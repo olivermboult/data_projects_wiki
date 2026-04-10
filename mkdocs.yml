@@ -1,1 +1,72 @@
-site_name: My Docs
+# ------------------------------------------------------------------------------------------
+# Project information
+# ------------------------------------------------------------------------------------------
+
+site_name: Data Projects Wiki                                                                             # The title shown in the header, browser tab title, and used across the theme
+site_url: https://olivermboult.github.io/data_projects_wiki/                                              # Canonical base URL (used for generating correct absolute links + SEO/social cards)
+site_author: Oliver Boult                                                                                 # Author/maintainer metadata (used by some themes/plugins for meta tags)
+site_description: This wiki site documents all designs, practices and processes used within data projets. # Short description for SEO/meta tags and social previews
+
+# ------------------------------------------------------------------------------------------
+# Repository
+# ------------------------------------------------------------------------------------------
+
+repo_name: repos/data_projects_wiki                            # Label shown in the header (repo link name shown by Material)
+repo_url: https://github.com/olivermboult/data_projects_wiki   # The actual repository URL (enables “edit/view source” links and header repo icon)
+
+# ------------------------------------------------------------------------------------------
+# Configuration
+# ------------------------------------------------------------------------------------------
+
+docs_dir: wiki                              # Tells MkDocs your Markdown source files live in /wiki instead of the default /docs
+theme:                                      # Starts theme configuration block (Material options live under here)
+  name: material                            # Selects the Material for MkDocs theme (enables Material features, palette, etc.
+  custom_dir: wiki/_wiki_branding           # Folder containing theme overrides (partials, templates, assets) to customise Material output
+  icon:                                     # Theme icon overrides (lets you change icons used by the theme) 
+    logo: material/database-cog             # Optional logo path
+    admonition:                             # Per-admonition-type icon mapping (built-in admonition types)
+      note: octicons/tag-16                 # Icon used for !!! note admonitions 
+      abstract: octicons/checklist-16       # Icon used for !!! abstract admonitions 
+      info: octicons/info-16                # Icon used for !!! info admonitions
+      tip: octicons/light-bulb-16           # Icon used for !!! tip admonitions 
+      success: octicons/check-16            # Icon used for !!! success admonitions 
+      question: octicons/question-16        # Icon used for !!! question admonitions 
+      warning: octicons/alert-16            # Icon used for !!! warning admonitions 
+      failure: octicons/x-16                # Icon used for !!! failure admonitions 
+      danger: octicons/no-entry-16          # Icon used for !!! danger admonitions 
+      bug: octicons/bug-16                  # Icon used for !!! bug admonitions 
+      example: octicons/beaker-16           # Icon used for !!! example admonitions
+      quote: octicons/quote-16              # Icon used for !!! quote admonitions 
+      draft: octicons/pencil-16             # Icon used for !!! draft admonitions
+    annotation: material/plus-circle        # Icon used for annotation elements (e.g., code copy button, search reset button, etc.)
+  features:                                 # Enables/disables specific Material UX features (navigation, search, code copy, etc.)
+  # Navigation enhancements ----------------------------------------------------------------
+    - navigation.instant                    # Enables Single Page Application-like instant loading for faster navigation
+    - navigation.instant.progress           # Shows a loading bar for slow connections
+    #- navigation.instant.preview           # Enables hover previews for internal links
+    - navigation.tracking                   # Updates the URL with the active anchor as you scroll
+    #- navigation.tabs                      # Renders top-level sections as tabs on large screens
+    #- navigation.tabs.sticky               # Keeps tabs visible while scrolling
+    #- navigation.sections                  # Groups top-level sections in the sidebar
+    #- navigation.expand                    # Expands all sidebar sections by default (incompatible with navigation.prune)
+    #- navigation.prune                     # Reduces HTML size by pruning hidden navigation items (incompatible with navigation.expand)
+    #- navigation.indexes                   # Allows index.md files to act as section landing pages (incompatible with toc.integrate)
+    - navigation.top                        # Adds a back-to-top button when scrolling up
+  # Table of Contents enhancements ---------------------------------------------------------                                   
+    - toc.follow                            # Keeps the active TOC item visible in the sidebar
+    #- toc.integrate                        # Integrates the TOC into the main navigation sidebar (incompatible with navigation.indexes)
+  # Search enhancements --------------------------------------------------------------------
+    - search.suggest                        # Enables autocomplete suggestions for the last word typed in the search bar. Users can accept suggestions using the Right Arrow key.
+    - search.highlight                      # Highlights all occurrences of the search term on the destination page after clicking a search result.
+    - search.share                          # Adds a share button next to the search reset button, allowing users to copy a link to the current search query and results.
+  # Header enhancements --------------------------------------------------------------------
+    - header.autohide                       # Header is automatically hidden when the user scrolls past a certain threshold.
+    - announce.dismiss                      # Adds a dismiss button to temporary announcements, allowing users to mark them as read and hide them from view.
+  # Footer enhancements --------------------------------------------------------------------
+    #- navigation.footer                    # The footer can include links to the previous and next page of the current page.
+  # Content enhancements -------------------------------------------------------------------
+    - content.code.copy                     # Adds code block copy button
+    - content.code.select                   # Shows select button to highlight line ranges
+    - content.code.annotate                 # Enables code annotations
+    - content.tooltips                      # Enables improved tooltips
+    # - content.footnote.tooltips           # Footnote tooltips feature
