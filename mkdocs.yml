@@ -70,3 +70,106 @@ theme:                                      # Starts theme configuration block (
     - content.code.annotate                 # Enables code annotations
     - content.tooltips                      # Enables improved tooltips
     # - content.footnote.tooltips           # Footnote tooltips feature
+
+  palette:                              # Defines colour schemes (light/dark) and the mode toggle behaviour
+    - scheme: default                   # “default” = light mode scheme in Material
+      primary: custom                   # Uses your CSS-defined palette rather than a built-in Material colour
+      accent: custom                    # Uses your CSS-defined accent rather than a built-in Material colour
+      toggle:                           # Configures the UI control for switching colour schemes          
+        icon: material/weather-night    # Icon shown when light mode is active (suggests switching to dark)
+        name: Switch to dark mode       # Tooltip/accessible label for the toggle in light mode
+
+    - scheme: slate                     # “slate” = Material’s dark mode scheme base
+      primary: custom                   # Again use your custom CSS-driven colours in dark mode
+      accent: custom                    # Again use your custom accent colours in dark mode
+      toggle:                           # Toggle settings for when dark mode is active
+        icon: material/weather-sunny    # Icon shown in dark mode (suggests switching to light)
+        name: Switch to light mode      # Tooltip/accessible label for the toggle in dark mode
+
+  language: en                          # Sets UI language strings (search labels, buttons, etc.)
+
+plugins:          # Enables MkDocs/Material plugins (features beyond core markdown rendering)                   
+  - search        # Enables built-in search index generation (Material uses this for site search)
+#  - table-reader  # Adds support for reading table data from CSV/TSV files (useful for data engineering docs)
+  - include-markdown:
+      encoding: ascii
+      preserve_includer_indent: false
+      dedent: false
+      trailing_newlines: true
+      comments: true
+      rewrite_relative_urls: true
+      heading_offset: 0
+      start: <!--start-->
+      end: <!--end-->
+      recursive: true
+markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoji, mermaid fences, etc.)
+  - meta
+  
+  # Core helpers used across many components -----------------------------------------------
+  - attr_list                                                           # Allows adding HTML attributes in Markdown (e.g., classes for components)
+  - md_in_html                                                          # Allows Markdown inside raw HTML blocks (useful for custom component markup)
+  - pymdownx.superfences:                                               # Allows nested/advanced fenced blocks and custom fences (needed for mermaid)  
+      # Mermaid diagrams (Material native integration)                  
+      custom_fences:                                                    # Defines extra fenced code types beyond standard triple-backtick
+        - name: mermaid                                                 # Fence name used like ```mermaid
+          class: mermaid                                                # HTML class added so Material/JS knows to render it as a Mermaid diagram           
+          format: !!python/name:pymdownx.superfences.fence_code_format  # Uses the standard fence formatter so the content is preserved correctly
+
+  # Admonitions (callouts) -----------------------------------------------------------------
+  - admonition                                                          # Enables !!! note/warning/tip blocks (Material styles these nicely)
+  - pymdownx.details                                                    # Enables collapsible admonitions and <details> enhancements
+
+  # Content tabs ---------------------------------------------------------------------------
+  - pymdownx.tabbed:                                                    # Enables tabbed content syntax (Material styles as nice tabs)
+      alternate_style: true                                             # Uses Material’s alternate tab style (more visually distinct)                   
+
+  # Code blocks (highlighting, inline highlight, fences, snippets) -------------------------
+  - pymdownx.highlight:                                                 # Adds advanced syntax highlighting configuration
+      anchor_linenums: true                                             # Makes line numbers linkable (useful for referencing specific lines)
+      line_spans: __span                                                # Wraps lines with spans so Material can style/target them                   
+      pygments_lang_class: true                                         # Adds language CSS class to code blocks (helps styling and tooling)
+
+  - pymdownx.inlinehilite                                               # Enables inline code highlighting using special syntax (great for docs)                  
+ 
+  # Data tables ----------------------------------------------------------------------------
+  - tables                                                              # Enables GitHub-style Markdown tables (if you document schemas, etc.)
+
+  # Footnotes ------------------------------------------------------------------------------
+  - footnotes                                                           # Enables footnote syntax (useful for references and definitions)
+
+  # Formatting (critic markup, highlight/underline/strike, keys) --------------------------- 
+  - pymdownx.critic                                                     # Enables Critic Markup for editorial suggestions (add/remove/replace)
+  - pymdownx.caret                                                      # Enables ^superscript^ and underline-like caret features
+  - pymdownx.keys                                                       # Pretty formatting for keyboard keys (e.g., ++ctrl+c++) 
+  - pymdownx.mark                                                       # Enables ==highlight== syntax                     
+  - pymdownx.tilde                                                      # Enables ~~strike~~ and subscript-like tilde features
+
+  # Lists (definition lists + task lists) --------------------------------------------------
+  - def_list                                                            # Enables definition lists (term: definition) useful for glossaries                     
+  - pymdownx.tasklist:                                                  # Enables GitHub-style task lists
+      custom_checkbox: true                                             # Uses Material-themed checkboxes instead of plain text boxes
+
+  # Icons + Emojis (Twemoji SVG) -----------------------------------------------------------
+  - pymdownx.emoji:                                                     # Uses Material emoji extension so emojis render consistently  
+      emoji_index: !!python/name:material.extensions.emoji.twemoji      # Chooses the Twemoji index (consistent emoji set)
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg   # Renders emojis as SVG for crisp scaling on all screens
+
+  # Images: captions + alignment patterns --------------------------------------------------
+  - pymdownx.blocks.caption                                             # Enables figure-like captions for images/content blocks           
+
+  # Tooltips / glossary (abbr + titles + snippets) -----------------------------------------
+  - abbr                                                                # Enables abbreviations with hover expansion via HTML <abbr>                  
+#  - pymdownx.snippets:
+#      auto_append: ["glossary.md"]
+#      base_path: ["wiki/appendices"]             # Automatically appends a Markdown file with snippet definitions (e.g., for glossary/tooltip content)
+
+  # Math (enable rendering via MathJax/KaTeX integration guidance) -------------------------
+  - pymdownx.arithmatex:                                                # Wraps math so you can render later with MathJax/KaTeX 
+      generic: true                                                     # Uses generic wrappers (gives flexibility in which renderer you choose)
+
+
+# ------------------------------------------------------------------------------------------
+# Customisation
+# ------------------------------------------------------------------------------------------
+extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you can override styles)
+  - styles/style.css  # Path to your custom CSS file for styling overrides

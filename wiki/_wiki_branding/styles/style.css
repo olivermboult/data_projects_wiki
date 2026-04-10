@@ -1,0 +1,1035 @@
+
+/* 
+------------------------------------------------------------------------------------------
+  Wiki Fonts
+------------------------------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: "wiki_font";
+  src: url("../fonts/Silka-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Material for MkDocs font hooks */
+:root {
+  --md-text-font: "wiki_font", sans-serif;
+  --md-header-font: "wiki_font", sans-serif;
+  --md-code-font: "Roboto Mono", monospace;
+}
+
+/* 
+------------------------------------------------------------------------------------------
+  Wiki Colours
+------------------------------------------------------------------------------------------
+*/
+
+:root {
+  /* Main Colours */
+  --wiki-indigo: #185B84;
+  --wiki-bleu: #0395FA;
+  --wiki-midnight-green: #00515C;
+  --wiki-persian-green: #1DAB98;
+  --wiki-emerald: #00D987;
+  --wiki-tea-green: #B4F9CD;
+  --wiki-mustard: #FFDE83;
+  --wiki-mexican-pink: #DC0D7F;
+
+  /* Inidigo - Darker variants*/
+  --wiki-indigo-10-d: color-mix(in oklab, var(--wiki-indigo), black 10%);
+  --wiki-indigo-20-d: color-mix(in oklab, var(--wiki-indigo), black 20%);
+  --wiki-indigo-30-d: color-mix(in oklab, var(--wiki-indigo), black 30%);
+  --wiki-indigo-40-d: color-mix(in oklab, var(--wiki-indigo), black 40%);
+  --wiki-indigo-50-d: color-mix(in oklab, var(--wiki-indigo), black 50%);
+  --wiki-indigo-60-d: color-mix(in oklab, var(--wiki-indigo), black 60%);
+  --wiki-indigo-70-d: color-mix(in oklab, var(--wiki-indigo), black 70%);
+  --wiki-indigo-80-d: color-mix(in oklab, var(--wiki-indigo), black 80%);
+  --wiki-indigo-90-d: color-mix(in oklab, var(--wiki-indigo), black 90%);
+  /* indigo - Lighter variants*/
+  --wiki-indigo-10-l: color-mix(in oklab, var(--wiki-indigo), white 10%);
+  --wiki-indigo-20-l: color-mix(in oklab, var(--wiki-indigo), white 20%);
+  --wiki-indigo-30-l: color-mix(in oklab, var(--wiki-indigo), white 30%);
+  --wiki-indigo-40-l: color-mix(in oklab, var(--wiki-indigo), white 40%);
+  --wiki-indigo-50-l: color-mix(in oklab, var(--wiki-indigo), white 50%);
+  --wiki-indigo-60-l: color-mix(in oklab, var(--wiki-indigo), white 60%);
+  --wiki-indigo-70-l: color-mix(in oklab, var(--wiki-indigo), white 70%);
+  --wiki-indigo-90-l: color-mix(in oklab, var(--wiki-indigo), white 90%);
+  --wiki-indigo-95-l: color-mix(in oklab, var(--wiki-indigo), white 95%);
+
+  /* Bleu - Darker variants*/
+  --wiki-bleu-10-d: color-mix(in oklab, var(--wiki-bleu), black 10%);
+  --wiki-bleu-20-d: color-mix(in oklab, var(--wiki-bleu), black 20%);
+  --wiki-bleu-30-d: color-mix(in oklab, var(--wiki-bleu), black 30%);
+  --wiki-bleu-40-d: color-mix(in oklab, var(--wiki-bleu), black 40%);
+  --wiki-bleu-50-d: color-mix(in oklab, var(--wiki-bleu), black 50%);
+  --wiki-bleu-60-d: color-mix(in oklab, var(--wiki-bleu), black 60%);
+  --wiki-bleu-70-d: color-mix(in oklab, var(--wiki-bleu), black 70%);
+  --wiki-bleu-80-d: color-mix(in oklab, var(--wiki-bleu), black 80%);
+  --wiki-bleu-90-d: color-mix(in oklab, var(--wiki-bleu), black 90%);
+  /* Bleu - Lighter variants*/
+  --wiki-bleu-10-l: color-mix(in oklab, var(--wiki-bleu), white 10%);
+  --wiki-bleu-20-l: color-mix(in oklab, var(--wiki-bleu), white 20%);
+  --wiki-bleu-30-l: color-mix(in oklab, var(--wiki-bleu), white 30%);
+  --wiki-bleu-40-l: color-mix(in oklab, var(--wiki-bleu), white 40%);
+  --wiki-bleu-50-l: color-mix(in oklab, var(--wiki-bleu), white 50%);
+  --wiki-bleu-60-l: color-mix(in oklab, var(--wiki-bleu), white 60%);
+  --wiki-bleu-70-l: color-mix(in oklab, var(--wiki-bleu), white 70%);
+  --wiki-bleu-90-l: color-mix(in oklab, var(--wiki-bleu), white 90%);
+  --wiki-bleu-95-l: color-mix(in oklab, var(--wiki-bleu), white 95%);
+
+  /* Midnight Green - Darker variants*/
+  --wiki-midnight-green-10-d: color-mix(in oklab, var(--wiki-midnight-green), black 10%);
+  --wiki-midnight-green-20-d: color-mix(in oklab, var(--wiki-midnight-green), black 20%);
+  --wiki-midnight-green-30-d: color-mix(in oklab, var(--wiki-midnight-green), black 30%);
+  --wiki-midnight-green-40-d: color-mix(in oklab, var(--wiki-midnight-green), black 40%);
+  --wiki-midnight-green-50-d: color-mix(in oklab, var(--wiki-midnight-green), black 50%);
+  --wiki-midnight-green-60-d: color-mix(in oklab, var(--wiki-midnight-green), black 60%);
+  --wiki-midnight-green-70-d: color-mix(in oklab, var(--wiki-midnight-green), black 70%);
+  --wiki-midnight-green-80-d: color-mix(in oklab, var(--wiki-midnight-green), black 80%);
+  --wiki-midnight-green-90-d: color-mix(in oklab, var(--wiki-midnight-green), black 90%);
+  /* Midnight Green - Lighter variants*/
+  --wiki-midnight-green-10-l: color-mix(in oklab, var(--wiki-midnight-green), white 10%);
+  --wiki-midnight-green-20-l: color-mix(in oklab, var(--wiki-midnight-green), white 20%);
+  --wiki-midnight-green-30-l: color-mix(in oklab, var(--wiki-midnight-green), white 30%);
+  --wiki-midnight-green-40-l: color-mix(in oklab, var(--wiki-midnight-green), white 40%);
+  --wiki-midnight-green-50-l: color-mix(in oklab, var(--wiki-midnight-green), white 50%);
+  --wiki-midnight-green-60-l: color-mix(in oklab, var(--wiki-midnight-green), white 60%);
+  --wiki-midnight-green-70-l: color-mix(in oklab, var(--wiki-midnight-green), white 70%);
+  --wiki-midnight-green-90-l: color-mix(in oklab, var(--wiki-midnight-green), white 90%);
+  --wiki-midnight-green-95-l: color-mix(in oklab, var(--wiki-midnight-green), white 95%);
+
+  /* Persian Green - Darker variants*/
+  --wiki-persian-green-10-d: color-mix(in oklab, var(--wiki-persian-green), black 10%);
+  --wiki-persian-green-20-d: color-mix(in oklab, var(--wiki-persian-green), black 20%);
+  --wiki-persian-green-30-d: color-mix(in oklab, var(--wiki-persian-green), black 30%);
+  --wiki-persian-green-40-d: color-mix(in oklab, var(--wiki-persian-green), black 40%);
+  --wiki-persian-green-50-d: color-mix(in oklab, var(--wiki-persian-green), black 50%);
+  --wiki-persian-green-60-d: color-mix(in oklab, var(--wiki-persian-green), black 60%);
+  --wiki-persian-green-70-d: color-mix(in oklab, var(--wiki-persian-green), black 70%);
+  --wiki-persian-green-80-d: color-mix(in oklab, var(--wiki-persian-green), black 80%);
+  --wiki-persian-green-90-d: color-mix(in oklab, var(--wiki-persian-green), black 90%);
+  /* Persian Green - Lighter variants*/
+  --wiki-persian-green-10-l: color-mix(in oklab, var(--wiki-persian-green), white 10%);
+  --wiki-persian-green-20-l: color-mix(in oklab, var(--wiki-persian-green), white 20%);
+  --wiki-persian-green-30-l: color-mix(in oklab, var(--wiki-persian-green), white 30%);
+  --wiki-persian-green-40-l: color-mix(in oklab, var(--wiki-persian-green), white 40%);
+  --wiki-persian-green-50-l: color-mix(in oklab, var(--wiki-persian-green), white 50%);
+  --wiki-persian-green-60-l: color-mix(in oklab, var(--wiki-persian-green), white 60%);
+  --wiki-persian-green-70-l: color-mix(in oklab, var(--wiki-persian-green), white 70%);
+  --wiki-persian-green-90-l: color-mix(in oklab, var(--wiki-persian-green), white 90%);
+  --wiki-persian-green-95-l: color-mix(in oklab, var(--wiki-persian-green), white 95%);
+
+  /* Emerald - Darker variants*/
+  --wiki-emerald-10-d: color-mix(in oklab, var(--wiki-emerald), black 10%);
+  --wiki-emerald-20-d: color-mix(in oklab, var(--wiki-emerald), black 20%);
+  --wiki-emerald-30-d: color-mix(in oklab, var(--wiki-emerald), black 30%);
+  --wiki-emerald-40-d: color-mix(in oklab, var(--wiki-emerald), black 40%);
+  --wiki-emerald-50-d: color-mix(in oklab, var(--wiki-emerald), black 50%);
+  --wiki-emerald-60-d: color-mix(in oklab, var(--wiki-emerald), black 60%);
+  --wiki-emerald-70-d: color-mix(in oklab, var(--wiki-emerald), black 70%);
+  --wiki-emerald-80-d: color-mix(in oklab, var(--wiki-emerald), black 80%);
+  --wiki-emerald-90-d: color-mix(in oklab, var(--wiki-emerald), black 90%);
+  /* Emerald - Lighter variants*/
+  --wiki-emerald-10-l: color-mix(in oklab, var(--wiki-emerald), white 10%);
+  --wiki-emerald-20-l: color-mix(in oklab, var(--wiki-emerald), white 20%);
+  --wiki-emerald-30-l: color-mix(in oklab, var(--wiki-emerald), white 30%);
+  --wiki-emerald-40-l: color-mix(in oklab, var(--wiki-emerald), white 40%);
+  --wiki-emerald-50-l: color-mix(in oklab, var(--wiki-emerald), white 50%);
+  --wiki-emerald-60-l: color-mix(in oklab, var(--wiki-emerald), white 60%);
+  --wiki-emerald-70-l: color-mix(in oklab, var(--wiki-emerald), white 70%);
+  --wiki-emerald-90-l: color-mix(in oklab, var(--wiki-emerald), white 90%);
+  --wiki-emerald-95-l: color-mix(in oklab, var(--wiki-emerald), white 95%);
+
+  /* Tea Green - Darker variants*/
+  --wiki-tea-green-10-d: color-mix(in oklab, var(--wiki-tea-green), black 10%);
+  --wiki-tea-green-20-d: color-mix(in oklab, var(--wiki-tea-green), black 20%);
+  --wiki-tea-green-30-d: color-mix(in oklab, var(--wiki-tea-green), black 30%);
+  --wiki-tea-green-40-d: color-mix(in oklab, var(--wiki-tea-green), black 40%);
+  --wiki-tea-green-50-d: color-mix(in oklab, var(--wiki-tea-green), black 50%);
+  --wiki-tea-green-60-d: color-mix(in oklab, var(--wiki-tea-green), black 60%);
+  --wiki-tea-green-70-d: color-mix(in oklab, var(--wiki-tea-green), black 70%);
+  --wiki-tea-green-80-d: color-mix(in oklab, var(--wiki-tea-green), black 80%);
+  --wiki-tea-green-90-d: color-mix(in oklab, var(--wiki-tea-green), black 90%);
+  /* Tea Green - Lighter variants*/
+  --wiki-tea-green-10-l: color-mix(in oklab, var(--wiki-tea-green), white 10%);
+  --wiki-tea-green-20-l: color-mix(in oklab, var(--wiki-tea-green), white 20%);
+  --wiki-tea-green-30-l: color-mix(in oklab, var(--wiki-tea-green), white 30%);
+  --wiki-tea-green-40-l: color-mix(in oklab, var(--wiki-tea-green), white 40%);
+  --wiki-tea-green-50-l: color-mix(in oklab, var(--wiki-tea-green), white 50%);
+  --wiki-tea-green-60-l: color-mix(in oklab, var(--wiki-tea-green), white 60%);
+  --wiki-tea-green-70-l: color-mix(in oklab, var(--wiki-tea-green), white 70%);
+  --wiki-tea-green-90-l: color-mix(in oklab, var(--wiki-tea-green), white 90%);
+  --wiki-tea-green-95-l: color-mix(in oklab, var(--wiki-tea-green), white 95%);
+
+  /* Mustard - Darker variants*/
+  --wiki-mustard-10-d: color-mix(in oklab, var(--wiki-mustard), black 10%);
+  --wiki-mustard-20-d: color-mix(in oklab, var(--wiki-mustard), black 20%);
+  --wiki-mustard-30-d: color-mix(in oklab, var(--wiki-mustard), black 30%);
+  --wiki-mustard-40-d: color-mix(in oklab, var(--wiki-mustard), black 40%);
+  --wiki-mustard-50-d: color-mix(in oklab, var(--wiki-mustard), black 50%);
+  --wiki-mustard-60-d: color-mix(in oklab, var(--wiki-mustard), black 60%);
+  --wiki-mustard-70-d: color-mix(in oklab, var(--wiki-mustard), black 70%);
+  --wiki-mustard-80-d: color-mix(in oklab, var(--wiki-mustard), black 80%);
+  --wiki-mustard-90-d: color-mix(in oklab, var(--wiki-mustard), black 90%);
+  /* Mustard - Lighter variants*/
+  --wiki-mustard-10-l: color-mix(in oklab, var(--wiki-mustard), white 10%);
+  --wiki-mustard-20-l: color-mix(in oklab, var(--wiki-mustard), white 20%);
+  --wiki-mustard-30-l: color-mix(in oklab, var(--wiki-mustard), white 30%);
+  --wiki-mustard-40-l: color-mix(in oklab, var(--wiki-mustard), white 40%);
+  --wiki-mustard-50-l: color-mix(in oklab, var(--wiki-mustard), white 50%);
+  --wiki-mustard-60-l: color-mix(in oklab, var(--wiki-mustard), white 60%);
+  --wiki-mustard-70-l: color-mix(in oklab, var(--wiki-mustard), white 70%);
+  --wiki-mustard-90-l: color-mix(in oklab, var(--wiki-mustard), white 90%);
+  --wiki-mustard-95-l: color-mix(in oklab, var(--wiki-mustard), white 95%);
+
+  /* Mexican Pink - Darker variants*/
+  --wiki-mexican-pink-10-d: color-mix(in oklab, var(--wiki-mexican-pink), black 10%);
+  --wiki-mexican-pink-20-d: color-mix(in oklab, var(--wiki-mexican-pink), black 20%);
+  --wiki-mexican-pink-30-d: color-mix(in oklab, var(--wiki-mexican-pink), black 30%);
+  --wiki-mexican-pink-40-d: color-mix(in oklab, var(--wiki-mexican-pink), black 40%);
+  --wiki-mexican-pink-50-d: color-mix(in oklab, var(--wiki-mexican-pink), black 50%);
+  --wiki-mexican-pink-60-d: color-mix(in oklab, var(--wiki-mexican-pink), black 60%);
+  --wiki-mexican-pink-70-d: color-mix(in oklab, var(--wiki-mexican-pink), black 70%);
+  --wiki-mexican-pink-80-d: color-mix(in oklab, var(--wiki-mexican-pink), black 80%);
+  --wiki-mexican-pink-90-d: color-mix(in oklab, var(--wiki-mexican-pink), black 90%);
+  /* Mexican Pink - Lighter variants*/
+  --wiki-mexican-pink-10-l: color-mix(in oklab, var(--wiki-mexican-pink), white 10%);
+  --wiki-mexican-pink-20-l: color-mix(in oklab, var(--wiki-mexican-pink), white 20%);
+  --wiki-mexican-pink-30-l: color-mix(in oklab, var(--wiki-mexican-pink), white 30%);
+  --wiki-mexican-pink-40-l: color-mix(in oklab, var(--wiki-mexican-pink), white 40%);
+  --wiki-mexican-pink-50-l: color-mix(in oklab, var(--wiki-mexican-pink), white 50%);
+  --wiki-mexican-pink-60-l: color-mix(in oklab, var(--wiki-mexican-pink), white 60%);
+  --wiki-mexican-pink-70-l: color-mix(in oklab, var(--wiki-mexican-pink), white 70%);
+  --wiki-mexican-pink-90-l: color-mix(in oklab, var(--wiki-mexican-pink), white 90%);
+  --wiki-mexican-pink-95-l: color-mix(in oklab, var(--wiki-mexican-pink), white 95%);
+
+  /* RAG Colours */
+  --wiki-red: #D2222D;
+  --wiki-amber: #FFBF00;
+  --wiki-green: #238823;
+
+  /* Other Colours */
+  --wiki-white: #FFFFFF;
+  --wiki-black: #000000;
+  --wiki-indigo-background: hsl(from var(--wiki-indigo) h calc(s * 0.35) calc(l * 0.45));
+  --wiki-indigo-code-background: hsl(from var(--wiki-indigo) h calc(s * 0.45) calc(l * 0.55));
+
+  /* Admonition Colours */
+  --wiki-ad-note: var(--wiki-indigo);
+  --wiki-ad-abstract: var(--wiki-midnight-green);
+  --wiki-ad-info: var(--wiki-bleu);
+  --wiki-ad-tip: var(--wiki-persian-green);
+  --wiki-ad-success: var(--wiki-green);
+  --wiki-ad-question: var(--wiki-persian-green);
+  --wiki-ad-warning: var(--wiki-amber);
+  --wiki-ad-failure: var(--wiki-red);
+  --wiki-ad-danger: var(--wiki-red);
+  --wiki-ad-bug: var(--wiki-red);
+  --wiki-ad-example: var(--wiki-bleu);
+  --wiki-ad-quote: var(--wiki-indigo-50-d);
+  --wiki-ad-draft: var(--wiki-amber)
+}
+
+/*
+------------------------------------------------------------------------------------------
+  Material Theme Overrides
+  Light Mode (default)
+  Look: clean white surfaces, indigo typography, bleu interactive accent, mustard for 
+  highlights, emerald/persian-green for “positive” code tokens.
+------------------------------------------------------------------------------------------
+*/
+
+[data-md-color-scheme="default"] {
+
+/*
+  Primary colour shades - Affects: top header bar background, sidebar header, active 
+  navigation, primary buttons, and various “brand” surfaces. 
+*/
+  --md-primary-fg-color: var(--wiki-indigo);                              /* Main header/nav brand color */
+  --md-primary-fg-color--light: var(--wiki-indigo-20-l);                  /* Lighter brand shade (subtle states) */
+  --md-primary-fg-color--dark: var(--wiki-indigo-30-d);                   /* Darker brand shade (pressed/strong states) */
+  --md-primary-bg-color: var(--wiki-white);                               /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70); /* Softer on-primary text/icons */
+
+/*
+  Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
+  and many “action” affordances. 
+*/
+  --md-accent-fg-color: var(--wiki-bleu);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-bleu) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-white);                                    /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70);      /* Softer on-accent */
+
+/*
+  Default foreground shades - Affects: global UI text, content text, muted 
+  metadata, dividers/borders, These are the “chrome” variables that stop things looking 
+  half-default.
+*/
+  --md-default-fg-color: var(--wiki-indigo-80-d);            /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-indigo-60-d);     /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-indigo-40-d);   /* Tertiary text (very muted UI text) */
+  --md-default-fg-color--lightest: var(--wiki-indigo-95-l);  /* Dividers, borders, hairlines */
+
+/* 
+  Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
+*/
+  --md-default-bg-color: var(--wiki-white);                                 /* Main page background */
+  --md-default-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70);   /* Light overlays / subtle panels */
+  --md-default-bg-color--lighter: hsl(from var(--wiki-white) h s l / 0.30); /* Transparent overlays */
+  --md-default-bg-color--lightest: hsl(from var(--wiki-white) h s l / 0.12);/* Very faint overlay layers */
+
+/* 
+  Code (base) - Affects: inline code + code blocks base background/foreground. 
+*/
+  --md-code-fg-color: var(--wiki-indigo-50-d);               /* Code text */
+  --md-code-bg-color: var(--wiki-indigo-95-l);               /* Code block & inline code background */
+
+
+/*
+  Code highlighting tokens - Affects: token colors in highlighted code blocks.
+  Choice rationale:
+    - keywords stay “brand” (indigo)
+    - strings are emerald/tea-green family
+    - functions lean persian-green
+    - specials lean mexican-pink
+    - numbers lean red
+*/
+  --md-code-hl-color: hsl(from var(--wiki-mustard) h s l / 0.35);     /* Highlighted line background / emphasis */
+  --md-code-hl-number-color: var(--wiki-red);                         /* Numbers */
+  --md-code-hl-special-color: var(--wiki-mexican-pink);               /* Special tokens (decorators, special names) */
+  --md-code-hl-function-color: var(--wiki-persian-green-20-d);        /* Function names */
+  --md-code-hl-constant-color: var(--wiki-bleu-20-d);                 /* Constants */
+  --md-code-hl-keyword-color: var(--wiki-indigo);                     /* Keywords (if/else/return) */
+  --md-code-hl-string-color: var(--wiki-emerald-30-d);                /* Strings */
+  --md-code-hl-name-color: var(--md-code-fg-color);                   /* General “name” tokens default to code fg */
+  --md-code-hl-operator-color: var(--md-default-fg-color--light);     /* Operators */
+  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);  /* Punctuation */
+  --md-code-hl-comment-color: var(--wiki-indigo-50-l);                /* Comments (muted) */
+  --md-code-hl-generic-color: var(--md-default-fg-color--light);      /* Generic tokens */
+  --md-code-hl-variable-color: var(--md-default-fg-color--light);     /* Variables */
+
+
+/* 
+  Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
+*/
+  --md-typeset-color: var(--md-default-fg-color);                   /* Main body text */
+  --md-typeset-a-color: var(--wiki-bleu-20-d);                      /* Link color in content*/
+  --md-typeset-mark-color: var(--wiki-mustard-70-l);                /* <mark> highlight background */
+  --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);   /* <del> background */
+  --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15); /* <ins> background */
+
+
+/*
+kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
+*/
+  --md-typeset-kbd-color: var(--wiki-indigo-95-l);                /* Keycap background */
+  --md-typeset-kbd-accent-color: var(--wiki-white);               /* Keycap highlight */
+  --md-typeset-kbd-border-color: var(--wiki-indigo-70-l);         /* Keycap border */
+
+
+/* 
+Tables - Affects: table grid/borders in content.
+*/
+  --md-typeset-table-color: var(--wiki-indigo-90-l);              /* Table border/grid line color */
+
+
+/* 
+  Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
+  (Specific admonition variants apply their own accents on top.)
+*/
+  --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
+  --md-admonition-bg-color: var(--wiki-indigo-95-l);              /* Admonition background (neutral base) */
+
+
+/* 
+  Footer - Affects: footer background + footer text. 
+*/
+  --md-footer-bg-color: var(--wiki-indigo-80-d);                              /* Footer background */
+  --md-footer-bg-color--dark: var(--wiki-indigo-90-d);                        /* Footer bottom strip / deeper section */
+  --md-footer-fg-color: var(--wiki-tea-green-95-l);                           /* Primary footer text/icons */
+  --md-footer-fg-color--light: hsl(from var(--wiki-tea-green) h s l / 0.75);  /* Secondary footer text */
+  --md-footer-fg-color--lighter: hsl(from var(--wiki-tea-green) h s l / 0.50);/* Tertiary footer text */
+
+
+/* 
+  Shadows (elevation) - Affects: raised cards/surfaces/shadows across the UI.
+  (These are not “colors” you see directly, but they affect perceived polish.)
+*/
+  --md-shadow-z1:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.05),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.10);
+
+  --md-shadow-z2:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.10),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.25);
+
+  --md-shadow-z3:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.20),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.35);
+}
+
+/*
+------------------------------------------------------------------------------------------
+  Material Theme Overrides
+  Dark Mode (slate)
+  Look: deep indigo background, midnight-green surfaces, white typography, bleu accents, 
+  mustard highlights, emerald/persian-green for “positive” tokens.
+------------------------------------------------------------------------------------------
+*/
+[data-md-color-scheme="slate"] {
+
+/*
+  Primary colour shades - Affects: top header bar background, sidebar header, active 
+  navigation, primary buttons, and various “brand” surfaces. 
+*/
+  --md-primary-fg-color: var(--wiki-midnight-green-60-d);                 /* Main header/nav brand color */    
+  --md-primary-fg-color--light: var(--wiki-midnight-green-40-d);          /* Lighter brand shade (subtle states) */  
+  --md-primary-fg-color--dark: var(--wiki-midnight-green-80-d);           /* Darker brand shade (pressed/strong states) */  
+  --md-primary-bg-color: var(--wiki-white);                               /* Text/icons ON primary surfaces (header title/icons) */  
+  --md-primary-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70); /* Softer on-primary text/icons */
+
+/*
+  Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
+  and many “action” affordances. 
+*/
+  --md-accent-fg-color: var(--wiki-bleu);                                             /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-bleu) h s l / 0.16);         /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-indigo-background);                                /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-indigo-background) h s l / 0.70);  /* Softer on-accent */
+
+
+/*
+  Default foreground shades - Affects: global UI text, content text, muted 
+  metadata, dividers/borders, These are the “chrome” variables that stop things looking 
+  half-default.
+*/
+  --md-default-fg-color: var(--wiki-white);                                   /* Main page background */
+  --md-default-fg-color--light: var(--wiki-indigo-70-l);                      /* Light overlays / subtle panels */
+  --md-default-fg-color--lighter: var(--wiki-indigo-50-l);                    /* Transparent overlays */
+  --md-default-fg-color--lightest: hsl(from var(--wiki-white) h s l / 0.10);  /* Very faint overlay layers */
+
+/* 
+  Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
+*/
+  --md-default-bg-color: var(--wiki-indigo-background);                                     /* Main page background */
+  --md-default-bg-color--light: hsl(from var(--wiki-indigo-background) h s l / 0.70);       /* Light overlays / subtle panels */
+  --md-default-bg-color--lighter: hsl(from var(--wiki-indigo-background) h s l / 0.35);     /* Transparent overlays */
+  --md-default-bg-color--lightest: hsl(from var(--wiki-indigo-background) h s l / 0.18);    /* Very faint overlay layers */
+
+/* 
+  Code (base) - Affects: inline code + code blocks base background/foreground. 
+*/
+  --md-code-fg-color: var(--wiki-tea-green-95-l);               /* Code text */
+  --md-code-bg-color: var(--wiki-indigo-code-background);       /* Code block & inline code background */
+
+/*
+  Code highlighting tokens - Affects: token colors in highlighted code blocks.
+*/
+  --md-code-hl-color: hsl(from var(--wiki-mustard) h s l / 0.22);   /* Highlighted line background / emphasis */
+  --md-code-hl-number-color: var(--wiki-red);                       /* Numbers */
+  --md-code-hl-special-color: var(--wiki-mexican-pink-20-l);        /* Special tokens (decorators, special names) */
+  --md-code-hl-function-color: var(--wiki-persian-green-20-l);      /* Function names */
+  --md-code-hl-constant-color: var(--wiki-bleu-20-l);               /* Constants */
+  --md-code-hl-keyword-color: var(--wiki-bleu-20-l);                /* Keywords (if/else/return) */
+  --md-code-hl-string-color: var(--wiki-emerald-20-l);              /* Strings */
+  --md-code-hl-name-color: var(--md-code-fg-color);                 /* General “name” tokens default to code fg */
+  --md-code-hl-operator-color: var(--md-default-fg-color--light);   /* Operators */
+  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);/* Punctuation */
+  --md-code-hl-comment-color: var(--wiki-indigo-50-l);              /* Comments (muted) */
+  --md-code-hl-generic-color: var(--md-default-fg-color--light);    /* Generic tokens */
+  --md-code-hl-variable-color: var(--md-default-fg-color--light);   /* Variables */
+
+
+/* 
+  Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
+*/
+  --md-typeset-color: var(--md-default-fg-color);                       /* Main body text */
+  --md-typeset-a-color: var(--wiki-bleu-20-l);                          /* Link color in content*/
+  --md-typeset-mark-color: hsl(from var(--wiki-mustard) h s l / 0.22);  /* <mark> highlight background */
+  --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.18);       /* <del> background */
+  --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.18);     /* <ins> background */
+
+
+/*
+kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
+*/
+  --md-typeset-kbd-color: hsl(from var(--wiki-white) h s l / 0.06);         /* Keycap background */
+  --md-typeset-kbd-accent-color: hsl(from var(--wiki-white) h s l / 0.10);  /* Keycap highlight */
+  --md-typeset-kbd-border-color: hsl(from var(--wiki-white) h s l / 0.18);  /* Keycap border */
+
+
+/* 
+Tables - Affects: table grid/borders in content.
+*/
+  --md-typeset-table-color: hsl(from var(--wiki-white) h s l / 0.12);   /* Table grid lines */
+
+
+/* 
+  Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
+  (Specific admonition variants apply their own accents on top.)
+*/
+  --md-admonition-fg-color: var(--md-default-fg-color);               /* Text in admonitions */
+  --md-admonition-bg-color: hsl(from var(--wiki-white) h s l / 0.03); /* Admonition background (neutral base) */
+
+
+/* 
+  Footer - Affects: footer background + footer text. 
+*/
+  --md-footer-bg-color: var(--wiki-midnight-green-80-d);                        /* Footer background */
+  --md-footer-bg-color--dark: var(--wiki-midnight-green-90-d);                  /* Footer bottom strip / deeper section */
+  --md-footer-fg-color: var(--wiki-tea-green-95-l);                             /* Primary footer text/icons */
+  --md-footer-fg-color--light: hsl(from var(--wiki-tea-green) h s l / 0.75);    /* Secondary footer text */
+  --md-footer-fg-color--lighter: hsl(from var(--wiki-tea-green) h s l / 0.50);  /* Tertiary footer text */
+
+
+/* 
+  Shadows (elevation) - Affects: raised cards/surfaces/shadows across the UI.
+  (These are not “colors” you see directly, but they affect perceived polish.)
+*/
+  --md-shadow-z1:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.25),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.40);
+
+  --md-shadow-z2:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.35),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.55);
+
+  --md-shadow-z3:
+    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.45),
+    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.65);
+}
+
+/* 
+------------------------------------------------------------------------------------------
+  Component Library
+------------------------------------------------------------------------------------------
+*/
+
+/*
+  Admonitions ----------------------------------------------------------------------------
+*/
+
+/* Customise Standard Admonitions */
+
+/* note */
+
+.md-typeset .admonition.note,                                                              /* Alters the note admonition block */
+.md-typeset details.note {                                                                 /* Alters the note details (expandable admonition) block */
+  border-color: var(--wiki-ad-note) !important;                                            /* Sets the border color of the note admonition */ 
+}
+
+.md-typeset .note > .admonition-title,                                                     /* Alters the title of the note admonition block */ 
+.md-typeset .note > summary {                                                              /* Alters the title of the note details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-note) 12%, transparent) !important;   /* Sets the background color of the title of note admonition */
+  color: var(--wiki-ad-note) !important;                                                   /* Sets the text color of the title of note admonition */  
+}
+
+.md-typeset .note > .admonition-title::before,                                             /* Alters the icon before the title of the note admonition block */         
+.md-typeset .note > summary::before {                                                      /* Alters the icon before the title of the note details (expandable admonition) block */
+  background-color: var(--wiki-ad-note) !important;                                        /* Sets the color of the icon before the title of note admonition */
+}
+
+.md-typeset .note > summary::after {                                                       /* Alters the icon after the title of the note details (expandable admonition) block */
+  color: var(--wiki-ad-note) !important;                                                   /* Sets the color of the icon after the title of note admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the note details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the note details block */
+}
+
+
+/* abstract */
+
+.md-typeset .admonition.abstract,                                                              /* Alters the abstract admonition block */
+.md-typeset details.abstract {                                                                 /* Alters the abstract details (expandable admonition) block */
+  border-color: var(--wiki-ad-abstract) !important;                                            /* Sets the border color of the abstract admonition */ 
+}
+
+.md-typeset .abstract > .admonition-title,                                                     /* Alters the title of the abstract admonition block */ 
+.md-typeset .abstract > summary {                                                              /* Alters the title of the abstract details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-abstract) 12%, transparent) !important;   /* Sets the background color of the title of abstract admonition */
+  color: var(--wiki-ad-abstract) !important;                                                   /* Sets the text color of the title of abstract admonition */  
+}
+
+.md-typeset .abstract > .admonition-title::before,                                             /* Alters the icon before the title of the abstract admonition block */         
+.md-typeset .abstract > summary::before {                                                      /* Alters the icon before the title of the abstract details (expandable admonition) block */
+  background-color: var(--wiki-ad-abstract) !important;                                        /* Sets the color of the icon before the title of abstract admonition */
+}
+
+.md-typeset .abstract > summary::after {                                                       /* Alters the icon after the title of the abstract details (expandable admonition) block */
+  color: var(--wiki-ad-abstract) !important;                                                   /* Sets the color of the icon after the title of abstract admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the abstract details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the abstract details block */
+}
+
+/* info */
+
+.md-typeset .admonition.info,                                                              /* Alters the info admonition block */
+.md-typeset details.info {                                                                 /* Alters the info details (expandable admonition) block */
+  border-color: var(--wiki-ad-info) !important;                                            /* Sets the border color of the info admonition */ 
+}
+
+.md-typeset .info > .admonition-title,                                                     /* Alters the title of the info admonition block */ 
+.md-typeset .info > summary {                                                              /* Alters the title of the info details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-info) 12%, transparent) !important;   /* Sets the background color of the title of info admonition */
+  color: var(--wiki-ad-info) !important;                                                   /* Sets the text color of the title of info admonition */  
+}
+
+.md-typeset .info > .admonition-title::before,                                             /* Alters the icon before the title of the info admonition block */         
+.md-typeset .info > summary::before {                                                      /* Alters the icon before the title of the info details (expandable admonition) block */
+  background-color: var(--wiki-ad-info) !important;                                        /* Sets the color of the icon before the title of info admonition */
+}
+
+.md-typeset .info > summary::after {                                                       /* Alters the icon after the title of the info details (expandable admonition) block */
+  color: var(--wiki-ad-info) !important;                                                   /* Sets the color of the icon after the title of info admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the info details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the info details block */
+}
+
+/* tip */
+
+.md-typeset .admonition.tip,                                                              /* Alters the tip admonition block */
+.md-typeset details.tip {                                                                 /* Alters the tip details (expandable admonition) block */
+  border-color: var(--wiki-ad-tip) !important;                                            /* Sets the border color of the tip admonition */ 
+}
+
+.md-typeset .tip > .admonition-title,                                                     /* Alters the title of the tip admonition block */ 
+.md-typeset .tip > summary {                                                              /* Alters the title of the tip details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-tip) 12%, transparent) !important;   /* Sets the background color of the title of tip admonition */
+  color: var(--wiki-ad-tip) !important;                                                   /* Sets the text color of the title of tip admonition */  
+}
+
+.md-typeset .tip > .admonition-title::before,                                             /* Alters the icon before the title of the tip admonition block */         
+.md-typeset .tip > summary::before {                                                      /* Alters the icon before the title of the tip details (expandable admonition) block */
+  background-color: var(--wiki-ad-tip) !important;                                        /* Sets the color of the icon before the title of tip admonition */
+}
+
+.md-typeset .tip > summary::after {                                                       /* Alters the icon after the title of the tip details (expandable admonition) block */
+  color: var(--wiki-ad-tip) !important;                                                   /* Sets the color of the icon after the title of tip admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the tip details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the tip details block */
+}
+
+/* success */
+
+.md-typeset .admonition.success,                                                              /* Alters the success admonition block */
+.md-typeset details.success {                                                                 /* Alters the success details (expandable admonition) block */
+  border-color: var(--wiki-ad-success) !important;                                            /* Sets the border color of the success admonition */ 
+}
+
+.md-typeset .success > .admonition-title,                                                     /* Alters the title of the success admonition block */ 
+.md-typeset .success > summary {                                                              /* Alters the title of the success details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-success) 12%, transparent) !important;   /* Sets the background color of the title of success admonition */
+  color: var(--wiki-ad-success) !important;                                                   /* Sets the text color of the title of success admonition */  
+}
+
+.md-typeset .success > .admonition-title::before,                                             /* Alters the icon before the title of the success admonition block */         
+.md-typeset .success > summary::before {                                                      /* Alters the icon before the title of the success details (expandable admonition) block */
+  background-color: var(--wiki-ad-success) !important;                                        /* Sets the color of the icon before the title of success admonition */
+}
+
+.md-typeset .success > summary::after {                                                       /* Alters the icon after the title of the success details (expandable admonition) block */
+  color: var(--wiki-ad-success) !important;                                                   /* Sets the color of the icon after the title of success admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the success details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the success details block */
+}
+
+/* question */
+
+.md-typeset .admonition.question,                                                              /* Alters the question admonition block */
+.md-typeset details.question {                                                                 /* Alters the question details (expandable admonition) block */
+  border-color: var(--wiki-ad-question) !important;                                            /* Sets the border color of the question admonition */ 
+}
+
+.md-typeset .question > .admonition-title,                                                     /* Alters the title of the question admonition block */ 
+.md-typeset .question > summary {                                                              /* Alters the title of the question details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-question) 12%, transparent) !important;   /* Sets the background color of the title of question admonition */
+  color: var(--wiki-ad-question) !important;                                                   /* Sets the text color of the title of question admonition */  
+}
+
+.md-typeset .question > .admonition-title::before,                                             /* Alters the icon before the title of the question admonition block */         
+.md-typeset .question > summary::before {                                                      /* Alters the icon before the title of the question details (expandable admonition) block */
+  background-color: var(--wiki-ad-question) !important;                                        /* Sets the color of the icon before the title of question admonition */
+}
+
+.md-typeset .question > summary::after {                                                       /* Alters the icon after the title of the question details (expandable admonition) block */
+  color: var(--wiki-ad-question) !important;                                                   /* Sets the color of the icon after the title of question admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the question details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the question details block */
+}
+
+/* warning */
+
+.md-typeset .admonition.warning,                                                              /* Alters the warning admonition block */
+.md-typeset details.warning {                                                                 /* Alters the warning details (expandable admonition) block */
+  border-color: var(--wiki-ad-warning) !important;                                            /* Sets the border color of the warning admonition */ 
+}
+
+.md-typeset .warning > .admonition-title,                                                     /* Alters the title of the warning admonition block */ 
+.md-typeset .warning > summary {                                                              /* Alters the title of the warning details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-warning) 12%, transparent) !important;   /* Sets the background color of the title of warning admonition */
+  color: var(--wiki-ad-warning) !important;                                                   /* Sets the text color of the title of warning admonition */  
+}
+
+.md-typeset .warning > .admonition-title::before,                                             /* Alters the icon before the title of the warning admonition block */         
+.md-typeset .warning > summary::before {                                                      /* Alters the icon before the title of the warning details (expandable admonition) block */
+  background-color: var(--wiki-ad-warning) !important;                                        /* Sets the color of the icon before the title of warning admonition */
+}
+
+.md-typeset .warning > summary::after {                                                       /* Alters the icon after the title of the warning details (expandable admonition) block */
+  color: var(--wiki-ad-warning) !important;                                                   /* Sets the color of the icon after the title of warning admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the warning details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the warning details block */
+}
+
+/* failure */
+
+.md-typeset .admonition.failure,                                                              /* Alters the failure admonition block */
+.md-typeset details.failure {                                                                 /* Alters the failure details (expandable admonition) block */
+  border-color: var(--wiki-ad-failure) !important;                                            /* Sets the border color of the failure admonition */ 
+}
+
+.md-typeset .failure > .admonition-title,                                                     /* Alters the title of the failure admonition block */ 
+.md-typeset .failure > summary {                                                              /* Alters the title of the failure details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-failure) 12%, transparent) !important;   /* Sets the background color of the title of failure admonition */
+  color: var(--wiki-ad-failure) !important;                                                   /* Sets the text color of the title of failure admonition */  
+}
+
+.md-typeset .failure > .admonition-title::before,                                             /* Alters the icon before the title of the failure admonition block */         
+.md-typeset .failure > summary::before {                                                      /* Alters the icon before the title of the failure details (expandable admonition) block */
+  background-color: var(--wiki-ad-failure) !important;                                        /* Sets the color of the icon before the title of failure admonition */
+}
+
+.md-typeset .failure > summary::after {                                                       /* Alters the icon after the title of the failure details (expandable admonition) block */
+  color: var(--wiki-ad-failure) !important;                                                   /* Sets the color of the icon after the title of failure admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the failure details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the failure details block */
+}
+
+/* danger */
+
+.md-typeset .admonition.danger,                                                              /* Alters the danger admonition block */
+.md-typeset details.danger {                                                                 /* Alters the danger details (expandable admonition) block */
+  border-color: var(--wiki-ad-danger) !important;                                            /* Sets the border color of the danger admonition */ 
+}
+
+.md-typeset .danger > .admonition-title,                                                     /* Alters the title of the danger admonition block */ 
+.md-typeset .danger > summary {                                                              /* Alters the title of the danger details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-danger) 12%, transparent) !important;   /* Sets the background color of the title of danger admonition */
+  color: var(--wiki-ad-danger) !important;                                                   /* Sets the text color of the title of danger admonition */  
+}
+
+.md-typeset .danger > .admonition-title::before,                                             /* Alters the icon before the title of the danger admonition block */         
+.md-typeset .danger > summary::before {                                                      /* Alters the icon before the title of the danger details (expandable admonition) block */
+  background-color: var(--wiki-ad-danger) !important;                                        /* Sets the color of the icon before the title of danger admonition */
+}
+
+.md-typeset .danger > summary::after {                                                       /* Alters the icon after the title of the danger details (expandable admonition) block */
+  color: var(--wiki-ad-danger) !important;                                                   /* Sets the color of the icon after the title of danger admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the danger details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the danger details block */
+}
+
+/* bug */
+
+.md-typeset .admonition.bug,                                                              /* Alters the bug admonition block */
+.md-typeset details.bug {                                                                 /* Alters the bug details (expandable admonition) block */
+  border-color: var(--wiki-ad-bug) !important;                                            /* Sets the border color of the bug admonition */ 
+}
+
+.md-typeset .bug > .admonition-title,                                                     /* Alters the title of the bug admonition block */ 
+.md-typeset .bug > summary {                                                              /* Alters the title of the bug details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-bug) 12%, transparent) !important;   /* Sets the background color of the title of bug admonition */
+  color: var(--wiki-ad-bug) !important;                                                   /* Sets the text color of the title of bug admonition */  
+}
+
+.md-typeset .bug > .admonition-title::before,                                             /* Alters the icon before the title of the bug admonition block */         
+.md-typeset .bug > summary::before {                                                      /* Alters the icon before the title of the bug details (expandable admonition) block */
+  background-color: var(--wiki-ad-bug) !important;                                        /* Sets the color of the icon before the title of bug admonition */
+}
+
+.md-typeset .bug > summary::after {                                                       /* Alters the icon after the title of the bug details (expandable admonition) block */
+  color: var(--wiki-ad-bug) !important;                                                   /* Sets the color of the icon after the title of bug admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the bug details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the bug details block */
+}
+
+/* example */
+
+.md-typeset .admonition.example,                                                              /* Alters the example admonition block */
+.md-typeset details.example {                                                                 /* Alters the example details (expandable admonition) block */
+  border-color: var(--wiki-ad-example) !important;                                            /* Sets the border color of the example admonition */ 
+}
+
+.md-typeset .example > .admonition-title,                                                     /* Alters the title of the example admonition block */ 
+.md-typeset .example > summary {                                                              /* Alters the title of the example details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-example) 12%, transparent) !important;   /* Sets the background color of the title of example admonition */
+  color: var(--wiki-ad-example) !important;                                                   /* Sets the text color of the title of example admonition */  
+}
+
+.md-typeset .example > .admonition-title::before,                                             /* Alters the icon before the title of the example admonition block */         
+.md-typeset .example > summary::before {                                                      /* Alters the icon before the title of the example details (expandable admonition) block */
+  background-color: var(--wiki-ad-example) !important;                                        /* Sets the color of the icon before the title of example admonition */
+}
+
+.md-typeset .example > summary::after {                                                       /* Alters the icon after the title of the example details (expandable admonition) block */
+  color: var(--wiki-ad-example) !important;                                                   /* Sets the color of the icon after the title of example admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the example details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the example details block */
+}
+
+/* quote */
+
+.md-typeset .admonition.quote,                                                              /* Alters the quote admonition block */
+.md-typeset details.quote {                                                                 /* Alters the quote details (expandable admonition) block */
+  border-color: var(--wiki-ad-quote) !important;                                            /* Sets the border color of the quote admonition */ 
+}
+
+.md-typeset .quote > .admonition-title,                                                     /* Alters the title of the quote admonition block */ 
+.md-typeset .quote > summary {                                                              /* Alters the title of the quote details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-quote) 12%, transparent) !important;   /* Sets the background color of the title of quote admonition */
+  color: var(--wiki-ad-quote) !important;                                                   /* Sets the text color of the title of quote admonition */  
+}
+
+.md-typeset .quote > .admonition-title::before,                                             /* Alters the icon before the title of the quote admonition block */         
+.md-typeset .quote > summary::before {                                                      /* Alters the icon before the title of the quote details (expandable admonition) block */
+  background-color: var(--wiki-ad-quote) !important;                                        /* Sets the color of the icon before the title of quote admonition */
+}
+
+.md-typeset .quote > summary::after {                                                       /* Alters the icon after the title of the quote details (expandable admonition) block */
+  color: var(--wiki-ad-quote) !important;                                                   /* Sets the color of the icon after the title of quote admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the quote details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the quote details block */
+}
+
+/*
+  Hero ----------------------------------------------------------------------------
+*/
+
+.md-typeset .hero {
+  /* Component variables (defaults) */
+  --hero-bg-1: var(--wiki-indigo-20-d);
+  --hero-bg-2: var(--wiki-indigo-20-l);
+  --hero-text: var(--wiki-white);
+  --hero-shadow: var(--md-shadow-z2);
+  --hero-radius: 12px;
+
+  text-align: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: var(--hero-radius);
+  background: linear-gradient(135deg, var(--hero-bg-1) 0%, var(--hero-bg-2) 100%);
+  box-shadow: var(--hero-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle highlight overlay */
+.md-typeset .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.md-typeset .hero__inner {
+  position: relative; /* so it sits above ::before */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.md-typeset .hero__kicker {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hero-text);
+}
+
+.md-typeset .hero__title {
+  margin: 0 0 16px 0;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--hero-text);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.22);
+}
+
+.md-typeset .hero__subtitle {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 450;
+  color: var(--hero-text);
+}
+
+/* Sizes */
+.md-typeset .hero--sm { padding: 22px 16px; }
+.md-typeset .hero--md { padding: 34px 18px; }
+.md-typeset .hero--lg { padding: 48px 22px; }
+
+.md-typeset .hero--sm .hero__title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.md-typeset .hero--lg .hero__title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
+
+/* Variants */
+
+/*
+  Hero ----------------------------------------------------------------------------
+*/
+
+.md-typeset .hero--inidgo {
+  --hero-bg-1: var(--wiki-indigo-20-d);
+  --hero-bg-2: var(--wiki-indigo-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--bleu {
+  --hero-bg-1: var(--wiki-bleu-20-d);
+  --hero-bg-2: var(--wiki-bleu-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--midnight-green{
+  --hero-bg-1: var(--wiki-midnight-green-20-d);
+  --hero-bg-2: var(--wiki-midnight-green-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--persian-green{
+  --hero-bg-1: var(--wiki-persian-green-20-d);
+  --hero-bg-2: var(--wiki-persian-green-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--emerald {
+  --hero-bg-1: var(--wiki-emerald-20-d);
+  --hero-bg-2: var(--wiki-emerald-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--tea-green {
+  --hero-bg-1: var(--wiki-tea-green-20-d);
+  --hero-bg-2: var(--wiki-tea-green-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--mustard {
+  --hero-bg-1: var(--wiki-mustard-20-d);
+  --hero-bg-2: var(--wiki-mustard-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+.md-typeset .hero--mexican-pink {
+  --hero-bg-1: var(--wiki-mexican-pink-20-d);
+  --hero-bg-2: var(--wiki-mexican-pink-20-l);
+  --hero-text: var(--wiki-white);
+}
+
+
+/*
+  Admonitions ----------------------------------------------------------------------------
+*/
+
+/* Draft */
+
+.md-typeset .admonition.draft,                                                              /* Alters the draft admonition block */
+.md-typeset details.draft {                                                                 /* Alters the draft details (expandable admonition) block */
+  border-color: var(--wiki-ad-draft) !important;                                            /* Sets the border color of the draft admonition */ 
+}
+
+.md-typeset .draft > .admonition-title,                                                     /* Alters the title of the draft admonition block */ 
+.md-typeset .draft > summary {                                                              /* Alters the title of the draft details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-draft) 12%, transparent) !important;   /* Sets the background color of the title of draft admonition */
+  color: var(--wiki-ad-draft) !important;                                                   /* Sets the text color of the title of draft admonition */  
+}
+
+.md-typeset .draft > .admonition-title::before,                                             /* Alters the icon before the title of the draft admonition block */         
+.md-typeset .draft > summary::before {                                                      /* Alters the icon before the title of the draft details (expandable admonition) block */
+  background-color: var(--wiki-ad-draft) !important;                                        /* Sets the color of the icon before the title of draft admonition */
+  -webkit-mask-image: var(--md-admonition-icon--draft);
+  mask-image: var(--md-admonition-icon--draft);
+
+}
+
+.md-typeset .draft > summary::after {                                                       /* Alters the icon after the title of the draft details (expandable admonition) block */
+  color: var(--wiki-ad-draft) !important;                                                   /* Sets the color of the icon after the title of draft admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the draft details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the draft details block */
+}
+
+
+/* Variant Template
+
+.md-typeset .admonition.VARIANT_NAME,
+.md-typeset details.VARIANT_NAME {
+  border-color: #COLOUR !important;
+}
+
+.md-typeset .VARIANT_NAME > .admonition-title,
+.md-typeset .VARIANT_NAME > summary {
+  background-color: #COLOUR !important;
+  color: #COLOUR !important;
+}
+
+.md-typeset .VARIANT_NAME > .admonition-title::before,
+.md-typeset .VARIANT_NAME > summary::before {
+  background-color: #COLOUR;
+  -webkit-mask-image: #ICON;
+  mask-image: #ICON;
+}
+
+.md-typeset .quote > summary::after {                                                      
+  color: #COLOUR !important;                                                   
+}
+
+.md-typeset details[class] {                                                            
+  box-shadow: none !important;                                                           
+}
+
+*/
+
+/*
+  Buttons --------------------------------------------------------------------------------
+*/
+
+/* Variants */
+
+/* Variant Template
+
+.md-typeset .md-button.VARIANT_NAME,
+.md-typeset a.md-button.VARIANT_NAME {
+  background-color: #COLOUR !important;
+  border-color: #COLOUR !important;
+  color: #COLOUR !important;
+}
+
+.md-typeset .md-button.VARIANT_NAME:focus {
+  box-shadow: #COLOUR !important;
+}
+
+*/
