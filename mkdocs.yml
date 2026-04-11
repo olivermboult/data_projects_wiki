@@ -159,9 +159,9 @@ markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoj
 
   # Tooltips / glossary (abbr + titles + snippets) -----------------------------------------
   - abbr                                                                # Enables abbreviations with hover expansion via HTML <abbr>                  
-#  - pymdownx.snippets:
-#      auto_append: ["glossary.md"]
-#      base_path: ["wiki/appendices"]             # Automatically appends a Markdown file with snippet definitions (e.g., for glossary/tooltip content)
+  - pymdownx.snippets:
+      auto_append: ["glossary.md"]
+      base_path: ["wiki"]             # Automatically appends a Markdown file with snippet definitions (e.g., for glossary/tooltip content)
 
   # Math (enable rendering via MathJax/KaTeX integration guidance) -------------------------
   - pymdownx.arithmatex:                                                # Wraps math so you can render later with MathJax/KaTeX 
@@ -172,4 +172,32 @@ markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoj
 # Customisation
 # ------------------------------------------------------------------------------------------
 extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you can override styles)
-  - styles/style.css  # Path to your custom CSS file for styling overrides
+  - style.css  # Path to your custom CSS file for styling overrides
+
+
+# ------------------------------------------------------------------------------------------
+# Navigation
+# ------------------------------------------------------------------------------------------
+
+nav:
+  - Wiki Design:
+    - Branding Guidelines: wiki_design/branding_guidelines.md
+    - Page Template: wiki_design/page_template.md
+    - Page References: wiki_design/page_references.md
+    - Components:
+      - Admonitions: wiki_design/components/admonitions.md
+      - Annotations: wiki_design/components/annotations.md
+      - Buttons: wiki_design/components/buttons.md
+      - Code Blocks: wiki_design/components/code_blocks.md
+      - Content Tabs: wiki_design/components/content_tabs.md
+      - Data Tables: wiki_design/components/data_tables.md
+      - Diagrams: wiki_design/components/diagrams.md
+      - Footnotes: wiki_design/components/footnotes.md
+      - Formatting: wiki_design/components/formatting.md
+      - Grids: wiki_design/components/grids.md
+      - Heros: wiki_design/components/heros.md
+      - Icons & Emojis: wiki_design/components/icons_emojis.md
+      - Images: wiki_design/components/images.md
+      - Lists: wiki_design/components/lists.md
+      - Maths: wiki_design/components/maths.md
+      - Tooltips: wiki_design/components/tooltips.md
