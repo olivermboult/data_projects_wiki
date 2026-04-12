@@ -231,7 +231,7 @@
   --md-primary-fg-color--light: var(--wiki-test);                  /* Lighter brand shade (subtle states) */
   --md-primary-fg-color--dark: var(--wiki-test);                   /* Darker brand shade (pressed/strong states) */
   --md-primary-bg-color: var(--wiki-n0);                               /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: var(--wiki-test); /* Softer on-primary text/icons */
+  --md-primary-bg-color--light: var(--wiki-test);  /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
