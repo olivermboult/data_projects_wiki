@@ -230,8 +230,8 @@
   --md-primary-fg-color: var(--wiki-data-blue);                              /* Main header/nav brand color */
   --md-primary-fg-color--light: var(--wiki-test);                  /* Lighter brand shade (subtle states) */
   --md-primary-fg-color--dark: var(--wiki-test);                   /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color: var(--wiki-test);                               /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70); /* Softer on-primary text/icons */
+  --md-primary-bg-color: var(--wiki-n0);                               /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: var(--wiki-test); /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
