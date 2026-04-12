@@ -200,15 +200,15 @@
   --wiki-ad-note: var(--wiki-data-blue);
   --wiki-ad-abstract: var(--wiki-dark-teal);
   --wiki-ad-info: var(--wiki-clear-sky);
-  --wiki-ad-tip: var(--wiki-test);
+  --wiki-ad-tip: var(--wiki-clear-sky);
   --wiki-ad-success: var(--wiki-success);
-  --wiki-ad-question: var(--wiki-test);
+  --wiki-ad-question: var(--wiki-dark-teal);
   --wiki-ad-warning: var(--wiki-warning);
   --wiki-ad-failure: var(--wiki-failure);
   --wiki-ad-danger: var(--wiki-failure);
   --wiki-ad-bug: var(--wiki-failure);
-  --wiki-ad-example: var(--wiki-test);
-  --wiki-ad-quote: var(--wiki-test);
+  --wiki-ad-example: var(--wiki-data-blue);
+  --wiki-ad-quote: var(--wiki-deep-indigo);
   --wiki-ad-draft: var(--wiki-golden)
 }
 
