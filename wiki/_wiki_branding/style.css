@@ -46,6 +46,8 @@
   --wiki-n800: #1E293B;
   --wiki-n900: #0F172A;
   --wiki-n1000: #000000;
+
+  --wiki-test: #FF007F;
   
   /* Deep Inidigo - Darker variants*/
   --wiki-deep-indigo-10-d: color-mix(in oklab, var(--wiki-deep-indigo), black 10%);
@@ -195,19 +197,19 @@
   --wiki-lavender-95-l: color-mix(in oklab, var(--wiki-lavender), white 95%);
 
   /* Admonition Colours */
-  --wiki-ad-note: var(--wiki-deep-indigo);
+  --wiki-ad-note: var(--wiki-data-blue);
   --wiki-ad-abstract: var(--wiki-dark-teal);
-  --wiki-ad-info: var(--wiki-data-blue);
-  --wiki-ad-tip: var(--wiki-burgundy);
+  --wiki-ad-info: var(--wiki-clear-sky);
+  --wiki-ad-tip: var(--wiki-test);
   --wiki-ad-success: var(--wiki-success);
-  --wiki-ad-question: var(--wiki-burgundy);
+  --wiki-ad-question: var(--wiki-test);
   --wiki-ad-warning: var(--wiki-warning);
   --wiki-ad-failure: var(--wiki-failure);
   --wiki-ad-danger: var(--wiki-failure);
   --wiki-ad-bug: var(--wiki-failure);
-  --wiki-ad-example: var(--wiki-data-blue);
-  --wiki-ad-quote: var(--wiki-deep-indigo-50-d);
-  --wiki-ad-draft: var(--wiki-warning)
+  --wiki-ad-example: var(--wiki-test);
+  --wiki-ad-quote: var(--wiki-test);
+  --wiki-ad-draft: var(--wiki-golden)
 }
 
 /*
