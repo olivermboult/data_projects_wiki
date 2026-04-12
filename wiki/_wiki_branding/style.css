@@ -197,18 +197,18 @@
 
   /* Admonition Colours */
   --wiki-ad-note: var(--wiki-test);
-  --wiki-ad-abstract: var(--wiki-test);
-  --wiki-ad-info: var(--wiki-test);
-  --wiki-ad-tip: var(--wiki-test);
-  --wiki-ad-success: var(--wiki-test);
-  --wiki-ad-question: var(--wiki-test);
-  --wiki-ad-warning: var(--wiki-test);
-  --wiki-ad-failure: var(--wiki-test);
-  --wiki-ad-danger: var(--wiki-test);
-  --wiki-ad-bug: var(--wiki-test);
-  --wiki-ad-example: var(--wiki-test);
-  --wiki-ad-quote: var(--wiki-test);
-  --wiki-ad-draft: var(--wiki-test)
+  --wiki-ad-abstract: var(--wiki-dark-teal);
+  --wiki-ad-info: var(--wiki-data-blue);
+  --wiki-ad-tip: var(--wiki-burgundy);
+  --wiki-ad-success: var(--wiki-success);
+  --wiki-ad-question: var(--wiki-burgundy);
+  --wiki-ad-warning: var(--wiki-warning);
+  --wiki-ad-failure: var(--wiki-failure);
+  --wiki-ad-danger: var(--wiki-failure);
+  --wiki-ad-bug: var(--wiki-failure);
+  --wiki-ad-example: var(--wiki-data-blue);
+  --wiki-ad-quote: var(--wiki-deep-indigo-50-d);
+  --wiki-ad-draft: var(--wiki-warning)
 }
 
 /*
@@ -226,44 +226,44 @@
   Primary colour shades - Affects: top header bar background, sidebar header, active 
   navigation, primary buttons, and various “brand” surfaces. 
 */
-  --md-primary-fg-color: var(--wiki-test);                              /* Main header/nav brand color */
-  --md-primary-fg-color--light: var(--wiki-test);                  /* Lighter brand shade (subtle states) */
-  --md-primary-fg-color--dark: var(--wiki-test);                   /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color: var(--wiki-test);                               /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: var(--wiki-test); /* Softer on-primary text/icons */
+  --md-primary-fg-color: var(--wiki-deep-indigo);                              /* Main header/nav brand color */
+  --md-primary-fg-color--light: var(--wiki-deep-indigo-20-l);                  /* Lighter brand shade (subtle states) */
+  --md-primary-fg-color--dark: var(--wiki-deep-indigo-30-d);                   /* Darker brand shade (pressed/strong states) */
+  --md-primary-bg-color: var(--wiki-n0);                               /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70); /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-test);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: var(--wiki-test); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-test);                                    /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: var(--wiki-test);      /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-data-blue);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-data-blue) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-n0);                                    /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);      /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color: var(--wiki-test);            /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-test);     /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter: var(--wiki-test);   /* Tertiary text (very muted UI text) */
-  --md-default-fg-color--lightest: var(--wiki-test);  /* Dividers, borders, hairlines */
+  --md-default-fg-color: var(--wiki-deep-indigo-80-d);            /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-deep-indigo-60-d);     /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-deep-indigo-40-d);   /* Tertiary text (very muted UI text) */
+  --md-default-fg-color--lightest: var(--wiki-deep-indigo-95-l);  /* Dividers, borders, hairlines */
 
 /* 
   Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
 */
-  --md-default-bg-color: var(--wiki-test);                                 /* Main page background */
-  --md-default-bg-color--light: var(--wiki-test);   /* Light overlays / subtle panels */
-  --md-default-bg-color--lighter: var(--wiki-test); /* Transparent overlays */
-  --md-default-bg-color--lightest: var(--wiki-test);/* Very faint overlay layers */
+  --md-default-bg-color: var(--wiki-n0);                                 /* Main page background */
+  --md-default-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);   /* Light overlays / subtle panels */
+  --md-default-bg-color--lighter: hsl(from var(--wiki-n0) h s l / 0.30); /* Transparent overlays */
+  --md-default-bg-color--lightest: hsl(from var(--wiki-n0) h s l / 0.12);/* Very faint overlay layers */
 
 /* 
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
-  --md-code-fg-color: var(--wiki-test);               /* Code text */
-  --md-code-bg-color: var(--wiki-test);               /* Code block & inline code background */
+  --md-code-fg-color: var(--wiki-deep-indigo-50-d);               /* Code text */
+  --md-code-bg-color: var(--wiki-deep-indigo-95-l);               /* Code block & inline code background */
 
 
 /*
@@ -275,61 +275,61 @@
     - specials lean mexican-pink
     - numbers lean red
 */
-  --md-code-hl-color: var(--wiki-test);     /* Highlighted line background / emphasis */
-  --md-code-hl-number-color: var(--wiki-test);                         /* Numbers */
-  --md-code-hl-special-color: var(--wiki-test);               /* Special tokens (decorators, special names) */
-  --md-code-hl-function-color: var(--wiki-test);        /* Function names */
-  --md-code-hl-constant-color: var(--wiki-test);                 /* Constants */
-  --md-code-hl-keyword-color: var(--wiki-test);                     /* Keywords (if/else/return) */
-  --md-code-hl-string-color: var(--wiki-test);                /* Strings */
-  --md-code-hl-name-color: var(--wiki-test);                   /* General “name” tokens default to code fg */
-  --md-code-hl-operator-color: var(--wiki-test);     /* Operators */
-  --md-code-hl-punctuation-color: var(--wiki-test);  /* Punctuation */
-  --md-code-hl-comment-color: var(--wiki-test);                /* Comments (muted) */
-  --md-code-hl-generic-color: var(--wiki-test);      /* Generic tokens */
-  --md-code-hl-variable-color: var(--wiki-test);     /* Variables */
+  --md-code-hl-color: hsl(from var(--wiki-lavender) h s l / 0.35);     /* Highlighted line background / emphasis */
+  --md-code-hl-number-color: var(--wiki-failure);                         /* Numbers */
+  --md-code-hl-special-color: var(--wiki-lavender);               /* Special tokens (decorators, special names) */
+  --md-code-hl-function-color: var(--wiki-burgundy-20-d);        /* Function names */
+  --md-code-hl-constant-color: var(--wiki-data-blue-20-d);                 /* Constants */
+  --md-code-hl-keyword-color: var(--wiki-deep-indigo);                     /* Keywords (if/else/return) */
+  --md-code-hl-string-color: var(--wiki-clear-sky-30-d);                /* Strings */
+  --md-code-hl-name-color: var(--md-code-fg-color);                   /* General “name” tokens default to code fg */
+  --md-code-hl-operator-color: var(--md-default-fg-color--light);     /* Operators */
+  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);  /* Punctuation */
+  --md-code-hl-comment-color: var(--wiki-deep-indigo-50-l);                /* Comments (muted) */
+  --md-code-hl-generic-color: var(--md-default-fg-color--light);      /* Generic tokens */
+  --md-code-hl-variable-color: var(--md-default-fg-color--light);     /* Variables */
 
 
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--wiki-test);                   /* Main body text */
-  --md-typeset-a-color: var(--wiki-test);                      /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-test);                /* <mark> highlight background */
-  --md-typeset-del-color: var(--wiki-test);   /* <del> background */
-  --md-typeset-ins-color: var(--wiki-test); /* <ins> background */
+  --md-typeset-color: var(--md-default-fg-color);                   /* Main body text */
+  --md-typeset-a-color: var(--wiki-data-blue-20-d);                      /* Link color in content*/
+  --md-typeset-mark-color: var(--wiki-lavender-70-l);                /* <mark> highlight background */
+  --md-typeset-del-color: hsl(from var(--wiki-failure) h s l / 0.15);   /* <del> background */
+  --md-typeset-ins-color: hsl(from var(--wiki-success) h s l / 0.15); /* <ins> background */
 
 
 /*
 kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 */
-  --md-typeset-kbd-color: var(--wiki-test);                /* Keycap background */
-  --md-typeset-kbd-accent-color: var(--wiki-test);               /* Keycap highlight */
-  --md-typeset-kbd-border-color: var(--wiki-test);         /* Keycap border */
+  --md-typeset-kbd-color: var(--wiki-deep-indigo-95-l);                /* Keycap background */
+  --md-typeset-kbd-accent-color: var(--wiki-n0);               /* Keycap highlight */
+  --md-typeset-kbd-border-color: var(--wiki-deep-indigo-70-l);         /* Keycap border */
 
 
 /* 
 Tables - Affects: table grid/borders in content.
 */
-  --md-typeset-table-color: var(--wiki-test);              /* Table border/grid line color */
+  --md-typeset-table-color: var(--wiki-deep-indigo-90-l);              /* Table border/grid line color */
 
 
 /* 
   Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
   (Specific admonition variants apply their own accents on top.)
 */
-  --md-admonition-fg-color: var(--wiki-test);           /* Text in admonitions */
-  --md-admonition-bg-color: var(--wiki-test);              /* Admonition background (neutral base) */
+  --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
+  --md-admonition-bg-color: var(--wiki-deep-indigo-95-l);              /* Admonition background (neutral base) */
 
 
 /* 
   Footer - Affects: footer background + footer text. 
 */
-  --md-footer-bg-color: var(--wiki-test);                              /* Footer background */
-  --md-footer-bg-color--dark: var(--wiki-test);                        /* Footer bottom strip / deeper section */
-  --md-footer-fg-color: var(--wiki-test);                           /* Primary footer text/icons */
-  --md-footer-fg-color--light: var(--wiki-test);  /* Secondary footer text */
-  --md-footer-fg-color--lighter: var(--wiki-test);/* Tertiary footer text */
+  --md-footer-bg-color: var(--wiki-deep-indigo-80-d);                              /* Footer background */
+  --md-footer-bg-color--dark: var(--wiki-deep-indigo-90-d);                        /* Footer bottom strip / deeper section */
+  --md-footer-fg-color: var(--wiki-golden-95-l);                           /* Primary footer text/icons */
+  --md-footer-fg-color--light: hsl(from var(--wiki-golden) h s l / 0.75);  /* Secondary footer text */
+  --md-footer-fg-color--lighter: hsl(from var(--wiki-golden) h s l / 0.50);/* Tertiary footer text */
 
 
 /* 
