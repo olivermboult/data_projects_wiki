@@ -18,209 +18,197 @@
 */
 
 :root {
-  /* Main Colours */
-  --wiki-indigo: #185B84;
-  --wiki-bleu: #0395FA;
-  --wiki-midnight-green: #00515C;
-  --wiki-persian-green: #1DAB98;
-  --wiki-emerald: #00D987;
-  --wiki-tea-green: #B4F9CD;
-  --wiki-mustard: #FFDE83;
-  --wiki-mexican-pink: #DC0D7F;
+  /* Primary Colours */
+  --wiki-deep-indigo: #1F2A64;
+  --wiki-data-blue: #126FB1;
+  --wiki-dark-teal: #0F6F66;
+  --wiki-burgundy: #630C2B;
 
-  /* Inidigo - Darker variants*/
-  --wiki-indigo-10-d: color-mix(in oklab, var(--wiki-indigo), black 10%);
-  --wiki-indigo-20-d: color-mix(in oklab, var(--wiki-indigo), black 20%);
-  --wiki-indigo-30-d: color-mix(in oklab, var(--wiki-indigo), black 30%);
-  --wiki-indigo-40-d: color-mix(in oklab, var(--wiki-indigo), black 40%);
-  --wiki-indigo-50-d: color-mix(in oklab, var(--wiki-indigo), black 50%);
-  --wiki-indigo-60-d: color-mix(in oklab, var(--wiki-indigo), black 60%);
-  --wiki-indigo-70-d: color-mix(in oklab, var(--wiki-indigo), black 70%);
-  --wiki-indigo-80-d: color-mix(in oklab, var(--wiki-indigo), black 80%);
-  --wiki-indigo-90-d: color-mix(in oklab, var(--wiki-indigo), black 90%);
-  /* indigo - Lighter variants*/
-  --wiki-indigo-10-l: color-mix(in oklab, var(--wiki-indigo), white 10%);
-  --wiki-indigo-20-l: color-mix(in oklab, var(--wiki-indigo), white 20%);
-  --wiki-indigo-30-l: color-mix(in oklab, var(--wiki-indigo), white 30%);
-  --wiki-indigo-40-l: color-mix(in oklab, var(--wiki-indigo), white 40%);
-  --wiki-indigo-50-l: color-mix(in oklab, var(--wiki-indigo), white 50%);
-  --wiki-indigo-60-l: color-mix(in oklab, var(--wiki-indigo), white 60%);
-  --wiki-indigo-70-l: color-mix(in oklab, var(--wiki-indigo), white 70%);
-  --wiki-indigo-90-l: color-mix(in oklab, var(--wiki-indigo), white 90%);
-  --wiki-indigo-95-l: color-mix(in oklab, var(--wiki-indigo), white 95%);
-
-  /* Bleu - Darker variants*/
-  --wiki-bleu-10-d: color-mix(in oklab, var(--wiki-bleu), black 10%);
-  --wiki-bleu-20-d: color-mix(in oklab, var(--wiki-bleu), black 20%);
-  --wiki-bleu-30-d: color-mix(in oklab, var(--wiki-bleu), black 30%);
-  --wiki-bleu-40-d: color-mix(in oklab, var(--wiki-bleu), black 40%);
-  --wiki-bleu-50-d: color-mix(in oklab, var(--wiki-bleu), black 50%);
-  --wiki-bleu-60-d: color-mix(in oklab, var(--wiki-bleu), black 60%);
-  --wiki-bleu-70-d: color-mix(in oklab, var(--wiki-bleu), black 70%);
-  --wiki-bleu-80-d: color-mix(in oklab, var(--wiki-bleu), black 80%);
-  --wiki-bleu-90-d: color-mix(in oklab, var(--wiki-bleu), black 90%);
-  /* Bleu - Lighter variants*/
-  --wiki-bleu-10-l: color-mix(in oklab, var(--wiki-bleu), white 10%);
-  --wiki-bleu-20-l: color-mix(in oklab, var(--wiki-bleu), white 20%);
-  --wiki-bleu-30-l: color-mix(in oklab, var(--wiki-bleu), white 30%);
-  --wiki-bleu-40-l: color-mix(in oklab, var(--wiki-bleu), white 40%);
-  --wiki-bleu-50-l: color-mix(in oklab, var(--wiki-bleu), white 50%);
-  --wiki-bleu-60-l: color-mix(in oklab, var(--wiki-bleu), white 60%);
-  --wiki-bleu-70-l: color-mix(in oklab, var(--wiki-bleu), white 70%);
-  --wiki-bleu-90-l: color-mix(in oklab, var(--wiki-bleu), white 90%);
-  --wiki-bleu-95-l: color-mix(in oklab, var(--wiki-bleu), white 95%);
-
-  /* Midnight Green - Darker variants*/
-  --wiki-midnight-green-10-d: color-mix(in oklab, var(--wiki-midnight-green), black 10%);
-  --wiki-midnight-green-20-d: color-mix(in oklab, var(--wiki-midnight-green), black 20%);
-  --wiki-midnight-green-30-d: color-mix(in oklab, var(--wiki-midnight-green), black 30%);
-  --wiki-midnight-green-40-d: color-mix(in oklab, var(--wiki-midnight-green), black 40%);
-  --wiki-midnight-green-50-d: color-mix(in oklab, var(--wiki-midnight-green), black 50%);
-  --wiki-midnight-green-60-d: color-mix(in oklab, var(--wiki-midnight-green), black 60%);
-  --wiki-midnight-green-70-d: color-mix(in oklab, var(--wiki-midnight-green), black 70%);
-  --wiki-midnight-green-80-d: color-mix(in oklab, var(--wiki-midnight-green), black 80%);
-  --wiki-midnight-green-90-d: color-mix(in oklab, var(--wiki-midnight-green), black 90%);
-  /* Midnight Green - Lighter variants*/
-  --wiki-midnight-green-10-l: color-mix(in oklab, var(--wiki-midnight-green), white 10%);
-  --wiki-midnight-green-20-l: color-mix(in oklab, var(--wiki-midnight-green), white 20%);
-  --wiki-midnight-green-30-l: color-mix(in oklab, var(--wiki-midnight-green), white 30%);
-  --wiki-midnight-green-40-l: color-mix(in oklab, var(--wiki-midnight-green), white 40%);
-  --wiki-midnight-green-50-l: color-mix(in oklab, var(--wiki-midnight-green), white 50%);
-  --wiki-midnight-green-60-l: color-mix(in oklab, var(--wiki-midnight-green), white 60%);
-  --wiki-midnight-green-70-l: color-mix(in oklab, var(--wiki-midnight-green), white 70%);
-  --wiki-midnight-green-90-l: color-mix(in oklab, var(--wiki-midnight-green), white 90%);
-  --wiki-midnight-green-95-l: color-mix(in oklab, var(--wiki-midnight-green), white 95%);
-
-  /* Persian Green - Darker variants*/
-  --wiki-persian-green-10-d: color-mix(in oklab, var(--wiki-persian-green), black 10%);
-  --wiki-persian-green-20-d: color-mix(in oklab, var(--wiki-persian-green), black 20%);
-  --wiki-persian-green-30-d: color-mix(in oklab, var(--wiki-persian-green), black 30%);
-  --wiki-persian-green-40-d: color-mix(in oklab, var(--wiki-persian-green), black 40%);
-  --wiki-persian-green-50-d: color-mix(in oklab, var(--wiki-persian-green), black 50%);
-  --wiki-persian-green-60-d: color-mix(in oklab, var(--wiki-persian-green), black 60%);
-  --wiki-persian-green-70-d: color-mix(in oklab, var(--wiki-persian-green), black 70%);
-  --wiki-persian-green-80-d: color-mix(in oklab, var(--wiki-persian-green), black 80%);
-  --wiki-persian-green-90-d: color-mix(in oklab, var(--wiki-persian-green), black 90%);
-  /* Persian Green - Lighter variants*/
-  --wiki-persian-green-10-l: color-mix(in oklab, var(--wiki-persian-green), white 10%);
-  --wiki-persian-green-20-l: color-mix(in oklab, var(--wiki-persian-green), white 20%);
-  --wiki-persian-green-30-l: color-mix(in oklab, var(--wiki-persian-green), white 30%);
-  --wiki-persian-green-40-l: color-mix(in oklab, var(--wiki-persian-green), white 40%);
-  --wiki-persian-green-50-l: color-mix(in oklab, var(--wiki-persian-green), white 50%);
-  --wiki-persian-green-60-l: color-mix(in oklab, var(--wiki-persian-green), white 60%);
-  --wiki-persian-green-70-l: color-mix(in oklab, var(--wiki-persian-green), white 70%);
-  --wiki-persian-green-90-l: color-mix(in oklab, var(--wiki-persian-green), white 90%);
-  --wiki-persian-green-95-l: color-mix(in oklab, var(--wiki-persian-green), white 95%);
-
-  /* Emerald - Darker variants*/
-  --wiki-emerald-10-d: color-mix(in oklab, var(--wiki-emerald), black 10%);
-  --wiki-emerald-20-d: color-mix(in oklab, var(--wiki-emerald), black 20%);
-  --wiki-emerald-30-d: color-mix(in oklab, var(--wiki-emerald), black 30%);
-  --wiki-emerald-40-d: color-mix(in oklab, var(--wiki-emerald), black 40%);
-  --wiki-emerald-50-d: color-mix(in oklab, var(--wiki-emerald), black 50%);
-  --wiki-emerald-60-d: color-mix(in oklab, var(--wiki-emerald), black 60%);
-  --wiki-emerald-70-d: color-mix(in oklab, var(--wiki-emerald), black 70%);
-  --wiki-emerald-80-d: color-mix(in oklab, var(--wiki-emerald), black 80%);
-  --wiki-emerald-90-d: color-mix(in oklab, var(--wiki-emerald), black 90%);
-  /* Emerald - Lighter variants*/
-  --wiki-emerald-10-l: color-mix(in oklab, var(--wiki-emerald), white 10%);
-  --wiki-emerald-20-l: color-mix(in oklab, var(--wiki-emerald), white 20%);
-  --wiki-emerald-30-l: color-mix(in oklab, var(--wiki-emerald), white 30%);
-  --wiki-emerald-40-l: color-mix(in oklab, var(--wiki-emerald), white 40%);
-  --wiki-emerald-50-l: color-mix(in oklab, var(--wiki-emerald), white 50%);
-  --wiki-emerald-60-l: color-mix(in oklab, var(--wiki-emerald), white 60%);
-  --wiki-emerald-70-l: color-mix(in oklab, var(--wiki-emerald), white 70%);
-  --wiki-emerald-90-l: color-mix(in oklab, var(--wiki-emerald), white 90%);
-  --wiki-emerald-95-l: color-mix(in oklab, var(--wiki-emerald), white 95%);
-
-  /* Tea Green - Darker variants*/
-  --wiki-tea-green-10-d: color-mix(in oklab, var(--wiki-tea-green), black 10%);
-  --wiki-tea-green-20-d: color-mix(in oklab, var(--wiki-tea-green), black 20%);
-  --wiki-tea-green-30-d: color-mix(in oklab, var(--wiki-tea-green), black 30%);
-  --wiki-tea-green-40-d: color-mix(in oklab, var(--wiki-tea-green), black 40%);
-  --wiki-tea-green-50-d: color-mix(in oklab, var(--wiki-tea-green), black 50%);
-  --wiki-tea-green-60-d: color-mix(in oklab, var(--wiki-tea-green), black 60%);
-  --wiki-tea-green-70-d: color-mix(in oklab, var(--wiki-tea-green), black 70%);
-  --wiki-tea-green-80-d: color-mix(in oklab, var(--wiki-tea-green), black 80%);
-  --wiki-tea-green-90-d: color-mix(in oklab, var(--wiki-tea-green), black 90%);
-  /* Tea Green - Lighter variants*/
-  --wiki-tea-green-10-l: color-mix(in oklab, var(--wiki-tea-green), white 10%);
-  --wiki-tea-green-20-l: color-mix(in oklab, var(--wiki-tea-green), white 20%);
-  --wiki-tea-green-30-l: color-mix(in oklab, var(--wiki-tea-green), white 30%);
-  --wiki-tea-green-40-l: color-mix(in oklab, var(--wiki-tea-green), white 40%);
-  --wiki-tea-green-50-l: color-mix(in oklab, var(--wiki-tea-green), white 50%);
-  --wiki-tea-green-60-l: color-mix(in oklab, var(--wiki-tea-green), white 60%);
-  --wiki-tea-green-70-l: color-mix(in oklab, var(--wiki-tea-green), white 70%);
-  --wiki-tea-green-90-l: color-mix(in oklab, var(--wiki-tea-green), white 90%);
-  --wiki-tea-green-95-l: color-mix(in oklab, var(--wiki-tea-green), white 95%);
-
-  /* Mustard - Darker variants*/
-  --wiki-mustard-10-d: color-mix(in oklab, var(--wiki-mustard), black 10%);
-  --wiki-mustard-20-d: color-mix(in oklab, var(--wiki-mustard), black 20%);
-  --wiki-mustard-30-d: color-mix(in oklab, var(--wiki-mustard), black 30%);
-  --wiki-mustard-40-d: color-mix(in oklab, var(--wiki-mustard), black 40%);
-  --wiki-mustard-50-d: color-mix(in oklab, var(--wiki-mustard), black 50%);
-  --wiki-mustard-60-d: color-mix(in oklab, var(--wiki-mustard), black 60%);
-  --wiki-mustard-70-d: color-mix(in oklab, var(--wiki-mustard), black 70%);
-  --wiki-mustard-80-d: color-mix(in oklab, var(--wiki-mustard), black 80%);
-  --wiki-mustard-90-d: color-mix(in oklab, var(--wiki-mustard), black 90%);
-  /* Mustard - Lighter variants*/
-  --wiki-mustard-10-l: color-mix(in oklab, var(--wiki-mustard), white 10%);
-  --wiki-mustard-20-l: color-mix(in oklab, var(--wiki-mustard), white 20%);
-  --wiki-mustard-30-l: color-mix(in oklab, var(--wiki-mustard), white 30%);
-  --wiki-mustard-40-l: color-mix(in oklab, var(--wiki-mustard), white 40%);
-  --wiki-mustard-50-l: color-mix(in oklab, var(--wiki-mustard), white 50%);
-  --wiki-mustard-60-l: color-mix(in oklab, var(--wiki-mustard), white 60%);
-  --wiki-mustard-70-l: color-mix(in oklab, var(--wiki-mustard), white 70%);
-  --wiki-mustard-90-l: color-mix(in oklab, var(--wiki-mustard), white 90%);
-  --wiki-mustard-95-l: color-mix(in oklab, var(--wiki-mustard), white 95%);
-
-  /* Mexican Pink - Darker variants*/
-  --wiki-mexican-pink-10-d: color-mix(in oklab, var(--wiki-mexican-pink), black 10%);
-  --wiki-mexican-pink-20-d: color-mix(in oklab, var(--wiki-mexican-pink), black 20%);
-  --wiki-mexican-pink-30-d: color-mix(in oklab, var(--wiki-mexican-pink), black 30%);
-  --wiki-mexican-pink-40-d: color-mix(in oklab, var(--wiki-mexican-pink), black 40%);
-  --wiki-mexican-pink-50-d: color-mix(in oklab, var(--wiki-mexican-pink), black 50%);
-  --wiki-mexican-pink-60-d: color-mix(in oklab, var(--wiki-mexican-pink), black 60%);
-  --wiki-mexican-pink-70-d: color-mix(in oklab, var(--wiki-mexican-pink), black 70%);
-  --wiki-mexican-pink-80-d: color-mix(in oklab, var(--wiki-mexican-pink), black 80%);
-  --wiki-mexican-pink-90-d: color-mix(in oklab, var(--wiki-mexican-pink), black 90%);
-  /* Mexican Pink - Lighter variants*/
-  --wiki-mexican-pink-10-l: color-mix(in oklab, var(--wiki-mexican-pink), white 10%);
-  --wiki-mexican-pink-20-l: color-mix(in oklab, var(--wiki-mexican-pink), white 20%);
-  --wiki-mexican-pink-30-l: color-mix(in oklab, var(--wiki-mexican-pink), white 30%);
-  --wiki-mexican-pink-40-l: color-mix(in oklab, var(--wiki-mexican-pink), white 40%);
-  --wiki-mexican-pink-50-l: color-mix(in oklab, var(--wiki-mexican-pink), white 50%);
-  --wiki-mexican-pink-60-l: color-mix(in oklab, var(--wiki-mexican-pink), white 60%);
-  --wiki-mexican-pink-70-l: color-mix(in oklab, var(--wiki-mexican-pink), white 70%);
-  --wiki-mexican-pink-90-l: color-mix(in oklab, var(--wiki-mexican-pink), white 90%);
-  --wiki-mexican-pink-95-l: color-mix(in oklab, var(--wiki-mexican-pink), white 95%);
+  /* Secondary Colours */
+  --wiki-clear-sky: #00D2FF;
+  --wiki-golden: #F5D26E;
+  --wiki-lavender: #B08FD6;
 
   /* RAG Colours */
-  --wiki-red: #D2222D;
-  --wiki-amber: #FFBF00;
-  --wiki-green: #238823;
+  --wiki-failure: #C70000;
+  --wiki-warning: #FFBF00;
+  --wiki-success: #27693F;
 
-  /* Other Colours */
-  --wiki-white: #FFFFFF;
-  --wiki-black: #000000;
-  --wiki-indigo-background: hsl(from var(--wiki-indigo) h calc(s * 0.35) calc(l * 0.45));
-  --wiki-indigo-code-background: hsl(from var(--wiki-indigo) h calc(s * 0.45) calc(l * 0.55));
+    /* Other Colours */
+  --wiki-n0: #FFFFFF;
+  --wiki-n100: #F8FAFC;
+  --wiki-n200: #F1F5F9;
+  --wiki-n300: #E2E8F0;
+  --wiki-n400: #94A3B8;
+  --wiki-n500: #64748B;
+  --wiki-n600: #475569;
+  --wiki-n700: #334155;
+  --wiki-n800: #1E293B;
+  --wiki-n900: #0F172A;
+  --wiki-n1000: #000000;
+  
+  --wiki-test: #FF007F;
+  /* Deep Inidigo - Darker variants*/
+  --wiki-deep-indigo-10-d: color-mix(in oklab, var(--wiki-deep-indigo), black 10%);
+  --wiki-deep-indigo-20-d: color-mix(in oklab, var(--wiki-deep-indigo), black 20%);
+  --wiki-deep-indigo-30-d: color-mix(in oklab, var(--wiki-deep-indigo), black 30%);
+  --wiki-deep-indigo-40-d: color-mix(in oklab, var(--wiki-deep-indigo), black 40%);
+  --wiki-deep-indigo-50-d: color-mix(in oklab, var(--wiki-deep-indigo), black 50%);
+  --wiki-deep-indigo-60-d: color-mix(in oklab, var(--wiki-deep-indigo), black 60%);
+  --wiki-deep-indigo-70-d: color-mix(in oklab, var(--wiki-deep-indigo), black 70%);
+  --wiki-deep-indigo-80-d: color-mix(in oklab, var(--wiki-deep-indigo), black 80%);
+  --wiki-deep-indigo-90-d: color-mix(in oklab, var(--wiki-deep-indigo), black 90%);
+  /* Deep Indigo - Lighter variants*/
+  --wiki-deep-indigo-10-l: color-mix(in oklab, var(--wiki-deep-indigo), white 10%);
+  --wiki-deep-indigo-20-l: color-mix(in oklab, var(--wiki-deep-indigo), white 20%);
+  --wiki-deep-indigo-30-l: color-mix(in oklab, var(--wiki-deep-indigo), white 30%);
+  --wiki-deep-indigo-40-l: color-mix(in oklab, var(--wiki-deep-indigo), white 40%);
+  --wiki-deep-indigo-50-l: color-mix(in oklab, var(--wiki-deep-indigo), white 50%);
+  --wiki-deep-indigo-60-l: color-mix(in oklab, var(--wiki-deep-indigo), white 60%);
+  --wiki-deep-indigo-70-l: color-mix(in oklab, var(--wiki-deep-indigo), white 70%);
+  --wiki-deep-indigo-90-l: color-mix(in oklab, var(--wiki-deep-indigo), white 90%);
+  --wiki-deep-indigo-95-l: color-mix(in oklab, var(--wiki-deep-indigo), white 95%);
+
+  /* Data Blue - Darker variants*/
+  --wiki-data-blue-10-d: color-mix(in oklab, var(--wiki-data-blue), black 10%);
+  --wiki-data-blue-20-d: color-mix(in oklab, var(--wiki-data-blue), black 20%);
+  --wiki-data-blue-30-d: color-mix(in oklab, var(--wiki-data-blue), black 30%);
+  --wiki-data-blue-40-d: color-mix(in oklab, var(--wiki-data-blue), black 40%);
+  --wiki-data-blue-50-d: color-mix(in oklab, var(--wiki-data-blue), black 50%);
+  --wiki-data-blue-60-d: color-mix(in oklab, var(--wiki-data-blue), black 60%);
+  --wiki-data-blue-70-d: color-mix(in oklab, var(--wiki-data-blue), black 70%);
+  --wiki-data-blue-80-d: color-mix(in oklab, var(--wiki-data-blue), black 80%);
+  --wiki-data-blue-90-d: color-mix(in oklab, var(--wiki-data-blue), black 90%);
+  /* Data Blue - Lighter variants*/
+  --wiki-data-blue-10-l: color-mix(in oklab, var(--wiki-data-blue), white 10%);
+  --wiki-data-blue-20-l: color-mix(in oklab, var(--wiki-data-blue), white 20%);
+  --wiki-data-blue-30-l: color-mix(in oklab, var(--wiki-data-blue), white 30%);
+  --wiki-data-blue-40-l: color-mix(in oklab, var(--wiki-data-blue), white 40%);
+  --wiki-data-blue-50-l: color-mix(in oklab, var(--wiki-data-blue), white 50%);
+  --wiki-data-blue-60-l: color-mix(in oklab, var(--wiki-data-blue), white 60%);
+  --wiki-data-blue-70-l: color-mix(in oklab, var(--wiki-data-blue), white 70%);
+  --wiki-data-blue-90-l: color-mix(in oklab, var(--wiki-data-blue), white 90%);
+  --wiki-data-blue-95-l: color-mix(in oklab, var(--wiki-data-blue), white 95%);
+
+  /* Dark Teal - Darker variants*/
+  --wiki-dark-teal-10-d: color-mix(in oklab, var(--wiki-dark-teal), black 10%);
+  --wiki-dark-teal-20-d: color-mix(in oklab, var(--wiki-dark-teal), black 20%);
+  --wiki-dark-teal-30-d: color-mix(in oklab, var(--wiki-dark-teal), black 30%);
+  --wiki-dark-teal-40-d: color-mix(in oklab, var(--wiki-dark-teal), black 40%);
+  --wiki-dark-teal-50-d: color-mix(in oklab, var(--wiki-dark-teal), black 50%);
+  --wiki-dark-teal-60-d: color-mix(in oklab, var(--wiki-dark-teal), black 60%);
+  --wiki-dark-teal-70-d: color-mix(in oklab, var(--wiki-dark-teal), black 70%);
+  --wiki-dark-teal-80-d: color-mix(in oklab, var(--wiki-dark-teal), black 80%);
+  --wiki-dark-teal-90-d: color-mix(in oklab, var(--wiki-dark-teal), black 90%);
+  /* Dark Teal - Lighter variants*/
+  --wiki-dark-teal-10-l: color-mix(in oklab, var(--wiki-dark-teal), white 10%);
+  --wiki-dark-teal-20-l: color-mix(in oklab, var(--wiki-dark-teal), white 20%);
+  --wiki-dark-teal-30-l: color-mix(in oklab, var(--wiki-dark-teal), white 30%);
+  --wiki-dark-teal-40-l: color-mix(in oklab, var(--wiki-dark-teal), white 40%);
+  --wiki-dark-teal-50-l: color-mix(in oklab, var(--wiki-dark-teal), white 50%);
+  --wiki-dark-teal-60-l: color-mix(in oklab, var(--wiki-dark-teal), white 60%);
+  --wiki-dark-teal-70-l: color-mix(in oklab, var(--wiki-dark-teal), white 70%);
+  --wiki-dark-teal-90-l: color-mix(in oklab, var(--wiki-dark-teal), white 90%);
+  --wiki-dark-teal-95-l: color-mix(in oklab, var(--wiki-dark-teal), white 95%);
+
+  /* Burgundy - Darker variants*/
+  --wiki-burgundy-10-d: color-mix(in oklab, var(--wiki-burgundy), black 10%);
+  --wiki-burgundy-20-d: color-mix(in oklab, var(--wiki-burgundy), black 20%);
+  --wiki-burgundy-30-d: color-mix(in oklab, var(--wiki-burgundy), black 30%);
+  --wiki-burgundy-40-d: color-mix(in oklab, var(--wiki-burgundy), black 40%);
+  --wiki-burgundy-50-d: color-mix(in oklab, var(--wiki-burgundy), black 50%);
+  --wiki-burgundy-60-d: color-mix(in oklab, var(--wiki-burgundy), black 60%);
+  --wiki-burgundy-70-d: color-mix(in oklab, var(--wiki-burgundy), black 70%);
+  --wiki-burgundy-80-d: color-mix(in oklab, var(--wiki-burgundy), black 80%);
+  --wiki-burgundy-90-d: color-mix(in oklab, var(--wiki-burgundy), black 90%);
+  /* Burgundy - Lighter variants*/
+  --wiki-burgundy-10-l: color-mix(in oklab, var(--wiki-burgundy), white 10%);
+  --wiki-burgundy-20-l: color-mix(in oklab, var(--wiki-burgundy), white 20%);
+  --wiki-burgundy-30-l: color-mix(in oklab, var(--wiki-burgundy), white 30%);
+  --wiki-burgundy-40-l: color-mix(in oklab, var(--wiki-burgundy), white 40%);
+  --wiki-burgundy-50-l: color-mix(in oklab, var(--wiki-burgundy), white 50%);
+  --wiki-burgundy-60-l: color-mix(in oklab, var(--wiki-burgundy), white 60%);
+  --wiki-burgundy-70-l: color-mix(in oklab, var(--wiki-burgundy), white 70%);
+  --wiki-burgundy-90-l: color-mix(in oklab, var(--wiki-burgundy), white 90%);
+  --wiki-burgundy-95-l: color-mix(in oklab, var(--wiki-burgundy), white 95%);
+
+  /* Clear Sky - Darker variants*/
+  --wiki-clear-sky-10-d: color-mix(in oklab, var(--wiki-clear-sky), black 10%);
+  --wiki-clear-sky-20-d: color-mix(in oklab, var(--wiki-clear-sky), black 20%);
+  --wiki-clear-sky-30-d: color-mix(in oklab, var(--wiki-clear-sky), black 30%);
+  --wiki-clear-sky-40-d: color-mix(in oklab, var(--wiki-clear-sky), black 40%);
+  --wiki-clear-sky-50-d: color-mix(in oklab, var(--wiki-clear-sky), black 50%);
+  --wiki-clear-sky-60-d: color-mix(in oklab, var(--wiki-clear-sky), black 60%);
+  --wiki-clear-sky-70-d: color-mix(in oklab, var(--wiki-clear-sky), black 70%);
+  --wiki-clear-sky-80-d: color-mix(in oklab, var(--wiki-clear-sky), black 80%);
+  --wiki-clear-sky-90-d: color-mix(in oklab, var(--wiki-clear-sky), black 90%);
+  /* Clear Sky - Lighter variants*/
+  --wiki-clear-sky-10-l: color-mix(in oklab, var(--wiki-clear-sky), white 10%);
+  --wiki-clear-sky-20-l: color-mix(in oklab, var(--wiki-clear-sky), white 20%);
+  --wiki-clear-sky-30-l: color-mix(in oklab, var(--wiki-clear-sky), white 30%);
+  --wiki-clear-sky-40-l: color-mix(in oklab, var(--wiki-clear-sky), white 40%);
+  --wiki-clear-sky-50-l: color-mix(in oklab, var(--wiki-clear-sky), white 50%);
+  --wiki-clear-sky-60-l: color-mix(in oklab, var(--wiki-clear-sky), white 60%);
+  --wiki-clear-sky-70-l: color-mix(in oklab, var(--wiki-clear-sky), white 70%);
+  --wiki-clear-sky-90-l: color-mix(in oklab, var(--wiki-clear-sky), white 90%);
+  --wiki-clear-sky-95-l: color-mix(in oklab, var(--wiki-clear-sky), white 95%);
+
+  /* Golden- Darker variants*/
+  --wiki-golden-10-d: color-mix(in oklab, var(--wiki-golden), black 10%);
+  --wiki-golden-20-d: color-mix(in oklab, var(--wiki-golden), black 20%);
+  --wiki-golden-30-d: color-mix(in oklab, var(--wiki-golden), black 30%);
+  --wiki-golden-40-d: color-mix(in oklab, var(--wiki-golden), black 40%);
+  --wiki-golden-50-d: color-mix(in oklab, var(--wiki-golden), black 50%);
+  --wiki-golden-60-d: color-mix(in oklab, var(--wiki-golden), black 60%);
+  --wiki-golden-70-d: color-mix(in oklab, var(--wiki-golden), black 70%);
+  --wiki-golden-80-d: color-mix(in oklab, var(--wiki-golden), black 80%);
+  --wiki-golden-90-d: color-mix(in oklab, var(--wiki-golden), black 90%);
+  /* Golden - Lighter variants*/
+  --wiki-golden-10-l: color-mix(in oklab, var(--wiki-golden), white 10%);
+  --wiki-golden-20-l: color-mix(in oklab, var(--wiki-golden), white 20%);
+  --wiki-golden-30-l: color-mix(in oklab, var(--wiki-golden), white 30%);
+  --wiki-golden-40-l: color-mix(in oklab, var(--wiki-golden), white 40%);
+  --wiki-golden-50-l: color-mix(in oklab, var(--wiki-golden), white 50%);
+  --wiki-golden-60-l: color-mix(in oklab, var(--wiki-golden), white 60%);
+  --wiki-golden-70-l: color-mix(in oklab, var(--wiki-golden), white 70%);
+  --wiki-golden-90-l: color-mix(in oklab, var(--wiki-golden), white 90%);
+  --wiki-golden-95-l: color-mix(in oklab, var(--wiki-golden), white 95%);
+
+  /* Lavender - Darker variants*/
+  --wiki-lavender-10-d: color-mix(in oklab, var(--wiki-lavender), black 10%);
+  --wiki-lavender-20-d: color-mix(in oklab, var(--wiki-lavender), black 20%);
+  --wiki-lavender-30-d: color-mix(in oklab, var(--wiki-lavender), black 30%);
+  --wiki-lavender-40-d: color-mix(in oklab, var(--wiki-lavender), black 40%);
+  --wiki-lavender-50-d: color-mix(in oklab, var(--wiki-lavender), black 50%);
+  --wiki-lavender-60-d: color-mix(in oklab, var(--wiki-lavender), black 60%);
+  --wiki-lavender-70-d: color-mix(in oklab, var(--wiki-lavender), black 70%);
+  --wiki-lavender-80-d: color-mix(in oklab, var(--wiki-lavender), black 80%);
+  --wiki-lavender-90-d: color-mix(in oklab, var(--wiki-lavender), black 90%);
+  /* Lavender - Lighter variants*/
+  --wiki-lavender-10-l: color-mix(in oklab, var(--wiki-lavender), white 10%);
+  --wiki-lavender-20-l: color-mix(in oklab, var(--wiki-lavender), white 20%);
+  --wiki-lavender-30-l: color-mix(in oklab, var(--wiki-lavender), white 30%);
+  --wiki-lavender-40-l: color-mix(in oklab, var(--wiki-lavender), white 40%);
+  --wiki-lavender-50-l: color-mix(in oklab, var(--wiki-lavender), white 50%);
+  --wiki-lavender-60-l: color-mix(in oklab, var(--wiki-lavender), white 60%);
+  --wiki-lavender-70-l: color-mix(in oklab, var(--wiki-lavender), white 70%);
+  --wiki-lavender-90-l: color-mix(in oklab, var(--wiki-lavender), white 90%);
+  --wiki-lavender-95-l: color-mix(in oklab, var(--wiki-lavender), white 95%);
 
   /* Admonition Colours */
-  --wiki-ad-note: var(--wiki-indigo);
-  --wiki-ad-abstract: var(--wiki-midnight-green);
-  --wiki-ad-info: var(--wiki-bleu);
-  --wiki-ad-tip: var(--wiki-persian-green);
-  --wiki-ad-success: var(--wiki-green);
-  --wiki-ad-question: var(--wiki-persian-green);
-  --wiki-ad-warning: var(--wiki-amber);
-  --wiki-ad-failure: var(--wiki-red);
-  --wiki-ad-danger: var(--wiki-red);
-  --wiki-ad-bug: var(--wiki-red);
-  --wiki-ad-example: var(--wiki-bleu);
-  --wiki-ad-quote: var(--wiki-indigo-50-d);
-  --wiki-ad-draft: var(--wiki-amber)
+  --wiki-ad-note: var(--wiki-test);
+  --wiki-ad-abstract: var(--wiki-test);
+  --wiki-ad-info: var(--wiki-test);
+  --wiki-ad-tip: var(--wiki-test);
+  --wiki-ad-success: var(--wiki-test);
+  --wiki-ad-question: var(--wiki-test);
+  --wiki-ad-warning: var(--wiki-test);
+  --wiki-ad-failure: var(--wiki-test);
+  --wiki-ad-danger: var(--wiki-test);
+  --wiki-ad-bug: var(--wiki-test);
+  --wiki-ad-example: var(--wiki-test);
+  --wiki-ad-quote: var(--wiki-test);
+  --wiki-ad-draft: var(--wiki-test)
 }
 
 /*
@@ -238,44 +226,44 @@
   Primary colour shades - Affects: top header bar background, sidebar header, active 
   navigation, primary buttons, and various “brand” surfaces. 
 */
-  --md-primary-fg-color: var(--wiki-indigo);                              /* Main header/nav brand color */
-  --md-primary-fg-color--light: var(--wiki-indigo-20-l);                  /* Lighter brand shade (subtle states) */
-  --md-primary-fg-color--dark: var(--wiki-indigo-30-d);                   /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color: var(--wiki-white);                               /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70); /* Softer on-primary text/icons */
+  --md-primary-fg-color: var(--wiki-test);                              /* Main header/nav brand color */
+  --md-primary-fg-color--light: var(--wiki-test);                  /* Lighter brand shade (subtle states) */
+  --md-primary-fg-color--dark: var(--wiki-test);                   /* Darker brand shade (pressed/strong states) */
+  --md-primary-bg-color: var(--wiki-test);                               /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: var(--wiki-test); /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-bleu);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-bleu) h s l / 0.12); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-white);                                    /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70);      /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-test);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: var(--wiki-test); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-test);                                    /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: var(--wiki-test);      /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color: var(--wiki-indigo-80-d);            /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-indigo-60-d);     /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter: var(--wiki-indigo-40-d);   /* Tertiary text (very muted UI text) */
-  --md-default-fg-color--lightest: var(--wiki-indigo-95-l);  /* Dividers, borders, hairlines */
+  --md-default-fg-color: var(--wiki-test);            /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-test);     /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-test);   /* Tertiary text (very muted UI text) */
+  --md-default-fg-color--lightest: var(--wiki-test);  /* Dividers, borders, hairlines */
 
 /* 
   Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
 */
-  --md-default-bg-color: var(--wiki-white);                                 /* Main page background */
-  --md-default-bg-color--light: hsl(from var(--wiki-white) h s l / 0.70);   /* Light overlays / subtle panels */
-  --md-default-bg-color--lighter: hsl(from var(--wiki-white) h s l / 0.30); /* Transparent overlays */
-  --md-default-bg-color--lightest: hsl(from var(--wiki-white) h s l / 0.12);/* Very faint overlay layers */
+  --md-default-bg-color: var(--wiki-test);                                 /* Main page background */
+  --md-default-bg-color--light: var(--wiki-test);   /* Light overlays / subtle panels */
+  --md-default-bg-color--lighter: var(--wiki-test); /* Transparent overlays */
+  --md-default-bg-color--lightest: var(--wiki-test);/* Very faint overlay layers */
 
 /* 
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
-  --md-code-fg-color: var(--wiki-indigo-50-d);               /* Code text */
-  --md-code-bg-color: var(--wiki-indigo-95-l);               /* Code block & inline code background */
+  --md-code-fg-color: var(--wiki-test);               /* Code text */
+  --md-code-bg-color: var(--wiki-test);               /* Code block & inline code background */
 
 
 /*
@@ -287,61 +275,61 @@
     - specials lean mexican-pink
     - numbers lean red
 */
-  --md-code-hl-color: hsl(from var(--wiki-mustard) h s l / 0.35);     /* Highlighted line background / emphasis */
-  --md-code-hl-number-color: var(--wiki-red);                         /* Numbers */
-  --md-code-hl-special-color: var(--wiki-mexican-pink);               /* Special tokens (decorators, special names) */
-  --md-code-hl-function-color: var(--wiki-persian-green-20-d);        /* Function names */
-  --md-code-hl-constant-color: var(--wiki-bleu-20-d);                 /* Constants */
-  --md-code-hl-keyword-color: var(--wiki-indigo);                     /* Keywords (if/else/return) */
-  --md-code-hl-string-color: var(--wiki-emerald-30-d);                /* Strings */
-  --md-code-hl-name-color: var(--md-code-fg-color);                   /* General “name” tokens default to code fg */
-  --md-code-hl-operator-color: var(--md-default-fg-color--light);     /* Operators */
-  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);  /* Punctuation */
-  --md-code-hl-comment-color: var(--wiki-indigo-50-l);                /* Comments (muted) */
-  --md-code-hl-generic-color: var(--md-default-fg-color--light);      /* Generic tokens */
-  --md-code-hl-variable-color: var(--md-default-fg-color--light);     /* Variables */
+  --md-code-hl-color: var(--wiki-test);     /* Highlighted line background / emphasis */
+  --md-code-hl-number-color: var(--wiki-test);                         /* Numbers */
+  --md-code-hl-special-color: var(--wiki-test);               /* Special tokens (decorators, special names) */
+  --md-code-hl-function-color: var(--wiki-test);        /* Function names */
+  --md-code-hl-constant-color: var(--wiki-test);                 /* Constants */
+  --md-code-hl-keyword-color: var(--wiki-test);                     /* Keywords (if/else/return) */
+  --md-code-hl-string-color: var(--wiki-test);                /* Strings */
+  --md-code-hl-name-color: var(--wiki-test);                   /* General “name” tokens default to code fg */
+  --md-code-hl-operator-color: var(--wiki-test);     /* Operators */
+  --md-code-hl-punctuation-color: var(--wiki-test);  /* Punctuation */
+  --md-code-hl-comment-color: var(--wiki-test);                /* Comments (muted) */
+  --md-code-hl-generic-color: var(--wiki-test);      /* Generic tokens */
+  --md-code-hl-variable-color: var(--wiki-test);     /* Variables */
 
 
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--md-default-fg-color);                   /* Main body text */
-  --md-typeset-a-color: var(--wiki-bleu-20-d);                      /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-mustard-70-l);                /* <mark> highlight background */
-  --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);   /* <del> background */
-  --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15); /* <ins> background */
+  --md-typeset-color: var(--wiki-test);                   /* Main body text */
+  --md-typeset-a-color: var(--wiki-test);                      /* Link color in content*/
+  --md-typeset-mark-color: var(--wiki-test);                /* <mark> highlight background */
+  --md-typeset-del-color: var(--wiki-test);   /* <del> background */
+  --md-typeset-ins-color: var(--wiki-test); /* <ins> background */
 
 
 /*
 kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 */
-  --md-typeset-kbd-color: var(--wiki-indigo-95-l);                /* Keycap background */
-  --md-typeset-kbd-accent-color: var(--wiki-white);               /* Keycap highlight */
-  --md-typeset-kbd-border-color: var(--wiki-indigo-70-l);         /* Keycap border */
+  --md-typeset-kbd-color: var(--wiki-test);                /* Keycap background */
+  --md-typeset-kbd-accent-color: var(--wiki-test);               /* Keycap highlight */
+  --md-typeset-kbd-border-color: var(--wiki-test);         /* Keycap border */
 
 
 /* 
 Tables - Affects: table grid/borders in content.
 */
-  --md-typeset-table-color: var(--wiki-indigo-90-l);              /* Table border/grid line color */
+  --md-typeset-table-color: var(--wiki-test);              /* Table border/grid line color */
 
 
 /* 
   Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
   (Specific admonition variants apply their own accents on top.)
 */
-  --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
-  --md-admonition-bg-color: var(--wiki-indigo-95-l);              /* Admonition background (neutral base) */
+  --md-admonition-fg-color: var(--wiki-test);           /* Text in admonitions */
+  --md-admonition-bg-color: var(--wiki-test);              /* Admonition background (neutral base) */
 
 
 /* 
   Footer - Affects: footer background + footer text. 
 */
-  --md-footer-bg-color: var(--wiki-indigo-80-d);                              /* Footer background */
-  --md-footer-bg-color--dark: var(--wiki-indigo-90-d);                        /* Footer bottom strip / deeper section */
-  --md-footer-fg-color: var(--wiki-tea-green-95-l);                           /* Primary footer text/icons */
-  --md-footer-fg-color--light: hsl(from var(--wiki-tea-green) h s l / 0.75);  /* Secondary footer text */
-  --md-footer-fg-color--lighter: hsl(from var(--wiki-tea-green) h s l / 0.50);/* Tertiary footer text */
+  --md-footer-bg-color: var(--wiki-test);                              /* Footer background */
+  --md-footer-bg-color--dark: var(--wiki-test);                        /* Footer bottom strip / deeper section */
+  --md-footer-fg-color: var(--wiki-test);                           /* Primary footer text/icons */
+  --md-footer-fg-color--light: var(--wiki-test);  /* Secondary footer text */
+  --md-footer-fg-color--lighter: var(--wiki-test);/* Tertiary footer text */
 
 
 /* 
@@ -349,16 +337,16 @@ Tables - Affects: table grid/borders in content.
   (These are not “colors” you see directly, but they affect perceived polish.)
 */
   --md-shadow-z1:
-    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.05),
-    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.10);
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.05),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.10);
 
   --md-shadow-z2:
-    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.10),
-    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.25);
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.10),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.25);
 
   --md-shadow-z3:
-    0 0.25rem 0.625rem hsl(from var(--wiki-black) h s l / 0.20),
-    0 0 0.0625rem hsl(from var(--wiki-black) h s l / 0.35);
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.20),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.35);
 }
 
 
@@ -693,9 +681,9 @@ Tables - Affects: table grid/borders in content.
 
 .md-typeset .hero {
   /* Component variables (defaults) */
-  --hero-bg-1: var(--wiki-indigo-20-d);
-  --hero-bg-2: var(--wiki-indigo-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-deep-indigo-20-d);
+  --hero-bg-2: var(--wiki-deep-indigo-20-l);
+  --hero-text: var(--wiki-n0);
   --hero-shadow: var(--md-shadow-z2);
   --hero-radius: 12px;
 
@@ -763,51 +751,51 @@ Tables - Affects: table grid/borders in content.
 */
 
 .md-typeset .hero--inidgo {
-  --hero-bg-1: var(--wiki-indigo-20-d);
-  --hero-bg-2: var(--wiki-indigo-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-deep-indigo-20-d);
+  --hero-bg-2: var(--wiki-deep-indigo-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--bleu {
-  --hero-bg-1: var(--wiki-bleu-20-d);
-  --hero-bg-2: var(--wiki-bleu-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-data-blue-20-d);
+  --hero-bg-2: var(--wiki-data-blue-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--midnight-green{
-  --hero-bg-1: var(--wiki-midnight-green-20-d);
-  --hero-bg-2: var(--wiki-midnight-green-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-dark-teal-20-d);
+  --hero-bg-2: var(--wiki-dark-teal-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--persian-green{
-  --hero-bg-1: var(--wiki-persian-green-20-d);
-  --hero-bg-2: var(--wiki-persian-green-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-burgundy-20-d);
+  --hero-bg-2: var(--wiki-burgundy-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--emerald {
-  --hero-bg-1: var(--wiki-emerald-20-d);
-  --hero-bg-2: var(--wiki-emerald-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-clear-sky-20-d);
+  --hero-bg-2: var(--wiki-clear-sky-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--tea-green {
-  --hero-bg-1: var(--wiki-tea-green-20-d);
-  --hero-bg-2: var(--wiki-tea-green-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-golden-20-d);
+  --hero-bg-2: var(--wiki-golden-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--mustard {
-  --hero-bg-1: var(--wiki-mustard-20-d);
-  --hero-bg-2: var(--wiki-mustard-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-lavender-20-d);
+  --hero-bg-2: var(--wiki-lavender-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 .md-typeset .hero--mexican-pink {
-  --hero-bg-1: var(--wiki-mexican-pink-20-d);
-  --hero-bg-2: var(--wiki-mexican-pink-20-l);
-  --hero-text: var(--wiki-white);
+  --hero-bg-1: var(--wiki-lavender-20-d);
+  --hero-bg-2: var(--wiki-lavender-20-l);
+  --hero-text: var(--wiki-n0);
 }
 
 
