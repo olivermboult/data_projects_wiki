@@ -208,7 +208,7 @@
   --wiki-ad-bug: var(--wiki-failure);
   --wiki-ad-example: var(--wiki-data-blue);
   --wiki-ad-quote: var(--wiki-deep-indigo-50-d);
-  --wiki-ad-draft: var(--wiki-warning)
+  --wiki-ad-draft: var(--wiki-warning);
 }
 
 /*
