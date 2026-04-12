@@ -225,11 +225,11 @@
   Primary colour shades - Affects: top header bar background, sidebar header, active 
   navigation, primary buttons, and various “brand” surfaces. 
 */
-  --md-primary-fg-color: var(--wiki-data-blue);     /* Main header/nav brand color */
-  --md-primary-fg-color--light: var(--wiki-test);   /* Lighter brand shade (subtle states) */
-  --md-primary-fg-color--dark: var(--wiki-deep-indigo);    /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color: var(--wiki-n0);            /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: var(--wiki-n200);   /* Softer on-primary text/icons */
+        --md-primary-fg-color: var(--wiki-data-blue);     /* Main header/nav brand color */
+        --md-primary-fg-color--light: var(--wiki-test);   /* Lighter brand shade (subtle states) */
+    --md-primary-fg-color--dark: var(--wiki-deep-indigo); /* Darker brand shade (pressed/strong states) */
+          --md-primary-bg-color: var(--wiki-n0);          /* Text/icons ON primary surfaces (header title/icons) */
+        --md-primary-bg-color--light: var(--wiki-n200);   /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
