@@ -47,7 +47,6 @@
   --wiki-n900: #0F172A;
   --wiki-n1000: #000000;
   
-  --wiki-test: #FF007F;
   /* Deep Inidigo - Darker variants*/
   --wiki-deep-indigo-10-d: color-mix(in oklab, var(--wiki-deep-indigo), black 10%);
   --wiki-deep-indigo-20-d: color-mix(in oklab, var(--wiki-deep-indigo), black 20%);
@@ -196,7 +195,7 @@
   --wiki-lavender-95-l: color-mix(in oklab, var(--wiki-lavender), white 95%);
 
   /* Admonition Colours */
-  --wiki-ad-note: var(--wiki-test);
+  --wiki-ad-note: var(--wiki-deep-indigo);
   --wiki-ad-abstract: var(--wiki-dark-teal);
   --wiki-ad-info: var(--wiki-data-blue);
   --wiki-ad-tip: var(--wiki-burgundy);
@@ -208,7 +207,7 @@
   --wiki-ad-bug: var(--wiki-failure);
   --wiki-ad-example: var(--wiki-data-blue);
   --wiki-ad-quote: var(--wiki-deep-indigo-50-d);
-  --wiki-ad-draft: var(--wiki-warning);
+  --wiki-ad-draft: var(--wiki-warning)
 }
 
 /*
