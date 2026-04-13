@@ -212,119 +212,87 @@
   --wiki-ad-draft:    var(--wiki-golden)
 }
 
-/*
-------------------------------------------------------------------------------------------
-  Material Theme Overrides
-  Light Mode (default)
-------------------------------------------------------------------------------------------
-*/
 
+/* =============================================================================
+   Material for MkDocs – Default (Light) Theme
+   ============================================================================= */
 [data-md-color-scheme="default"] {
 
-/*
-  Primary colour shades - Affects: top header bar background, sidebar header, active 
-  navigation, primary buttons, and various “brand” surfaces. 
-*/
-  --md-primary-fg-color:        var(--wiki-data-blue);  /* Main header banner and navigation header banner color */
-  --md-primary-fg-color--light: var(--wiki-test);       /* Lighter brand shade (subtle states) */
-/*  --md-primary-fg-color--dark:  var(--wiki-n0);         /* Darker brand shade (pressed/strong states) */
-/*  --md-primary-bg-color:        var(--wiki-n0);         /* Text/icons ON primary surfaces (header title/icons) */
-/*  --md-primary-bg-color--light: var(--wiki-n0);         /* Softer on-primary text/icons */
+  /* ---------------------------------------------------------------------------
+     PRIMARY (Brand surfaces)
+     --------------------------------------------------------------------------- */
+  --md-primary-fg-color:        var(--wiki-data-blue);
+  --md-primary-fg-color--light: var(--wiki-data-blue-20-l);
+  --md-primary-fg-color--dark:  var(--wiki-data-blue-30-d);
 
-/*
-  Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
-  and many “action” affordances. 
-*/
-/*  --md-accent-fg-color:               var(--wiki-n0);   /* Hover/active emphasis (clickable items) */
-/*  --md-accent-fg-color--transparent:  var(--wiki-n0);   /* Soft highlight/ripple backgrounds */
-/*  --md-accent-bg-color:               var(--wiki-n0);   /* Text/icons ON accent surfaces (rare) */
-/*  --md-accent-bg-color--light:        var(--wiki-n0);   /* Softer on-accent */
+  --md-primary-bg-color:        var(--wiki-n0);
+  --md-primary-bg-color--light: var(--wiki-n200);
 
-/*
-  Default foreground shades - Affects: global UI text, content text, muted 
-  metadata, dividers/borders, These are the “chrome” variables that stop things looking 
-  half-default.
-*/
-/*  --md-default-fg-color:            var(--wiki-n0);   /* Main text across UI & content */
-/*  --md-default-fg-color--light:     var(--wiki-n0);   /* Secondary text (hints, metadata, labels) */
-/*  --md-default-fg-color--lighter:   var(--wiki-n0);   /* Tertiary text (very muted UI text) */
-/*  --md-default-fg-color--lightest:  var(--wiki-n0);   /* Dividers, borders, hairlines */
+  /* ---------------------------------------------------------------------------
+     ACCENT (Interaction & emphasis)
+     --------------------------------------------------------------------------- */
+  --md-accent-fg-color:              var(--wiki-clear-sky);
+  --md-accent-fg-color--transparent: var(--wiki-clear-sky-90-l);
 
-/* 
-  Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
-*/
-/*  --md-default-bg-color:            var(--wiki-n0);   /* Main page background */
-/*  --md-default-bg-color--light:     var(--wiki-n0);   /* Light overlays / subtle panels */
-/*  --md-default-bg-color--lighter:   var(--wiki-n0);   /* Transparent overlays */
-/*  --md-default-bg-color--lightest:  var(--wiki-n0);   /* Very faint overlay layers */
+  --md-accent-bg-color:              var(--wiki-n0);
+  --md-accent-bg-color--light:        var(--wiki-n100);
 
-/* 
-  Code (base) - Affects: inline code + code blocks base background/foreground. 
-*/
-/*  --md-code-fg-color: var(--wiki-n0); /* Code text */
-/*  --md-code-bg-color: var(--wiki-n0); /* Code block & inline code background */
+  /* ---------------------------------------------------------------------------
+     DEFAULT FOREGROUND (Text & UI chrome)
+     --------------------------------------------------------------------------- */
+  --md-default-fg-color:           var(--wiki-n900);
+  --md-default-fg-color--light:    var(--wiki-n600);
+  --md-default-fg-color--lighter:  var(--wiki-n500);
+  --md-default-fg-color--lightest: var(--wiki-n300);
 
-/*
-  Code highlighting tokens - Affects: token colors in highlighted code blocks.
-  Choice rationale:
-    - keywords stay “brand” (indigo)
-    - strings are emerald/tea-green family
-    - functions lean persian-green
-    - specials lean mexican-pink
-    - numbers lean red
-*/
-/*  --md-code-hl-color:               var(--wiki-n0);   /* Highlighted line background / emphasis */
-/*  --md-code-hl-number-color:        var(--wiki-n0);   /* Numbers */
-/*  --md-code-hl-special-color:       var(--wiki-n0);   /* Special tokens (decorators, special names) */
-/*  --md-code-hl-function-color:      var(--wiki-n0);   /* Function names */
-/*  --md-code-hl-constant-color:      var(--wiki-n0);   /* Constants */
-/*  --md-code-hl-keyword-color:       var(--wiki-n0);   /* Keywords (if/else/return) */
-/*  --md-code-hl-string-color:        var(--wiki-n0);   /* Strings */
-/*  --md-code-hl-name-color:          var(--wiki-n0);   /* General “name” tokens default to code fg */
-/*  --md-code-hl-operator-color:      var(--wiki-n0);   /* Operators */
-/*  --md-code-hl-punctuation-color:   var(--wiki-n0);   /* Punctuation */
-/*  --md-code-hl-comment-color:       var(--wiki-n0);   /* Comments (muted) */
-/*  --md-code-hl-generic-color:       var(--wiki-n0);   /* Generic tokens */
-/*  --md-code-hl-variable-color:      var(--wiki-n0);   /* Variables */
+  /* ---------------------------------------------------------------------------
+     DEFAULT BACKGROUND (Surfaces)
+     --------------------------------------------------------------------------- */
+  --md-default-bg-color:           var(--wiki-n0);
+  --md-default-bg-color--light:    var(--wiki-n100);
+  --md-default-bg-color--lighter:  var(--wiki-n200);
+  --md-default-bg-color--lightest: var(--wiki-n300);
 
-/* 
-  Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
-*/
-/*  --md-typeset-color:       var(--wiki-n0); /* Main body text */
-/*  --md-typeset-a-color:     var(--wiki-n0); /* Link color in content*/
-/*  --md-typeset-mark-color:  var(--wiki-n0); /* <mark> highlight background */
-/*  --md-typeset-del-color:   var(--wiki-n0); /* <del> background */
-/*  --md-typeset-ins-color:   var(--wiki-n0); /* <ins> background */
+  /* ---------------------------------------------------------------------------
+     TYPESET (Markdown content)
+     --------------------------------------------------------------------------- */
+  --md-typeset-color:   var(--wiki-n900);
+  --md-typeset-a-color: var(--wiki-data-blue);
 
-/*
-kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
-*/
-/*  --md-typeset-kbd-color:         var(--wiki-n0);   /* Keycap background */
-/*  --md-typeset-kbd-accent-color:  var(--wiki-n0);   /* Keycap highlight */
-/*  --md-typeset-kbd-border-color:  var(--wiki-n0);   /* Keycap border */
+  --md-typeset-mark-color: var(--wiki-golden-40-l);
+  --md-typeset-del-color:  var(--wiki-burgundy-90-l);
+  --md-typeset-ins-color:  var(--wiki-dark-teal-90-l);
 
-/* 
-Tables - Affects: table grid/borders in content.
-*/
-/*  --md-typeset-table-color: var(--wiki-n0); /* Table border/grid line color */
+  /* ---------------------------------------------------------------------------
+     CODE (Base)
+     --------------------------------------------------------------------------- */
+  --md-code-bg-color: var(--wiki-n100);
+  --md-code-fg-color: var(--wiki-n800);
 
-/* 
-  Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
-  (Specific admonition variants apply their own accents on top.)
-*/
-/*  --md-admonition-fg-color: var(--wiki-n0);   /* Text in admonitions */
-/*  --md-admonition-bg-color: var(--wiki-n0);   /* Admonition background (neutral base) */
+  /* ---------------------------------------------------------------------------
+     CODE HIGHLIGHTING (Semantic, restrained)
+     --------------------------------------------------------------------------- */
+  --md-code-hl-keyword-color:  var(--wiki-deep-indigo);
+  --md-code-hl-string-color:   var(--wiki-dark-teal);
+  --md-code-hl-function-color: var(--wiki-data-blue-30-d);
+  --md-code-hl-number-color:   var(--wiki-burgundy);
+  --md-code-hl-comment-color:  var(--wiki-n500);
 
+  /* ---------------------------------------------------------------------------
+     ADMONITIONS (Base colours only – icons handled elsewhere)
+     --------------------------------------------------------------------------- */
+  --md-admonition-bg-color: var(--wiki-n100);
+  --md-admonition-fg-color: var(--wiki-n900);
 
-/* 
-  Footer - Affects: footer background + footer text. 
-*/
-/*  --md-footer-bg-color:           var(--wiki-n0); /* Footer background */
-/*  --md-footer-bg-color--dark:     var(--wiki-n0); /* Footer bottom strip / deeper section */
-/*  --md-footer-fg-color:           var(--wiki-n0); /* Primary footer text/icons */
-/*  --md-footer-fg-color--light:    var(--wiki-n0); /* Secondary footer text */
-/*  --md-footer-fg-color--lighter:  var(--wiki-n0); /* Tertiary footer text */
+  /* ---------------------------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------------------------- */
+  --md-footer-bg-color:       var(--wiki-n200);
+  --md-footer-bg-color--dark: var(--wiki-n300);
 
+  --md-footer-fg-color:           var(--wiki-n800);
+  --md-footer-fg-color--light:    var(--wiki-n600);
+  --md-footer-fg-color--lighter:  var(--wiki-n500);
 
 /* 
   Shadows (elevation) - Affects: raised cards/surfaces/shadows across the UI.
@@ -343,6 +311,103 @@ Tables - Affects: table grid/borders in content.
     0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.35);
 }
 
+/* =============================================================================
+   Material for MkDocs – Slate (Dark) Theme
+   ============================================================================= */
+[data-md-color-scheme="slate"] {
+
+  /* ---------------------------------------------------------------------------
+     PRIMARY (Brand surfaces)
+     --------------------------------------------------------------------------- */
+  --md-primary-fg-color:        var(--wiki-deep-indigo);
+  --md-primary-fg-color--light: var(--wiki-deep-indigo-20-l);
+  --md-primary-fg-color--dark:  var(--wiki-deep-indigo-30-d);
+
+  --md-primary-bg-color:        var(--wiki-n100);
+  --md-primary-bg-color--light: var(--wiki-n300);
+
+  /* ---------------------------------------------------------------------------
+     ACCENT (Interaction highlights)
+     --------------------------------------------------------------------------- */
+  --md-accent-fg-color:              var(--wiki-clear-sky);
+  --md-accent-fg-color--transparent: var(--wiki-clear-sky-80-d);
+
+  --md-accent-bg-color:              var(--wiki-n900);
+  --md-accent-bg-color--light:        var(--wiki-n800);
+
+  /* ---------------------------------------------------------------------------
+     DEFAULT FOREGROUND
+     --------------------------------------------------------------------------- */
+  --md-default-fg-color:           var(--wiki-n100);
+  --md-default-fg-color--light:    var(--wiki-n400);
+  --md-default-fg-color--lighter:  var(--wiki-n500);
+  --md-default-fg-color--lightest: var(--wiki-n700);
+
+  /* ---------------------------------------------------------------------------
+     DEFAULT BACKGROUND
+     --------------------------------------------------------------------------- */
+  --md-default-bg-color:           var(--wiki-n900);
+  --md-default-bg-color--light:    var(--wiki-n800);
+  --md-default-bg-color--lighter:  var(--wiki-n700);
+  --md-default-bg-color--lightest: var(--wiki-n600);
+
+  /* ---------------------------------------------------------------------------
+     TYPESET
+     --------------------------------------------------------------------------- */
+  --md-typeset-color:   var(--wiki-n100);
+  --md-typeset-a-color: var(--wiki-clear-sky);
+
+  --md-typeset-mark-color: var(--wiki-golden-40-d);
+  --md-typeset-del-color:  var(--wiki-burgundy-40-d);
+  --md-typeset-ins-color:  var(--wiki-dark-teal-40-d);
+
+  /* ---------------------------------------------------------------------------
+     CODE
+     --------------------------------------------------------------------------- */
+  --md-code-bg-color: var(--wiki-n800);
+  --md-code-fg-color: var(--wiki-n100);
+
+  /* ---------------------------------------------------------------------------
+     CODE HIGHLIGHTING
+     --------------------------------------------------------------------------- */
+  --md-code-hl-keyword-color:  var(--wiki-lavender);
+  --md-code-hl-string-color:   var(--wiki-dark-teal-20-l);
+  --md-code-hl-function-color: var(--wiki-data-blue-20-l);
+  --md-code-hl-number-color:   var(--wiki-golden);
+  --md-code-hl-comment-color:  var(--wiki-n500);
+
+  /* ---------------------------------------------------------------------------
+     ADMONITIONS
+     --------------------------------------------------------------------------- */
+  --md-admonition-bg-color: var(--wiki-n800);
+  --md-admonition-fg-color: var(--wiki-n100);
+
+  /* ---------------------------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------------------------- */
+  --md-footer-bg-color:       var(--wiki-n900);
+  --md-footer-bg-color--dark: var(--wiki-n1000);
+
+  --md-footer-fg-color:           var(--wiki-n200);
+  --md-footer-fg-color--light:    var(--wiki-n400);
+  --md-footer-fg-color--lighter:  var(--wiki-n500);
+  
+/* 
+  Shadows (elevation) - Affects: raised cards/surfaces/shadows across the UI.
+  (These are not “colors” you see directly, but they affect perceived polish.)
+*/
+  --md-shadow-z1:
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.05),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.10);
+
+  --md-shadow-z2:
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.10),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.25);
+
+  --md-shadow-z3:
+    0 0.25rem 0.625rem hsl(from var(--wiki-n1000) h s l / 0.20),
+    0 0 0.0625rem hsl(from var(--wiki-n1000) h s l / 0.35);
+}
 
 /* 
 ------------------------------------------------------------------------------------------
