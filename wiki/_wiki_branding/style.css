@@ -287,7 +287,7 @@
 */
   --md-typeset-color: var(--wiki-n900);                               /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-d);                   /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-n400);                          /* <mark> highlight background */
+  --md-typeset-mark-color: var(--wiki-n300);                          /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
   --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15);   /* <ins> background */
 
@@ -423,7 +423,7 @@ Tables - Affects: table grid/borders in content.
 */
   --md-typeset-color: var(--wiki-n100);                               /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-l);                   /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-n900);                          /* <mark> highlight background */
+  --md-typeset-mark-color: var(--wiki-n500);                          /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
   --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15);   /* <ins> background */
 
