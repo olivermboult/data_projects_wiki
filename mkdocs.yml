@@ -183,7 +183,7 @@ nav:
   - Wiki Design:
     - Branding Guidelines: wiki_design/branding_guidelines.md
     - Page Template: wiki_design/page_template.md
-    - Page References: wiki_design/page_references.md
+    
     - Components:
       - Admonitions: wiki_design/components/admonitions.md
       - Annotations: wiki_design/components/annotations.md
@@ -200,4 +200,5 @@ nav:
       - Images: wiki_design/components/images.md
       - Lists: wiki_design/components/lists.md
       - Maths: wiki_design/components/maths.md
+      - Page References: wiki_design/components/page_references.md
       - Tooltips: wiki_design/components/tooltips.md

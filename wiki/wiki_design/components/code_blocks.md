@@ -165,25 +165,32 @@ To increase the width of annotation tooltips, add to your extra CSS:
 /* 
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
-  --md-code-fg-color: var(--wiki-tea-green-95-l);               /* Code text */
-  --md-code-bg-color: var(--wiki-indigo-code-background);       /* Code block & inline code background */
+  --md-code-fg-color: var(--wiki-n900);               /* Code text */
+  --md-code-bg-color: var(--wiki-n200);               /* Code block & inline code background */
+
 
 /*
   Code highlighting tokens - Affects: token colors in highlighted code blocks.
+  Choice rationale:
+    - keywords stay “brand” (indigo)
+    - strings are emerald/tea-green family
+    - functions lean persian-green
+    - specials lean mexican-pink
+    - numbers lean red
 */
-  --md-code-hl-color: hsl(from var(--wiki-mustard) h s l / 0.22);   /* Highlighted line background / emphasis */
-  --md-code-hl-number-color: var(--wiki-red);                       /* Numbers */
-  --md-code-hl-special-color: var(--wiki-mexican-pink-20-l);        /* Special tokens (decorators, special names) */
-  --md-code-hl-function-color: var(--wiki-persian-green-20-l);      /* Function names */
-  --md-code-hl-constant-color: var(--wiki-bleu-20-l);               /* Constants */
-  --md-code-hl-keyword-color: var(--wiki-bleu-20-l);                /* Keywords (if/else/return) */
-  --md-code-hl-string-color: var(--wiki-emerald-20-l);              /* Strings */
-  --md-code-hl-name-color: var(--md-code-fg-color);                 /* General “name” tokens default to code fg */
-  --md-code-hl-operator-color: var(--md-default-fg-color--light);   /* Operators */
-  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);/* Punctuation */
-  --md-code-hl-comment-color: var(--wiki-indigo-50-l);              /* Comments (muted) */
-  --md-code-hl-generic-color: var(--md-default-fg-color--light);    /* Generic tokens */
-  --md-code-hl-variable-color: var(--md-default-fg-color--light);   /* Variables */
+/*  --md-code-hl-color:                 /* Highlighted line background / emphasis */
+/*  --md-code-hl-number-color:          /* Numbers */
+/*  --md-code-hl-special-color:         /* Special tokens (decorators, special names) */
+/*  --md-code-hl-function-color:        /* Function names */
+/*  --md-code-hl-constant-color:        /* Constants */
+/*  --md-code-hl-keyword-color:         /* Keywords (if/else/return) */
+/*  --md-code-hl-string-color:          /* Strings */
+/*  --md-code-hl-name-color:            /* General “name” tokens default to code fg */
+/*  --md-code-hl-operator-color:        /* Operators */
+/*  --md-code-hl-punctuation-color:     /* Punctuation */
+/*  --md-code-hl-comment-color:         /* Comments (muted) */
+/*  --md-code-hl-generic-color:         /* Generic tokens */
+/*  --md-code-hl-variable-color:        /* Variables */
 
 ```
 

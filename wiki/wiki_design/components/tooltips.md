@@ -90,7 +90,7 @@ The Snippets extension can be used to implement a simple glossary by moving all 
         markdown_extensions:
             - pymdownx.snippets:
                 auto_append:
-                    - glossary/abbreviations.md 
+                    - glossary.md 
     ```
 ---
 

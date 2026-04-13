@@ -228,10 +228,10 @@
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-amber);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-amber) h s l / 0.12); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-n0);                                         /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);           /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-burgundy);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-burgundy) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-n0);                                           /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);             /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
@@ -285,7 +285,7 @@
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--md-default-fg-color);                     /* Main body text */
+  --md-typeset-color: var(--wiki-n900);                     /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-d);                   /* Link color in content*/
   --md-typeset-mark-color: var(--wiki-golden-70-l);                   /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
@@ -310,7 +310,7 @@ Tables - Affects: table grid/borders in content.
   Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
   (Specific admonition variants apply their own accents on top.)
 */
-  --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
+  --md-admonition-fg-color: var(--wiki-n900);           /* Text in admonitions */
   --md-admonition-bg-color: var(--wiki-n200);                     /* Admonition background (neutral base) */
 
 /* 
@@ -877,49 +877,43 @@ Tables - Affects: table grid/borders in content.
   Hero ----------------------------------------------------------------------------
 */
 
-.md-typeset .hero--inidgo {
+.md-typeset .hero--deep-inidgo {
   --hero-bg-1: var(--wiki-deep-indigo-20-d);
   --hero-bg-2: var(--wiki-deep-indigo-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--bleu {
+.md-typeset .hero--data-blue {
   --hero-bg-1: var(--wiki-data-blue-20-d);
   --hero-bg-2: var(--wiki-data-blue-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--midnight-green{
+.md-typeset .hero--dark-teal{
   --hero-bg-1: var(--wiki-dark-teal-20-d);
   --hero-bg-2: var(--wiki-dark-teal-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--persian-green{
+.md-typeset .hero--burgundy{
   --hero-bg-1: var(--wiki-burgundy-20-d);
   --hero-bg-2: var(--wiki-burgundy-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--emerald {
+.md-typeset .hero--clear-sky {
   --hero-bg-1: var(--wiki-clear-sky-20-d);
   --hero-bg-2: var(--wiki-clear-sky-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--tea-green {
+.md-typeset .hero--golden {
   --hero-bg-1: var(--wiki-golden-20-d);
   --hero-bg-2: var(--wiki-golden-20-l);
   --hero-text: var(--wiki-n0);
 }
 
-.md-typeset .hero--mustard {
-  --hero-bg-1: var(--wiki-lavender-20-d);
-  --hero-bg-2: var(--wiki-lavender-20-l);
-  --hero-text: var(--wiki-n0);
-}
-
-.md-typeset .hero--mexican-pink {
+.md-typeset .hero--lavender {
   --hero-bg-1: var(--wiki-lavender-20-d);
   --hero-bg-2: var(--wiki-lavender-20-l);
   --hero-text: var(--wiki-n0);

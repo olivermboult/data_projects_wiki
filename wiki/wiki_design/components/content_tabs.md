@@ -59,27 +59,28 @@ When SuperFences is enabled, content tabs can contain arbitrary nested content, 
 !!! example
 
     === "Unordered List"
-        * Sed sagittis eleifend rutrum
-        * Donec vitae suscipit est
-        * Nulla tempor lobortis orci
+        * This is point one of the unordered list.
+        * This is point two of the unordered list.
+        * This is point three of the unordered list.
 
     === "Ordered List"
-        1. Sed sagittis eleifend rutrum
-        2. Donec vitae suscipit est
-        3. Nulla tempor lobortis orci
+        1. This is point one of the ordered list.
+        2. This is point two of the ordered list.
+        3. This is point three of the ordered list.
 
 ```md
     !!! example
 
     === "Unordered List"
-        * Sed sagittis eleifend rutrum
-        * Donec vitae suscipit est
-        * Nulla tempor lobortis orci
+        * This is point one of the unordered list.
+        * This is point two of the unordered list.
+        * This is point three of the unordered list.
 
     === "Ordered List"
-        1. Sed sagittis eleifend rutrum
-        2. Donec vitae suscipit est
-        3. Nulla tempor lobortis orci
+        1. This is point one of the ordered list.
+        2. This is point two of the ordered list.
+        3. This is point three of the ordered list.
+
 ```
 
 ---
