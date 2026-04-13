@@ -228,10 +228,10 @@
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-burgundy);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-burgundy) h s l / 0.12); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-n0);                                           /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);             /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-amber);                                          /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: var(--wiki-n300);                              /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-n0);                                             /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);               /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
@@ -285,9 +285,9 @@
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--wiki-n900);                     /* Main body text */
+  --md-typeset-color: var(--wiki-n900);                               /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-d);                   /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-golden-70-l);                   /* <mark> highlight background */
+  --md-typeset-mark-color: var(--wiki-n400);                          /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
   --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15);   /* <ins> background */
 
@@ -364,8 +364,8 @@ Tables - Affects: table grid/borders in content.
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-amber);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-amber) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-fg-color: var(--wiki-amber);                                      /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: var(--wiki-n900);                          /* Soft highlight/ripple backgrounds */
   --md-accent-bg-color: var(--wiki-n0);                                         /* Text/icons ON accent surfaces (rare) */
   --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);           /* Softer on-accent */
 
@@ -421,9 +421,9 @@ Tables - Affects: table grid/borders in content.
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--wiki-n100);                     /* Main body text */
+  --md-typeset-color: var(--wiki-n100);                               /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-l);                   /* Link color in content*/
-  --md-typeset-mark-color: var(--wiki-golden-70-l);                   /* <mark> highlight background */
+  --md-typeset-mark-color: var(--wiki-n900);                          /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
   --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15);   /* <ins> background */
 
