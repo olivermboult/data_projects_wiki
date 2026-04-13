@@ -313,7 +313,6 @@ Tables - Affects: table grid/borders in content.
   --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
   --md-admonition-bg-color: var(--wiki-n200);                     /* Admonition background (neutral base) */
 
-
 /* 
   Footer - Affects: footer background + footer text. 
 */
@@ -375,9 +374,9 @@ Tables - Affects: table grid/borders in content.
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color: var(--wiki-n0);              /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-n100);     /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter: var(--wiki-n200);   /* Tertiary text (very muted UI text) */
+  --md-default-fg-color: var(--wiki-n100);              /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-n200);     /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-n300);   /* Tertiary text (very muted UI text) */
   --md-default-fg-color--lightest: var(--wiki-n900);  /* Dividers, borders, hairlines */
 
 /* 
@@ -391,8 +390,8 @@ Tables - Affects: table grid/borders in content.
 /* 
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
-  --md-code-fg-color: var(--wiki-n900);               /* Code text */
-  --md-code-bg-color: var(--wiki-n200);               /* Code block & inline code background */
+  --md-code-fg-color: var(--wiki-n100);               /* Code text */
+  --md-code-bg-color: var(--wiki-n700);               /* Code block & inline code background */
 
 
 /*
@@ -422,8 +421,8 @@ Tables - Affects: table grid/borders in content.
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color: var(--md-default-fg-color);                     /* Main body text */
-  --md-typeset-a-color: var(--wiki-data-blue-20-d);                   /* Link color in content*/
+  --md-typeset-color: var(--wiki-n100);                     /* Main body text */
+  --md-typeset-a-color: var(--wiki-data-blue-20-l);                   /* Link color in content*/
   --md-typeset-mark-color: var(--wiki-golden-70-l);                   /* <mark> highlight background */
   --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15);     /* <del> background */
   --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15);   /* <ins> background */
@@ -432,7 +431,7 @@ Tables - Affects: table grid/borders in content.
 /*
 kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 */
-  --md-typeset-kbd-color: var(--wiki-n200);                     /* Keycap background */
+  --md-typeset-kbd-color: var(--wiki-n700);                     /* Keycap background */
   --md-typeset-kbd-accent-color: var(--wiki-n0);                /* Keycap highlight */
   --md-typeset-kbd-border-color: var(--wiki-n400);              /* Keycap border */
 
@@ -440,25 +439,24 @@ kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 /* 
 Tables - Affects: table grid/borders in content.
 */
-  --md-typeset-table-color: var(--wiki-n200);              /* Table border/grid line color */
+  --md-typeset-table-color: var(--wiki-n700);              /* Table border/grid line color */
 
 
 /* 
   Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
   (Specific admonition variants apply their own accents on top.)
 */
-  --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
-  --md-admonition-bg-color: var(--wiki-n200);                     /* Admonition background (neutral base) */
-
+  --md-admonition-fg-color: var(--wiki-n100);           /* Text in admonitions */
+  --md-admonition-bg-color: var(--wiki-n700);           /* Admonition background (neutral base) */
 
 /* 
   Footer - Affects: footer background + footer text. 
 */
-  --md-footer-bg-color: var(--wiki-n400);           /* Footer background */
-  --md-footer-bg-color--dark: var(--wiki-n400);     /* Footer bottom strip / deeper section */
-  --md-footer-fg-color: var(--wiki-n900);           /* Primary footer text/icons */
-  --md-footer-fg-color--light: var(--wiki-n800);    /* Secondary footer text */
-  --md-footer-fg-color--lighter: var(--wiki-n700);  /* Tertiary footer text */
+  --md-footer-bg-color: var(--wiki-n900);           /* Footer background */
+  --md-footer-bg-color--dark: var(--wiki-n900);     /* Footer bottom strip / deeper section */
+  --md-footer-fg-color: var(--wiki-n200);           /* Primary footer text/icons */
+  --md-footer-fg-color--light: var(--wiki-n300);    /* Secondary footer text */
+  --md-footer-fg-color--lighter: var(--wiki-n400);  /* Tertiary footer text */
 
 
 /* 

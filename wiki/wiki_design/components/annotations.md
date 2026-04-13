@@ -28,13 +28,13 @@ Annotations require the `annotate` class on the outer block that contains the in
 
 ### Basic inline annotation
 
-Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
+Through a sentence, (1) we can add annotations to add extra detail.
 { .annotate }
 
 1.  :man_raising_hand: I'm an annotation! I can contain `code`, **formatting**, and images.
 
 ```md
-Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
+Through a sentence, (1) we can add annotations to add extra detail.
 { .annotate }
 
 1.  :man_raising_hand: I'm an annotation! I can contain `code`, **formatting**, and images.
@@ -47,7 +47,7 @@ This renders the numbered marker in the paragraph; clicking or focusing it opens
 
 When `pymdownx.superfences` is enabled you can nest annotations by adding `annotate` to nested list items.
 
-Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
+Sometimes, (1) we want to add an annotation to an annotation.
 { .annotate }
 
 1.  :man_raising_hand: I'm an annotation! (1)
@@ -56,7 +56,7 @@ Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
     1. :woman_raising_hand: I'm nested inside the annotation.
 
 ```md
-Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.
+Sometimes, (1) we want to add an annotation to an annotation.
 { .annotate }
 
 1.  :man_raising_hand: I'm an annotation! (1)
