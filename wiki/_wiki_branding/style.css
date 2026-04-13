@@ -235,7 +235,7 @@
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-clear-sky);            /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color: var(--wiki-data-blue);            /* Hover/active emphasis (clickable items) */
   --md-accent-fg-color--transparent: var(--wiki-failure); /* Soft highlight/ripple backgrounds */
   --md-accent-bg-color: var(--wiki-warning);              /* Text/icons ON accent surfaces (rare) */
   --md-accent-bg-color--light: var(--wiki-success);       /* Softer on-accent */
@@ -246,7 +246,7 @@
   half-default.
 */
   --md-default-fg-color: var(--wiki-n900);                  /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-deep-indigo);    /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--light: var(--wiki-data-blue-20-d); /* Secondary text (hints, metadata, labels) */
   --md-default-fg-color--lighter: var(--wiki-test);         /* Tertiary text (very muted UI text) */
   --md-default-fg-color--lightest: var(--wiki-deep-indigo); /* Dividers, borders, hairlines */
 
