@@ -245,10 +245,10 @@
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color: var(--wiki-deep-indigo-80-d);            /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-deep-indigo-60-d);     /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter: var(--wiki-deep-indigo-40-d);   /* Tertiary text (very muted UI text) */
-  --md-default-fg-color--lightest: var(--wiki-deep-indigo-95-l);  /* Dividers, borders, hairlines */
+  --md-default-fg-color: var(--wiki-burgundy);            /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-dark-teal);     /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-lavender);   /* Tertiary text (very muted UI text) */
+  --md-default-fg-color--lightest: var(--wiki-clear-sky);  /* Dividers, borders, hairlines */
 
 /* 
   Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
