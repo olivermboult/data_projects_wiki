@@ -255,7 +255,7 @@
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
   --md-code-fg-color: var(--wiki-n900);               /* Code text */
-  --md-code-bg-color: var(--wiki-n300);               /* Code block & inline code background */
+  --md-code-bg-color: var(--wiki-n200);               /* Code block & inline code background */
 
 
 /*
@@ -295,9 +295,9 @@
 /*
 kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 */
-  --md-typeset-kbd-color: var(--wiki-n300);                     /* Keycap background */
+  --md-typeset-kbd-color: var(--wiki-n200);                     /* Keycap background */
   --md-typeset-kbd-accent-color: var(--wiki-n0);                /* Keycap highlight */
-  --md-typeset-kbd-border-color: var(--wiki-n400);       /* Keycap border */
+  --md-typeset-kbd-border-color: var(--wiki-n400);              /* Keycap border */
 
 
 /* 
@@ -311,7 +311,7 @@ Tables - Affects: table grid/borders in content.
   (Specific admonition variants apply their own accents on top.)
 */
   --md-admonition-fg-color: var(--md-default-fg-color);           /* Text in admonitions */
-  --md-admonition-bg-color: var(--wiki-n300);              /* Admonition background (neutral base) */
+  --md-admonition-bg-color: var(--wiki-n200);                     /* Admonition background (neutral base) */
 
 
 /* 
