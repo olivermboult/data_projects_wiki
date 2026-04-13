@@ -181,9 +181,7 @@ extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you 
 
 nav:
   - Wiki Design:
-    - Branding Guidelines: wiki_design/branding_guidelines.md
-    - Page Template: wiki_design/page_template.md
-    
+    - Branding Guidelines: wiki_design/branding_guidelines.md    
     - Components:
       - Admonitions: wiki_design/components/admonitions.md
       - Annotations: wiki_design/components/annotations.md
