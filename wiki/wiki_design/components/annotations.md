@@ -7,6 +7,7 @@ description: This page is a single, copy‑paste friendly reference for using, s
 
 **Annotations** are inline markers that expand a small panel containing arbitrary Markdown when clicked or focused. They’re useful for providing optional clarifications, footnotes, or short asides without cluttering the main content.
 
+extra line 1
 ---
 
 ## Annotation Design Standards

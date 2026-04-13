@@ -227,42 +227,42 @@
 */
   --md-primary-fg-color:        var(--wiki-data-blue);  /* Main header banner and navigation header banner color */
   --md-primary-fg-color--light: var(--wiki-test);       /* Lighter brand shade (subtle states) */
-  --md-primary-fg-color--dark:  var(--wiki-n0);         /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color:        var(--wiki-n0);         /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: var(--wiki-n0);         /* Softer on-primary text/icons */
+/*  --md-primary-fg-color--dark:  var(--wiki-n0);         /* Darker brand shade (pressed/strong states) */
+/*  --md-primary-bg-color:        var(--wiki-n0);         /* Text/icons ON primary surfaces (header title/icons) */
+/*  --md-primary-bg-color--light: var(--wiki-n0);         /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color:               var(--wiki-n0);   /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent:  var(--wiki-n0);   /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color:               var(--wiki-n0);   /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light:        var(--wiki-n0);   /* Softer on-accent */
+/*  --md-accent-fg-color:               var(--wiki-n0);   /* Hover/active emphasis (clickable items) */
+/*  --md-accent-fg-color--transparent:  var(--wiki-n0);   /* Soft highlight/ripple backgrounds */
+/*  --md-accent-bg-color:               var(--wiki-n0);   /* Text/icons ON accent surfaces (rare) */
+/*  --md-accent-bg-color--light:        var(--wiki-n0);   /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color:            var(--wiki-n0);   /* Main text across UI & content */
-  --md-default-fg-color--light:     var(--wiki-n0);   /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter:   var(--wiki-n0);   /* Tertiary text (very muted UI text) */
-  --md-default-fg-color--lightest:  var(--wiki-n0);   /* Dividers, borders, hairlines */
+/*  --md-default-fg-color:            var(--wiki-n0);   /* Main text across UI & content */
+/*  --md-default-fg-color--light:     var(--wiki-n0);   /* Secondary text (hints, metadata, labels) */
+/*  --md-default-fg-color--lighter:   var(--wiki-n0);   /* Tertiary text (very muted UI text) */
+/*  --md-default-fg-color--lightest:  var(--wiki-n0);   /* Dividers, borders, hairlines */
 
 /* 
   Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
 */
-  --md-default-bg-color:            var(--wiki-n0);   /* Main page background */
-  --md-default-bg-color--light:     var(--wiki-n0);   /* Light overlays / subtle panels */
-  --md-default-bg-color--lighter:   var(--wiki-n0);   /* Transparent overlays */
-  --md-default-bg-color--lightest:  var(--wiki-n0);   /* Very faint overlay layers */
+/*  --md-default-bg-color:            var(--wiki-n0);   /* Main page background */
+/*  --md-default-bg-color--light:     var(--wiki-n0);   /* Light overlays / subtle panels */
+/*  --md-default-bg-color--lighter:   var(--wiki-n0);   /* Transparent overlays */
+/*  --md-default-bg-color--lightest:  var(--wiki-n0);   /* Very faint overlay layers */
 
 /* 
   Code (base) - Affects: inline code + code blocks base background/foreground. 
 */
-  --md-code-fg-color: var(--wiki-n0); /* Code text */
-  --md-code-bg-color: var(--wiki-n0); /* Code block & inline code background */
+/*  --md-code-fg-color: var(--wiki-n0); /* Code text */
+/*  --md-code-bg-color: var(--wiki-n0); /* Code block & inline code background */
 
 /*
   Code highlighting tokens - Affects: token colors in highlighted code blocks.
@@ -273,57 +273,57 @@
     - specials lean mexican-pink
     - numbers lean red
 */
-  --md-code-hl-color:               var(--wiki-n0);   /* Highlighted line background / emphasis */
-  --md-code-hl-number-color:        var(--wiki-n0);   /* Numbers */
-  --md-code-hl-special-color:       var(--wiki-n0);   /* Special tokens (decorators, special names) */
-  --md-code-hl-function-color:      var(--wiki-n0);   /* Function names */
-  --md-code-hl-constant-color:      var(--wiki-n0);   /* Constants */
-  --md-code-hl-keyword-color:       var(--wiki-n0);   /* Keywords (if/else/return) */
-  --md-code-hl-string-color:        var(--wiki-n0);   /* Strings */
-  --md-code-hl-name-color:          var(--wiki-n0);   /* General “name” tokens default to code fg */
-  --md-code-hl-operator-color:      var(--wiki-n0);   /* Operators */
-  --md-code-hl-punctuation-color:   var(--wiki-n0);   /* Punctuation */
-  --md-code-hl-comment-color:       var(--wiki-n0);   /* Comments (muted) */
-  --md-code-hl-generic-color:       var(--wiki-n0);   /* Generic tokens */
-  --md-code-hl-variable-color:      var(--wiki-n0);   /* Variables */
+/*  --md-code-hl-color:               var(--wiki-n0);   /* Highlighted line background / emphasis */
+/*  --md-code-hl-number-color:        var(--wiki-n0);   /* Numbers */
+/*  --md-code-hl-special-color:       var(--wiki-n0);   /* Special tokens (decorators, special names) */
+/*  --md-code-hl-function-color:      var(--wiki-n0);   /* Function names */
+/*  --md-code-hl-constant-color:      var(--wiki-n0);   /* Constants */
+/*  --md-code-hl-keyword-color:       var(--wiki-n0);   /* Keywords (if/else/return) */
+/*  --md-code-hl-string-color:        var(--wiki-n0);   /* Strings */
+/*  --md-code-hl-name-color:          var(--wiki-n0);   /* General “name” tokens default to code fg */
+/*  --md-code-hl-operator-color:      var(--wiki-n0);   /* Operators */
+/*  --md-code-hl-punctuation-color:   var(--wiki-n0);   /* Punctuation */
+/*  --md-code-hl-comment-color:       var(--wiki-n0);   /* Comments (muted) */
+/*  --md-code-hl-generic-color:       var(--wiki-n0);   /* Generic tokens */
+/*  --md-code-hl-variable-color:      var(--wiki-n0);   /* Variables */
 
 /* 
   Typeset (content area) - Affects: main prose text + links + highlights within Markdown content.
 */
-  --md-typeset-color:       var(--wiki-n0); /* Main body text */
-  --md-typeset-a-color:     var(--wiki-n0); /* Link color in content*/
-  --md-typeset-mark-color:  var(--wiki-n0); /* <mark> highlight background */
-  --md-typeset-del-color:   var(--wiki-n0); /* <del> background */
-  --md-typeset-ins-color:   var(--wiki-n0); /* <ins> background */
+/*  --md-typeset-color:       var(--wiki-n0); /* Main body text */
+/*  --md-typeset-a-color:     var(--wiki-n0); /* Link color in content*/
+/*  --md-typeset-mark-color:  var(--wiki-n0); /* <mark> highlight background */
+/*  --md-typeset-del-color:   var(--wiki-n0); /* <del> background */
+/*  --md-typeset-ins-color:   var(--wiki-n0); /* <ins> background */
 
 /*
 kbd (keycaps) - Affects: <kbd> styling in docs (background, border, highlight).
 */
-  --md-typeset-kbd-color:         var(--wiki-n0);   /* Keycap background */
-  --md-typeset-kbd-accent-color:  var(--wiki-n0);   /* Keycap highlight */
-  --md-typeset-kbd-border-color:  var(--wiki-n0);   /* Keycap border */
+/*  --md-typeset-kbd-color:         var(--wiki-n0);   /* Keycap background */
+/*  --md-typeset-kbd-accent-color:  var(--wiki-n0);   /* Keycap highlight */
+/*  --md-typeset-kbd-border-color:  var(--wiki-n0);   /* Keycap border */
 
 /* 
 Tables - Affects: table grid/borders in content.
 */
-  --md-typeset-table-color: var(--wiki-n0); /* Table border/grid line color */
+/*  --md-typeset-table-color: var(--wiki-n0); /* Table border/grid line color */
 
 /* 
   Admonitions (call-outs) - Affects: base colors for !!! note/ warning/ tip containers.
   (Specific admonition variants apply their own accents on top.)
 */
-  --md-admonition-fg-color: var(--wiki-n0);   /* Text in admonitions */
-  --md-admonition-bg-color: var(--wiki-n0);   /* Admonition background (neutral base) */
+/*  --md-admonition-fg-color: var(--wiki-n0);   /* Text in admonitions */
+/*  --md-admonition-bg-color: var(--wiki-n0);   /* Admonition background (neutral base) */
 
 
 /* 
   Footer - Affects: footer background + footer text. 
 */
-  --md-footer-bg-color:           var(--wiki-n0); /* Footer background */
-  --md-footer-bg-color--dark:     var(--wiki-n0); /* Footer bottom strip / deeper section */
-  --md-footer-fg-color:           var(--wiki-n0); /* Primary footer text/icons */
-  --md-footer-fg-color--light:    var(--wiki-n0); /* Secondary footer text */
-  --md-footer-fg-color--lighter:  var(--wiki-n0); /* Tertiary footer text */
+/*  --md-footer-bg-color:           var(--wiki-n0); /* Footer background */
+/*  --md-footer-bg-color--dark:     var(--wiki-n0); /* Footer bottom strip / deeper section */
+/*  --md-footer-fg-color:           var(--wiki-n0); /* Primary footer text/icons */
+/*  --md-footer-fg-color--light:    var(--wiki-n0); /* Secondary footer text */
+/*  --md-footer-fg-color--lighter:  var(--wiki-n0); /* Tertiary footer text */
 
 
 /* 
