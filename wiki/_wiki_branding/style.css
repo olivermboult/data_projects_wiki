@@ -225,20 +225,20 @@
   Primary colour shades - Affects: top header bar background, sidebar header, active 
   navigation, primary buttons, and various “brand” surfaces. 
 */
-  --md-primary-fg-color: var(--wiki-data-blue);     /* Main header/nav brand color */
-  --md-primary-fg-color--light: var(--wiki-lavender);   /* Lighter brand shade (subtle states) */
-  --md-primary-fg-color--dark: var(--wiki-golden);    /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color: var(--wiki-n0);            /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: var(--wiki-n200);   /* Softer on-primary text/icons */
+  --md-primary-fg-color: var(--wiki-data-blue);         /* Main header/nav brand color */
+  --md-primary-fg-color--light: var(--wiki-test);       /* Lighter brand shade (subtle states) */
+  --md-primary-fg-color--dark: var(--wiki-golden);      /* Darker brand shade (pressed/strong states) */
+  --md-primary-bg-color: var(--wiki-n0);                /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: var(--wiki-n200);       /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-data-blue);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-data-blue) h s l / 0.12); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-n0);                                    /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);      /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-test);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: var(--wiki-failure);                      /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-warning);                                    /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: var(--wiki-success);             /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
