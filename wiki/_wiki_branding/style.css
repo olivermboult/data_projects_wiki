@@ -226,7 +226,7 @@
   navigation, primary buttons, and various “brand” surfaces. 
 */
   --md-primary-fg-color: var(--wiki-data-blue);         /* Main header/nav brand color */
-  --md-primary-fg-color--light: var(--wiki-test);       /* Lighter brand shade (subtle states) */
+  --md-primary-fg-color--light: var(--wiki-test);  /* Lighter brand shade (subtle states) */
   --md-primary-fg-color--dark: var(--wiki-golden);      /* Darker brand shade (pressed/strong states) */
   --md-primary-bg-color: var(--wiki-n0);                /* Text/icons ON primary surfaces (header title/icons) */
   --md-primary-bg-color--light: var(--wiki-n200);       /* Softer on-primary text/icons */
@@ -235,20 +235,20 @@
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-test);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: var(--wiki-failure);                      /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-warning);                                    /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: var(--wiki-success);             /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-clear-sky);            /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: var(--wiki-failure); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-warning);              /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: var(--wiki-success);       /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
   metadata, dividers/borders, These are the “chrome” variables that stop things looking 
   half-default.
 */
-  --md-default-fg-color: var(--wiki-burgundy);            /* Main text across UI & content */
-  --md-default-fg-color--light: var(--wiki-dark-teal);     /* Secondary text (hints, metadata, labels) */
-  --md-default-fg-color--lighter: var(--wiki-lavender);   /* Tertiary text (very muted UI text) */
-  --md-default-fg-color--lightest: var(--wiki-clear-sky);  /* Dividers, borders, hairlines */
+  --md-default-fg-color: var(--wiki-n900);                  /* Main text across UI & content */
+  --md-default-fg-color--light: var(--wiki-deep-indigo);    /* Secondary text (hints, metadata, labels) */
+  --md-default-fg-color--lighter: var(--wiki-test);         /* Tertiary text (very muted UI text) */
+  --md-default-fg-color--lightest: var(--wiki-deep-indigo); /* Dividers, borders, hairlines */
 
 /* 
   Default background (surface) shades - Affects: page background + overlay/elevation surfaces.
