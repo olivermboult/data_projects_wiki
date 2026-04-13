@@ -228,8 +228,8 @@
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-golden);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-golden) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-fg-color: var(--wiki-amber);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-amber) h s l / 0.12); /* Soft highlight/ripple backgrounds */
   --md-accent-bg-color: var(--wiki-n0);                                         /* Text/icons ON accent surfaces (rare) */
   --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);           /* Softer on-accent */
 
@@ -365,8 +365,8 @@ Tables - Affects: table grid/borders in content.
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-golden);                                     /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-golden) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-fg-color: var(--wiki-amber);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-amber) h s l / 0.12); /* Soft highlight/ripple backgrounds */
   --md-accent-bg-color: var(--wiki-n0);                                         /* Text/icons ON accent surfaces (rare) */
   --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);           /* Softer on-accent */
 
