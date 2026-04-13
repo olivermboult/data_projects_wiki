@@ -30,9 +30,9 @@
   --wiki-lavender:    #B08FD6;
 
   /* RAG Colours */
-  --wiki-failure:     #C70000;
-  --wiki-warning:     #FFBF00;
-  --wiki-success:     #27693F;
+  --wiki-red:     #C70000;
+  --wiki-amber:   #FFBF00;
+  --wiki-green:   #27693F;
 
     /* Other Colours */
   --wiki-n0:    #FFFFFF;
@@ -201,14 +201,14 @@
   --wiki-ad-abstract: var(--wiki-dark-teal);
   --wiki-ad-info:     var(--wiki-clear-sky);
   --wiki-ad-tip:      var(--wiki-clear-sky);
-  --wiki-ad-success:  var(--wiki-success);
+  --wiki-ad-success:  var(--wiki-green);
   --wiki-ad-question: var(--wiki-dark-teal);
-  --wiki-ad-warning:  var(--wiki-warning);
-  --wiki-ad-failure:  var(--wiki-failure);
-  --wiki-ad-danger:   var(--wiki-failure);
-  --wiki-ad-bug:      var(--wiki-failure);
+  --wiki-ad-warning:  var(--wiki-amber);
+  --wiki-ad-failure:  var(--wiki-red);
+  --wiki-ad-danger:   var(--wiki-red);
+  --wiki-ad-bug:      var(--wiki-red);
   --wiki-ad-example:  var(--wiki-data-blue);
-  --wiki-ad-quote:    var(--wiki-deep-indigo);
+  --wiki-ad-quote:    var(--wiki-data-blue);
   --wiki-ad-draft:    var(--wiki-golden)
 }
 
@@ -221,17 +221,17 @@
   --md-primary-fg-color:        var(--wiki-data-blue);                      /* Main header/nav brand color */
   --md-primary-fg-color--light: var(--wiki-data-blue-20-l);                 /* Lighter brand shade (subtle states) */
   --md-primary-fg-color--dark:  var(--wiki-data-blue-30-d);                 /* Darker brand shade (pressed/strong states) */
-  --md-primary-bg-color:        var(--wiki-n0);                          /* Text/icons ON primary surfaces (header title/icons) */
-  --md-primary-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);   /* Softer on-primary text/icons */
+  --md-primary-bg-color:        var(--wiki-n0);                             /* Text/icons ON primary surfaces (header title/icons) */
+  --md-primary-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);      /* Softer on-primary text/icons */
 
 /*
   Accent colour shades - Affects: hover states, interactive highlights (toggles, controls), 
   and many “action” affordances. 
 */
-  --md-accent-fg-color: var(--wiki-clear-sky);                                /* Hover/active emphasis (clickable items) */
-  --md-accent-fg-color--transparent: hsl(from var(--wiki-clear-sky) h s l / 0.12); /* Soft highlight/ripple backgrounds */
-  --md-accent-bg-color: var(--wiki-n0);                                    /* Text/icons ON accent surfaces (rare) */
-  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);      /* Softer on-accent */
+  --md-accent-fg-color: var(--wiki-golden);                                     /* Hover/active emphasis (clickable items) */
+  --md-accent-fg-color--transparent: hsl(from var(--wiki-golden) h s l / 0.12); /* Soft highlight/ripple backgrounds */
+  --md-accent-bg-color: var(--wiki-n0);                                         /* Text/icons ON accent surfaces (rare) */
+  --md-accent-bg-color--light: hsl(from var(--wiki-n0) h s l / 0.70);           /* Softer on-accent */
 
 /*
   Default foreground shades - Affects: global UI text, content text, muted 
@@ -288,8 +288,8 @@
   --md-typeset-color: var(--md-default-fg-color);                     /* Main body text */
   --md-typeset-a-color: var(--wiki-data-blue-20-d);                   /* Link color in content*/
   --md-typeset-mark-color: var(--wiki-golden-70-l);                   /* <mark> highlight background */
-  --md-typeset-del-color: hsl(from var(--wiki-failure) h s l / 0.15); /* <del> background */
-  --md-typeset-ins-color: hsl(from var(--wiki-success) h s l / 0.15); /* <ins> background */
+  --md-typeset-del-color: hsl(from var(--wiki-red) h s l / 0.15); /* <del> background */
+  --md-typeset-ins-color: hsl(from var(--wiki-green) h s l / 0.15); /* <ins> background */
 
 
 /*
