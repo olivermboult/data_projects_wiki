@@ -28,7 +28,7 @@ description: This page is a single, copy‑paste friendly reference for using, s
 
 Below are the current hero variants used across the design system. Each example shows the rendered hero and the HTML you can copy.
 
-<div class="hero hero--indigo hero--lg" markdown="1">
+<div class="hero hero--deep-indigo hero--lg" markdown="1">
   <div class="hero__inner">
     <h1 class="hero__title">Data Platform Design</h1>
     <p class="hero__subtitle">Patterns, standards, and reusable components for delivery.</p>
@@ -36,7 +36,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--indigo hero--lg" markdown="1">
+<div class="hero hero--deep-indigo hero--lg" markdown="1">
   <div class="hero__inner">
     <h1 class="hero__title">Data Platform Design</h1>
     <p class="hero__subtitle">Patterns, standards, and reusable components for delivery.</p>
@@ -44,7 +44,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--bleu hero--md" markdown="1">
+<div class="hero hero--data-blue hero--md" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Draft</p>
     <h1 class="hero__title">Work in progress</h1>
@@ -53,7 +53,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--bleu hero--md" markdown="1">
+<div class="hero hero--data-blue hero--md" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Draft</p>
     <h1 class="hero__title">Work in progress</h1>
@@ -62,7 +62,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--midnight-green hero--sm" markdown="1">
+<div class="hero hero--dark-teal hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -71,7 +71,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--midnight-green hero--sm" markdown="1">
+<div class="hero hero--dark-teal hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -80,7 +80,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--persian-green hero--sm" markdown="1">
+<div class="hero hero--burgundy hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -89,7 +89,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--persian-green hero--sm" markdown="1">
+<div class="hero hero--burgundy hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -98,7 +98,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--emerald hero--sm" markdown="1">
+<div class="hero hero--clear-sky hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -107,7 +107,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--emerald hero--sm" markdown="1">
+<div class="hero hero--clear-sky hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -116,7 +116,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--tea-green hero--sm" markdown="1">
+<div class="hero hero--golden hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -125,7 +125,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--tea-green hero--sm" markdown="1">
+<div class="hero hero--golden hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -134,7 +134,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 ```
 
-<div class="hero hero--mustard hero--sm" markdown="1">
+<div class="hero hero--lavender hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
@@ -143,25 +143,7 @@ Below are the current hero variants used across the design system. Each example 
 </div>
 
 ```html
-<div class="hero hero--mustard hero--sm" markdown="1">
-  <div class="hero__inner">
-    <p class="hero__kicker">Published</p>
-    <h1 class="hero__title">Production-ready pattern</h1>
-    <p class="hero__subtitle">Validated and approved for reuse across projects.</p>
-  </div>
-</div>
-```
-
-<div class="hero hero--mexican-pink hero--sm" markdown="1">
-  <div class="hero__inner">
-    <p class="hero__kicker">Published</p>
-    <h1 class="hero__title">Production-ready pattern</h1>
-    <p class="hero__subtitle">Validated and approved for reuse across projects.</p>
-  </div>
-</div>
-
-```html
-<div class="hero hero--mexican-pink hero--sm" markdown="1">
+<div class="hero hero--lavender hero--sm" markdown="1">
   <div class="hero__inner">
     <p class="hero__kicker">Published</p>
     <h1 class="hero__title">Production-ready pattern</h1>
