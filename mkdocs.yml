@@ -23,7 +23,7 @@ theme:                                      # Starts theme configuration block (
   name: material                            # Selects the Material for MkDocs theme (enables Material features, palette, etc.
   custom_dir: wiki/_wiki_branding           # Folder containing theme overrides (partials, templates, assets) to customise Material output
   icon:                                     # Theme icon overrides (lets you change icons used by the theme) 
-    logo: material/database-cog             # Optional logo path
+    logo: material/home                     # Optional logo path
     admonition:                             # Per-admonition-type icon mapping (built-in admonition types)
       note: octicons/tag-16                 # Icon used for !!! note admonitions 
       abstract: octicons/checklist-16       # Icon used for !!! abstract admonitions 
