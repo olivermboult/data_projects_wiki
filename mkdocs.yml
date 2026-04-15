@@ -163,17 +163,11 @@ markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoj
       auto_append: ["glossary.md"]
       base_path: ["wiki"]             # Automatically appends a Markdown file with snippet definitions (e.g., for glossary/tooltip content)
 
-  # Math (enable rendering via MathJax/KaTeX integration guidance) -------------------------
-  - pymdownx.arithmatex:                                                # Wraps math so you can render later with MathJax/KaTeX 
-      generic: true                                                     # Uses generic wrappers (gives flexibility in which renderer you choose)
-
-
 # ------------------------------------------------------------------------------------------
 # Customisation
 # ------------------------------------------------------------------------------------------
 extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you can override styles)
   - style.css  # Path to your custom CSS file for styling overrides
-
 
 # ------------------------------------------------------------------------------------------
 # Navigation
