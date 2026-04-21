@@ -1,25 +1,3 @@
-
-/* 
-------------------------------------------------------------------------------------------
-  Wiki Fonts
-------------------------------------------------------------------------------------------
-  Defines the typography system for the entire wiki. Material for MkDocs provides three
-  primary font hooks that cascade through the UI. All fonts fallback to system sans-serif
-  or monospace families for reliability across browsers and systems.
-*/
-
-/* Material for MkDocs font hooks */
-:root {
-  /* Text font: used for body copy, navigation labels, metadata, UI chrome, etc. */
-  --md-text-font: "Roboto Flex", sans-serif;
-  
-  /* Header font: used for page titles, section headings, and navigation hierarchy. */
-  --md-header-font: "Roboto Flex", sans-serif;
-  
-  /* Code font: monospace, used for inline code snippets and code blocks. */
-  --md-code-font: "Roboto Mono", monospace;
-}
-
 /* 
 ------------------------------------------------------------------------------------------
   Wiki Colours

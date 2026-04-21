@@ -33,6 +33,9 @@ docs_dir: wiki                              # Specifies the directory for docume
 theme:                                      # Configures the theme and its customisations, providing a professional look tailored to data engineering audiences.
   name: material                            # Selects Material for MkDocs, chosen for its modern design and features that enhance readability of technical content.
   custom_dir: wiki/_wiki_branding           # Points to custom theme overrides, enabling branding specific to the data projects wiki for better team identity.
+  font:
+    text: "Roboto Flex"                     # Sets the main text font to Roboto Flex, chosen for its readability and versatility in technical documentation.
+    code: "Roboto Mono"                     # Sets the code font to Roboto Mono, providing clear differentiation of code snippets for data engineers.
   icon:                                     # Customises icons for better visual cues in data documentation, improving user experience for technical readers.
     logo: material/home                     # Sets a home icon for the logo, providing a familiar entry point for navigating the wiki.
     admonition:                             # Defines icons for admonitions, helping to categorise notes and warnings effectively in data process documentation.
