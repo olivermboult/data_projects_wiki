@@ -3,11 +3,20 @@
 ------------------------------------------------------------------------------------------
   Wiki Fonts
 ------------------------------------------------------------------------------------------
+  Defines the typography system for the entire wiki. Material for MkDocs provides three
+  primary font hooks that cascade through the UI. All fonts fallback to system sans-serif
+  or monospace families for reliability across browsers and systems.
+*/
 
 /* Material for MkDocs font hooks */
 :root {
-  --md-text-font: "wiki_font", sans-serif;
-  --md-header-font: "wiki_font", sans-serif;
+  /* Text font: used for body copy, navigation labels, metadata, UI chrome, etc. */
+  --md-text-font: "Roboto Flex", sans-serif;
+  
+  /* Header font: used for page titles, section headings, and navigation hierarchy. */
+  --md-header-font: "Roboto Flex", sans-serif;
+  
+  /* Code font: monospace, used for inline code snippets and code blocks. */
   --md-code-font: "Roboto Mono", monospace;
 }
 
@@ -15,26 +24,41 @@
 ------------------------------------------------------------------------------------------
   Wiki Colours
 ------------------------------------------------------------------------------------------
+  Foundation colour palette for the entire design system. These base colours form the
+  backbone of the theme and are referenced throughout: in Material for MkDocs theme
+  variables, admonition variants, component libraries, and generated tint/shade scales.
+  
+  Organising principle:
+  - Primary colours (1): Brand identity and primary UI actions (headers, buttons, focus)
+  - Secondary colours (2): Accent and highlight states (hover, selection, emphasis)
+  - RAG colours (3): Status indicators (red = critical, amber = warning, green = success)
+  - Neutral greys (4): Global text, backgrounds, borders, and disabled states
+  
+  When to change these:
+  - Update brand identity (rare); cascades through theme and all child variants
+  - Ensure accessible contrast ratios (WCAG AA/AAA); check against neutral backgrounds
 */
 
 :root {
-  /* Primary Colours */
-  --wiki-deep-indigo: #1F2A64;
-  --wiki-data-blue:   #126FB1;
-  --wiki-dark-teal:   #0F6F66;
-  --wiki-burgundy:    #630C2B;
+  /* Primary Colours: Brand identity and main UI elements */
+  --wiki-deep-indigo: #1F2A64;  /* Primary brand: header bar, nav, primary buttons. */
+  --wiki-data-blue:   #126FB1;  /* Accent brand: action states, info, emphasis. */
+  --wiki-dark-teal:   #0F6F66;  /* Secondary: abstract, question types, variety. */
+  --wiki-burgundy:    #630C2B;  /* Tertiary: alternative accent, depth. */
 
-  /* Secondary Colours */
-  --wiki-clear-sky:   #00D2FF;
-  --wiki-golden:      #F5D26E;
-  --wiki-lavender:    #B08FD6;
+  /* Secondary Colours: Highlights, hover states, and secondary affordances */
+  --wiki-clear-sky:   #00D2FF;  /* Bright cyan: info/tip callouts, UI highlights. */
+  --wiki-golden:      #F5D26E;  /* Warm accent: active states, draft content flag. */
+  --wiki-lavender:    #B08FD6;  /* Soft purple: alternative highlight (future use). */
 
-  /* RAG Colours */
-  --wiki-red:     #C70000;
-  --wiki-amber:   #FFBF00;
-  --wiki-green:   #27693F;
+  /* RAG Colours: Semantic status indicators */
+  --wiki-red:     #C70000;      /* Critical errors, dangers, failures. */
+  --wiki-amber:   #FFBF00;      /* Warnings, cautions, in-progress states. */
+  --wiki-green:   #27693F;      /* Success, affirmations, positive outcomes. */
 
-    /* Other Colours */
+    /* Other Colours: Neutral grey scale */
+  /* Used throughout for text, backgrounds, borders, and disabled states. */
+  /* Values follow a 0–1000 scale: 0 is pure white, 1000 is pure black. */
   --wiki-n0:    #FFFFFF;
   --wiki-n100:  #F8FAFC;
   --wiki-n200:  #F1F5F9;
@@ -47,9 +71,24 @@
   --wiki-n900:  #0F172A;
   --wiki-n1000: #000000;
 
-  --wiki-test:  #FF007F;
   
-  /* Deep Inidigo - Darker variants*/
+  /* 
+  Programmatically generated colour variants using CSS color-mix() 
+------------------------------------------------------------------------------------------
+  Rationale: Generating lighter and darker tints of brand colours ensures design  
+  consistency, reduces maintenance burden, and enables responsive colour adaption. 
+  These variants are computed in the oklab colour space, which provides perceptually 
+  uniform darkening and lightening across all hues. 
+  
+  Naming convention: --wiki-[colour]-[percentage]-[l|d] 
+  - [colour] = base colour name 
+  - [percentage] = amount mixed (10% = subtle, 90% = extreme) 
+  - [l|d] = lighter (l) or darker (d) variant 
+  
+  Use case: Hover states, subtle backgrounds, hierarchy, emphasis, disabled states. 
+  Change if: Colour contrast ratios fall below WCAG AA for your use case. */
+  
+  /* Deep Indigo - Darker variants */
   --wiki-deep-indigo-10-d: color-mix(in oklab, var(--wiki-deep-indigo), black 10%);
   --wiki-deep-indigo-20-d: color-mix(in oklab, var(--wiki-deep-indigo), black 20%);
   --wiki-deep-indigo-30-d: color-mix(in oklab, var(--wiki-deep-indigo), black 30%);
@@ -59,7 +98,8 @@
   --wiki-deep-indigo-70-d: color-mix(in oklab, var(--wiki-deep-indigo), black 70%);
   --wiki-deep-indigo-80-d: color-mix(in oklab, var(--wiki-deep-indigo), black 80%);
   --wiki-deep-indigo-90-d: color-mix(in oklab, var(--wiki-deep-indigo), black 90%);
-  /* Deep Indigo - Lighter variants*/
+  
+  /* Deep Indigo - Lighter variants */
   --wiki-deep-indigo-10-l: color-mix(in oklab, var(--wiki-deep-indigo), white 10%);
   --wiki-deep-indigo-20-l: color-mix(in oklab, var(--wiki-deep-indigo), white 20%);
   --wiki-deep-indigo-30-l: color-mix(in oklab, var(--wiki-deep-indigo), white 30%);
@@ -70,7 +110,7 @@
   --wiki-deep-indigo-90-l: color-mix(in oklab, var(--wiki-deep-indigo), white 90%);
   --wiki-deep-indigo-95-l: color-mix(in oklab, var(--wiki-deep-indigo), white 95%);
 
-  /* Data Blue - Darker variants*/
+  /* Data Blue - Darker variants */
   --wiki-data-blue-10-d: color-mix(in oklab, var(--wiki-data-blue), black 10%);
   --wiki-data-blue-20-d: color-mix(in oklab, var(--wiki-data-blue), black 20%);
   --wiki-data-blue-30-d: color-mix(in oklab, var(--wiki-data-blue), black 30%);
@@ -80,7 +120,8 @@
   --wiki-data-blue-70-d: color-mix(in oklab, var(--wiki-data-blue), black 70%);
   --wiki-data-blue-80-d: color-mix(in oklab, var(--wiki-data-blue), black 80%);
   --wiki-data-blue-90-d: color-mix(in oklab, var(--wiki-data-blue), black 90%);
-  /* Data Blue - Lighter variants*/
+  
+  /* Data Blue - Lighter variants */
   --wiki-data-blue-10-l: color-mix(in oklab, var(--wiki-data-blue), white 10%);
   --wiki-data-blue-20-l: color-mix(in oklab, var(--wiki-data-blue), white 20%);
   --wiki-data-blue-30-l: color-mix(in oklab, var(--wiki-data-blue), white 30%);
@@ -91,7 +132,7 @@
   --wiki-data-blue-90-l: color-mix(in oklab, var(--wiki-data-blue), white 90%);
   --wiki-data-blue-95-l: color-mix(in oklab, var(--wiki-data-blue), white 95%);
 
-  /* Dark Teal - Darker variants*/
+  /* Dark Teal - Darker variants */
   --wiki-dark-teal-10-d: color-mix(in oklab, var(--wiki-dark-teal), black 10%);
   --wiki-dark-teal-20-d: color-mix(in oklab, var(--wiki-dark-teal), black 20%);
   --wiki-dark-teal-30-d: color-mix(in oklab, var(--wiki-dark-teal), black 30%);
@@ -101,7 +142,8 @@
   --wiki-dark-teal-70-d: color-mix(in oklab, var(--wiki-dark-teal), black 70%);
   --wiki-dark-teal-80-d: color-mix(in oklab, var(--wiki-dark-teal), black 80%);
   --wiki-dark-teal-90-d: color-mix(in oklab, var(--wiki-dark-teal), black 90%);
-  /* Dark Teal - Lighter variants*/
+  
+  /* Dark Teal - Lighter variants */
   --wiki-dark-teal-10-l: color-mix(in oklab, var(--wiki-dark-teal), white 10%);
   --wiki-dark-teal-20-l: color-mix(in oklab, var(--wiki-dark-teal), white 20%);
   --wiki-dark-teal-30-l: color-mix(in oklab, var(--wiki-dark-teal), white 30%);
@@ -112,7 +154,7 @@
   --wiki-dark-teal-90-l: color-mix(in oklab, var(--wiki-dark-teal), white 90%);
   --wiki-dark-teal-95-l: color-mix(in oklab, var(--wiki-dark-teal), white 95%);
 
-  /* Burgundy - Darker variants*/
+  /* Burgundy - Darker variants */
   --wiki-burgundy-10-d: color-mix(in oklab, var(--wiki-burgundy), black 10%);
   --wiki-burgundy-20-d: color-mix(in oklab, var(--wiki-burgundy), black 20%);
   --wiki-burgundy-30-d: color-mix(in oklab, var(--wiki-burgundy), black 30%);
@@ -122,7 +164,8 @@
   --wiki-burgundy-70-d: color-mix(in oklab, var(--wiki-burgundy), black 70%);
   --wiki-burgundy-80-d: color-mix(in oklab, var(--wiki-burgundy), black 80%);
   --wiki-burgundy-90-d: color-mix(in oklab, var(--wiki-burgundy), black 90%);
-  /* Burgundy - Lighter variants*/
+  
+  /* Burgundy - Lighter variants */
   --wiki-burgundy-10-l: color-mix(in oklab, var(--wiki-burgundy), white 10%);
   --wiki-burgundy-20-l: color-mix(in oklab, var(--wiki-burgundy), white 20%);
   --wiki-burgundy-30-l: color-mix(in oklab, var(--wiki-burgundy), white 30%);
@@ -133,7 +176,7 @@
   --wiki-burgundy-90-l: color-mix(in oklab, var(--wiki-burgundy), white 90%);
   --wiki-burgundy-95-l: color-mix(in oklab, var(--wiki-burgundy), white 95%);
 
-  /* Clear Sky - Darker variants*/
+  /* Clear Sky - Darker variants */
   --wiki-clear-sky-10-d: color-mix(in oklab, var(--wiki-clear-sky), black 10%);
   --wiki-clear-sky-20-d: color-mix(in oklab, var(--wiki-clear-sky), black 20%);
   --wiki-clear-sky-30-d: color-mix(in oklab, var(--wiki-clear-sky), black 30%);
@@ -143,7 +186,8 @@
   --wiki-clear-sky-70-d: color-mix(in oklab, var(--wiki-clear-sky), black 70%);
   --wiki-clear-sky-80-d: color-mix(in oklab, var(--wiki-clear-sky), black 80%);
   --wiki-clear-sky-90-d: color-mix(in oklab, var(--wiki-clear-sky), black 90%);
-  /* Clear Sky - Lighter variants*/
+  
+  /* Clear Sky - Lighter variants */
   --wiki-clear-sky-10-l: color-mix(in oklab, var(--wiki-clear-sky), white 10%);
   --wiki-clear-sky-20-l: color-mix(in oklab, var(--wiki-clear-sky), white 20%);
   --wiki-clear-sky-30-l: color-mix(in oklab, var(--wiki-clear-sky), white 30%);
@@ -154,7 +198,7 @@
   --wiki-clear-sky-90-l: color-mix(in oklab, var(--wiki-clear-sky), white 90%);
   --wiki-clear-sky-95-l: color-mix(in oklab, var(--wiki-clear-sky), white 95%);
 
-  /* Golden- Darker variants*/
+  /* Golden - Darker variants */
   --wiki-golden-10-d: color-mix(in oklab, var(--wiki-golden), black 10%);
   --wiki-golden-20-d: color-mix(in oklab, var(--wiki-golden), black 20%);
   --wiki-golden-30-d: color-mix(in oklab, var(--wiki-golden), black 30%);
@@ -164,7 +208,8 @@
   --wiki-golden-70-d: color-mix(in oklab, var(--wiki-golden), black 70%);
   --wiki-golden-80-d: color-mix(in oklab, var(--wiki-golden), black 80%);
   --wiki-golden-90-d: color-mix(in oklab, var(--wiki-golden), black 90%);
-  /* Golden - Lighter variants*/
+  
+  /* Golden - Lighter variants */
   --wiki-golden-10-l: color-mix(in oklab, var(--wiki-golden), white 10%);
   --wiki-golden-20-l: color-mix(in oklab, var(--wiki-golden), white 20%);
   --wiki-golden-30-l: color-mix(in oklab, var(--wiki-golden), white 30%);
@@ -175,7 +220,7 @@
   --wiki-golden-90-l: color-mix(in oklab, var(--wiki-golden), white 90%);
   --wiki-golden-95-l: color-mix(in oklab, var(--wiki-golden), white 95%);
 
-  /* Lavender - Darker variants*/
+  /* Lavender - Darker variants */
   --wiki-lavender-10-d: color-mix(in oklab, var(--wiki-lavender), black 10%);
   --wiki-lavender-20-d: color-mix(in oklab, var(--wiki-lavender), black 20%);
   --wiki-lavender-30-d: color-mix(in oklab, var(--wiki-lavender), black 30%);
@@ -185,7 +230,8 @@
   --wiki-lavender-70-d: color-mix(in oklab, var(--wiki-lavender), black 70%);
   --wiki-lavender-80-d: color-mix(in oklab, var(--wiki-lavender), black 80%);
   --wiki-lavender-90-d: color-mix(in oklab, var(--wiki-lavender), black 90%);
-  /* Lavender - Lighter variants*/
+  
+  /* Lavender - Lighter variants */
   --wiki-lavender-10-l: color-mix(in oklab, var(--wiki-lavender), white 10%);
   --wiki-lavender-20-l: color-mix(in oklab, var(--wiki-lavender), white 20%);
   --wiki-lavender-30-l: color-mix(in oklab, var(--wiki-lavender), white 30%);
@@ -196,7 +242,14 @@
   --wiki-lavender-90-l: color-mix(in oklab, var(--wiki-lavender), white 90%);
   --wiki-lavender-95-l: color-mix(in oklab, var(--wiki-lavender), white 95%);
 
-  /* Admonition Colours */
+/* 
+  Admonition Colour Mappings 
+ 
+  Semantic assignment of brand/RAG colours to admonition types. 
+
+  Rationale: Consistent visual language—each admonition type signals a single semantic intent (note, success, warning, etc.). 
+  Change if: You want to visually associate an admonition type with a different colour. 
+*/
   --wiki-ad-note:     var(--wiki-data-blue);
   --wiki-ad-abstract: var(--wiki-dark-teal);
   --wiki-ad-info:     var(--wiki-clear-sky);

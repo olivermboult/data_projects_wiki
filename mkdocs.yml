@@ -1,30 +1,59 @@
+# This mkdocs.yml is intentionally verbose and serves as living documentation
+# for how the Data Projects Wiki is configured and why decisions were made.
+# Architectural notes: This configuration balances usability for data engineers with maintainability.
+# Governance: Settings like search, repo links, and include-markdown promote collaboration and content reuse.
+# Scalability: Instant navigation and search are enabled for large documentation sites; prune/prune options noted for future optimisation.
+# Material-specific: Many features (e.g., palette, icons, features) are Material extensions enhancing core MkDocs.
+# Accessibility: Language setting, tooltips, and emoji SVG ensure usability for diverse teams.
+# Performance: Instant loading, code copy, and selective features reduce friction in data workflows.
+# Maintainability: Custom dir, plugins, and extensions allow modular updates without breaking changes.
+
 # ------------------------------------------------------------------------------------------
-# Project information
+# Site information 
+#
+# Defines the site'\''s identity and metadata, crucial for branding, SEO, and user recognition 
+# in a data projects wiki. These settings establish the site'\''s presence and discoverability.
 # ------------------------------------------------------------------------------------------
 
-site_name: Data Projects Wiki                                                                             # The title shown in the header, browser tab title, and used across the theme
-site_url: https://olivermboult.github.io/data_projects_wiki/                                              # Canonical base URL (used for generating correct absolute links + SEO/social cards)
-site_author: Oliver Boult                                                                                 # Author/maintainer metadata (used by some themes/plugins for meta tags)
-site_description: This wiki site documents all designs, practices and processes used within data projets. # Short description for SEO/meta tags and social previews
+# Core MkDocs: Sets the primary title displayed across the site, aiding user orientation.
+site_name: Data Projects Wiki                                                                               # The title shown in the header, browser tab title, and used across the theme
+# Core MkDocs: Provides a stable base URL for links and sharing, preventing broken references.
+site_url: https://olivermboult.github.io/data_projects_wiki/                                                # Canonical base URL for absolute links and social sharing, ensuring consistent referencing across platforms.
+# Core MkDocs: Attributes content for metadata, useful in collaborative environments for accountability.
+site_author: Oliver Boult                                                                                   # Author/maintainer metadata used by some themes/plugins for meta tags
+# Core MkDocs: Enhances SEO and previews, helping data teams quickly identify relevant docs in searches.
+site_description: This wiki site documents all designs, practices and processes used within data projets.   # Brief overview for search engines and previews, helping data engineers find relevant documentation quickly.
 
 # ------------------------------------------------------------------------------------------
 # Repository
+#
+# Configures the repository link in the header, promoting open-source collaboration and easy
+# access to source code for data projects. This fosters contribution and transparency.
 # ------------------------------------------------------------------------------------------
 
-repo_name: repos/data_projects_wiki                            # Label shown in the header (repo link name shown by Material)
-repo_url: https://github.com/olivermboult/data_projects_wiki   # The actual repository URL (enables “edit/view source” links and header repo icon)
+# Material-specific: Displays a custom repo label in the header, encouraging team contributions.
+repo_name: repos/data_projects_wiki                            # Label shown in the header with the repo link.
+# Core MkDocs: Enables edit links and repo access, essential for collaborative data documentation maintenance.
+repo_url: https://github.com/olivermboult/data_projects_wiki   # Links to the GitHub repository, enabling '\''edit this page'\'' features and fostering contributions from the data team.
 
 # ------------------------------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------------------------------
 
-docs_dir: wiki                              # Tells MkDocs your Markdown source files live in /wiki instead of the default /docs
-theme:                                      # Starts theme configuration block (Material options live under here)
-  name: material                            # Selects the Material for MkDocs theme (enables Material features, palette, etc.
-  custom_dir: wiki/_wiki_branding           # Folder containing theme overrides (partials, templates, assets) to customise Material output
-  icon:                                     # Theme icon overrides (lets you change icons used by the theme) 
-    logo: material/home                     # Optional logo path
-    admonition:                             # Per-admonition-type icon mapping (built-in admonition types)
+# Core MkDocs: Specifies source directory, allowing separation of docs from config for better organisation.
+docs_dir: wiki                              # Specifies the directory for documentation sources, allowing custom organisation of data project docs separate from build files.
+# Material-specific: Configures theme and extensions, providing a polished interface for technical content.
+theme:                                      # Configures the theme and its customisations, providing a professional look tailored to data engineering audiences.
+  # Material-specific: Chooses Material theme for advanced features like dark mode and icons, improving readability.
+  name: material                            # Selects Material for MkDocs, chosen for its modern design and features that enhance readability of technical content.
+  # Material-specific: Allows custom branding, ensuring the wiki reflects team identity for better engagement.
+  custom_dir: wiki/_wiki_branding           # Points to custom theme overrides, enabling branding specific to the data projects wiki for better team identity.
+  # Material-specific: Customises icons for visual clarity, aiding quick recognition in data docs.
+  icon:                                     # Customises icons for better visual cues in data documentation, improving user experience for technical readers.
+    # Material-specific: Sets logo icon, providing a consistent home reference for navigation.
+    logo: material/home                     # Sets a home icon for the logo, providing a familiar entry point for navigating the wiki.
+    # Material-specific: Defines admonition icons, categorising alerts effectively for process documentation.
+    admonition:                             # Defines icons for admonitions, helping to categorise notes and warnings effectively in data process documentation.
       note: octicons/tag-16                 # Icon used for !!! note admonitions 
       abstract: octicons/checklist-16       # Icon used for !!! abstract admonitions 
       info: octicons/info-16                # Icon used for !!! info admonitions
@@ -38,59 +67,95 @@ theme:                                      # Starts theme configuration block (
       example: octicons/beaker-16           # Icon used for !!! example admonitions
       quote: octicons/quote-16              # Icon used for !!! quote admonitions 
       draft: octicons/pencil-16             # Icon used for !!! draft admonitions
-    annotation: material/plus-circle        # Icon used for annotation elements (e.g., code copy button, search reset button, etc.)
+    # Material-specific: Customises interactive icons, enhancing usability for code-related tasks.
+    annotation: material/plus-circle        # Customises annotation icons, aiding in interactive elements like code copying for data engineers.
+
+  # Material-specific: Enables UX features, balancing functionality with performance for data sites.
   features:                                 # Enables/disables specific Material UX features (navigation, search, code copy, etc.)
   # Navigation enhancements ----------------------------------------------------------------
+    # Material-specific: Enables SPA-like loading, reducing perceived latency on large docs; enabled for scalability.
     - navigation.instant                    # Enables Single Page Application-like instant loading for faster navigation
+    # Material-specific: Shows progress on slow loads, improving user feedback; enabled for data-heavy content.
     - navigation.instant.progress           # Shows a loading bar for slow connections
-    #- navigation.instant.preview           # Enables hover previews for internal links
+    # Material-specific: Disabled to avoid potential hover delays; consider enabling for smaller sites with fast networks.
+    #- navigation.instant.preview           # Enables hover previews for internal links; disabled for performance on large wikis, enable if site grows slowly.
+    # Material-specific: Tracks scroll anchors, enabling deep linking; enabled for bookmarking in guides.
     - navigation.tracking                   # Updates the URL with the active anchor as you scroll
-    #- navigation.tabs                      # Renders top-level sections as tabs on large screens
-    #- navigation.tabs.sticky               # Keeps tabs visible while scrolling
-    #- navigation.sections                  # Groups top-level sections in the sidebar
-    #- navigation.expand                    # Expands all sidebar sections by default (incompatible with navigation.prune)
-    #- navigation.prune                     # Reduces HTML size by pruning hidden navigation items (incompatible with navigation.expand)
-    #- navigation.indexes                   # Allows index.md files to act as section landing pages (incompatible with toc.integrate)
+    # Material-specific: Disabled for sidebar consistency; consider enabling for tab-heavy navigation in future.
+    #- navigation.tabs                      # Renders top-level sections as tabs on large screens; disabled for current flat nav, enable for multi-section sites.
+    # Material-specific: Disabled without tabs; enable alongside navigation.tabs for persistent UI.
+    #- navigation.tabs.sticky               # Keeps tabs visible while scrolling; disabled, enable with tabs for better UX on long pages.
+    # Material-specific: Disabled for flat structure; consider grouping sections as wiki expands.
+    #- navigation.sections                  # Groups top-level sections in the sidebar; disabled for current flat nav, enable for hierarchical growth.
+    # Material-specific: Disabled due to prune incompatibility; choose based on content volume.
+    #- navigation.expand                    # Expands all sidebar sections by default (incompatible with navigation.prune); disabled for selective expansion, enable for overview-heavy sites.
+    # Material-specific: Disabled to preserve full nav; consider enabling for very large sites to reduce HTML size.
+    #- navigation.prune                     # Reduces HTML size by pruning hidden navigation items (incompatible with navigation.expand); disabled for complete nav, enable for performance optimisation.
+    # Material-specific: Disabled due to toc.integrate conflict; enable for landing pages in structured docs.
+    #- navigation.indexes                   # Allows index.md files to act as section landing pages (incompatible with toc.integrate); disabled for current structure, enable for section intros.
+    # Material-specific: Provides quick return to top, essential for long docs; enabled for usability.
     - navigation.top                        # Adds a back-to-top button when scrolling up
   # Table of Contents enhancements ---------------------------------------------------------                                   
+    # Material-specific: Keeps TOC active, aiding orientation; enabled for detailed topics.
     - toc.follow                            # Keeps the active TOC item visible in the sidebar
-    #- toc.integrate                        # Integrates the TOC into the main navigation sidebar (incompatible with navigation.indexes)
+    # Material-specific: Disabled due to navigation.indexes conflict; enable for integrated sidebar TOC.
+    #- toc.integrate                        # Integrates the TOC into the main navigation sidebar (incompatible with navigation.indexes); disabled for separate TOC, enable for compact nav.
   # Search enhancements --------------------------------------------------------------------
+    # Material-specific: Enables autocomplete, speeding searches; enabled for efficiency in data terms.
     - search.suggest                        # Enables autocomplete suggestions for the last word typed in the search bar. Users can accept suggestions using the Right Arrow key.
+    # Material-specific: Highlights results on page, easing location; enabled for quick reference.
     - search.highlight                      # Highlights all occurrences of the search term on the destination page after clicking a search result.
+    # Material-specific: Allows sharing queries, fostering collaboration; enabled for team discussions.
     - search.share                          # Adds a share button next to the search reset button, allowing users to copy a link to the current search query and results.
   # Header enhancements --------------------------------------------------------------------
+    # Material-specific: Hides header on scroll, maximising content space; enabled for focused reading.
     - header.autohide                       # Header is automatically hidden when the user scrolls past a certain threshold.
+    # Material-specific: Allows dismissing announcements, maintaining clean UI; enabled for ongoing work.
     - announce.dismiss                      # Adds a dismiss button to temporary announcements, allowing users to mark them as read and hide them from view.
   # Footer enhancements --------------------------------------------------------------------
-    #- navigation.footer                    # The footer can include links to the previous and next page of the current page.
+    # Material-specific: Disabled for minimal footer; consider enabling for page navigation in linear docs.
+    #- navigation.footer                    # The footer can include links to the previous and next page of the current page; disabled for current nav, enable for sequential reading.
   # Content enhancements -------------------------------------------------------------------
+    # Material-specific: Adds copy buttons, streamlining reuse; enabled for data engineering tasks.
     - content.code.copy                     # Adds code block copy button
+    # Material-specific: Allows range selection, highlighting snippets; enabled for code focus.
     - content.code.select                   # Shows select button to highlight line ranges
+    # Material-specific: Enables inline annotations, explaining logic; enabled for complex data code.
     - content.code.annotate                 # Enables code annotations
+    # Material-specific: Improves tooltips, providing context; enabled for better UX in tables/links.
     - content.tooltips                      # Enables improved tooltips
-    # - content.footnote.tooltips           # Footnote tooltips feature
+    # Material-specific: Disabled for simplicity; consider enabling for reference-heavy docs.
+    # - content.footnote.tooltips           # Footnote tooltips feature; disabled to avoid clutter, enable for extensive footnotes.
 
+  # Material-specific: Defines colour schemes for light and dark modes, accommodating different working environments for data engineers.
   palette:                              # Defines colour schemes (light/dark) and the mode toggle behaviour
-    - scheme: default                   # “default” = light mode scheme in Material
+    # Material-specific: Sets up light mode with custom colours, ensuring readability in bright office settings.
+    - scheme: default                   # "default" = light mode scheme in Material
       primary: custom                   # Uses your CSS-defined palette rather than a built-in Material colour
       accent: custom                    # Uses your CSS-defined accent rather than a built-in Material colour
+      # Material-specific: Configures the toggle for switching to dark mode, providing user control over display preferences.
       toggle:                           # Configures the UI control for switching colour schemes          
         icon: material/weather-night    # Icon shown when light mode is active (suggests switching to dark)
         name: Switch to dark mode       # Tooltip/accessible label for the toggle in light mode
 
-    - scheme: slate                     # “slate” = Material’s dark mode scheme base
+    # Material-specific: Sets up dark mode with custom colours, reducing eye strain during late-night data analysis.
+    - scheme: slate                     # "slate" = Material'\''s dark mode scheme base
       primary: custom                   # Again use your custom CSS-driven colours in dark mode
       accent: custom                    # Again use your custom accent colours in dark mode
+      # Material-specific: Configures the toggle for switching back to light mode, maintaining flexibility.
       toggle:                           # Toggle settings for when dark mode is active
         icon: material/weather-sunny    # Icon shown in dark mode (suggests switching to light)
         name: Switch to light mode      # Tooltip/accessible label for the toggle in dark mode
 
+  # Material-specific: Sets the language for UI elements, ensuring English labels for international data teams.
   language: en                          # Sets UI language strings (search labels, buttons, etc.)
 
+# Core MkDocs: Extends functionality via plugins, enabling advanced features for data docs.
 plugins:          # Enables MkDocs/Material plugins (features beyond core markdown rendering)                   
+  # Core MkDocs: Provides site-wide search, essential for quickly finding data practices and processes.
   - search        # Enables built-in search index generation (Material uses this for site search)
 #  - table-reader  # Adds support for reading table data from CSV/TSV files (useful for data engineering docs)
+  # Core MkDocs plugin: Enables modular includes, facilitating reusable content; maintainability for updates.
   - include-markdown:
       encoding: ascii
       preserve_includer_indent: false
@@ -102,12 +167,24 @@ plugins:          # Enables MkDocs/Material plugins (features beyond core markdo
       start: <!--start-->
       end: <!--end-->
       recursive: true
+# Optional plugin: Consider for version control visibility in governance-heavy sites.
+#  - git-revision-date-localized  # Optional: Shows last modified dates from git, enhancing accountability; enable for audit trails.
+# Optional plugin: Useful for large sites with many contributors.
+#  - git-authors  # Optional: Displays author info per page, promoting recognition; enable for collaborative teams.
+# Optional plugin: For SEO and social sharing in public docs.
+#  - social  # Optional: Adds social media cards, improving shareability; enable for external audiences.
+
+# Core MkDocs: Defines Markdown parsing extensions, enabling rich content for data docs.
 markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoji, mermaid fences, etc.)
+  # Core MkDocs: Enables metadata in files, useful for custom processing.
   - meta
   
   # Core helpers used across many components -----------------------------------------------
+  # PyMdown: Allows HTML attributes in Markdown, enabling custom styling.
   - attr_list                                                           # Allows adding HTML attributes in Markdown (e.g., classes for components)
+  # PyMdown: Permits Markdown in HTML, useful for complex layouts.
   - md_in_html                                                          # Allows Markdown inside raw HTML blocks (useful for custom component markup)
+  # PyMdown: Enables custom fences like Mermaid, essential for diagrams in data docs.
   - pymdownx.superfences:                                               # Allows nested/advanced fenced blocks and custom fences (needed for mermaid)  
       # Mermaid diagrams (Material native integration)                  
       custom_fences:                                                    # Defines extra fenced code types beyond standard triple-backtick
@@ -116,49 +193,67 @@ markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoj
           format: !!python/name:pymdownx.superfences.fence_code_format  # Uses the standard fence formatter so the content is preserved correctly
 
   # Admonitions (callouts) -----------------------------------------------------------------
+  # PyMdown: Enables styled callouts, improving readability of notes/warnings.
   - admonition                                                          # Enables !!! note/warning/tip blocks (Material styles these nicely)
+  # PyMdown: Adds collapsible details, useful for expandable content.
   - pymdownx.details                                                    # Enables collapsible admonitions and <details> enhancements
 
   # Content tabs ---------------------------------------------------------------------------
+  # PyMdown: Enables tabbed content, organising comparisons in data docs.
   - pymdownx.tabbed:                                                    # Enables tabbed content syntax (Material styles as nice tabs)
-      alternate_style: true                                             # Uses Material’s alternate tab style (more visually distinct)                   
+      alternate_style: true                                             # Uses Material'\''s alternate tab style (more visually distinct)                   
 
   # Code blocks (highlighting, inline highlight, fences, snippets) -------------------------
+  # PyMdown: Configures syntax highlighting, with linkable lines for referencing.
   - pymdownx.highlight:                                                 # Adds advanced syntax highlighting configuration
       anchor_linenums: true                                             # Makes line numbers linkable (useful for referencing specific lines)
       line_spans: __span                                                # Wraps lines with spans so Material can style/target them                   
       pygments_lang_class: true                                         # Adds language CSS class to code blocks (helps styling and tooling)
 
+  # PyMdown: Enables inline highlighting, great for docs.
   - pymdownx.inlinehilite                                               # Enables inline code highlighting using special syntax (great for docs)                  
  
   # Data tables ----------------------------------------------------------------------------
+  # Core MkDocs: Enables Markdown tables, useful for schema documentation.
   - tables                                                              # Enables GitHub-style Markdown tables (if you document schemas, etc.)
 
   # Footnotes ------------------------------------------------------------------------------
+  # Core MkDocs: Enables footnotes, useful for references in data guides.
   - footnotes                                                           # Enables footnote syntax (useful for references and definitions)
 
   # Formatting (critic markup, highlight/underline/strike, keys) --------------------------- 
+  # PyMdown: Enables editorial markup, useful for draft reviews.
   - pymdownx.critic                                                     # Enables Critic Markup for editorial suggestions (add/remove/replace)
+  # PyMdown: Adds superscript and caret features for formatting.
   - pymdownx.caret                                                      # Enables ^superscript^ and underline-like caret features
+  # PyMdown: Formats keyboard keys, useful for tutorials.
   - pymdownx.keys                                                       # Pretty formatting for keyboard keys (e.g., ++ctrl+c++) 
+  # PyMdown: Enables highlight syntax for emphasis.
   - pymdownx.mark                                                       # Enables ==highlight== syntax                     
+  # PyMdown: Adds strike and subscript features.
   - pymdownx.tilde                                                      # Enables ~~strike~~ and subscript-like tilde features
 
   # Lists (definition lists + task lists) --------------------------------------------------
+  # Core MkDocs: Enables definition lists, useful for glossaries.
   - def_list                                                            # Enables definition lists (term: definition) useful for glossaries                     
+  # PyMdown: Enables task lists, useful for checklists in processes.
   - pymdownx.tasklist:                                                  # Enables GitHub-style task lists
       custom_checkbox: true                                             # Uses Material-themed checkboxes instead of plain text boxes
 
-  # Icons + Emojis (Twemoji SVG) -----------------------------------------------------------
+  # Icons + Emojis (Twemoji SVG) -----------------------------------------------------------  
+  # Material/PyMdown: Ensures consistent emoji rendering, improving accessibility.
   - pymdownx.emoji:                                                     # Uses Material emoji extension so emojis render consistently  
       emoji_index: !!python/name:material.extensions.emoji.twemoji      # Chooses the Twemoji index (consistent emoji set)
       emoji_generator: !!python/name:material.extensions.emoji.to_svg   # Renders emojis as SVG for crisp scaling on all screens
 
   # Images: captions + alignment patterns --------------------------------------------------
+  # PyMdown: Enables image captions, useful for diagrams in data docs.
   - pymdownx.blocks.caption                                             # Enables figure-like captions for images/content blocks           
 
   # Tooltips / glossary (abbr + titles + snippets) -----------------------------------------
+  # Core MkDocs: Enables abbreviations with tooltips, aiding glossary use.
   - abbr                                                                # Enables abbreviations with hover expansion via HTML <abbr>                  
+  # PyMdown: Auto-appends snippets like glossary, enhancing maintainability.
   - pymdownx.snippets:
       auto_append: ["glossary.md"]
       base_path: ["wiki"]             # Automatically appends a Markdown file with snippet definitions (e.g., for glossary/tooltip content)
@@ -167,7 +262,7 @@ markdown_extensions:  # Controls how Markdown is parsed (admonitions, tabs, emoj
 # Customisation
 # ------------------------------------------------------------------------------------------
 extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you can override styles)
-  - style.css  # Path to your custom CSS file for styling overrides
+  - style.css         # Path to your custom CSS file for styling overrides
 
 # ------------------------------------------------------------------------------------------
 # Navigation
