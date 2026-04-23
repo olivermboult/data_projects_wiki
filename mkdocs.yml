@@ -254,3 +254,17 @@ nav:
       - Lists: wiki_design/components/lists.md
       - Page References: wiki_design/components/page_references.md
       - Tooltips: wiki_design/components/tooltips.md
+    - Design Framework:
+      - Page Templates:
+        - Component Reference: wiki_design/page_templates/component_reference.md
+        - FAQs: wiki_design/page_templates/faq.md
+        - Glossary Entry: wiki_design/page_templates/glossary_entry.md
+        - Overview Page: wiki_design/page_templates/overview_page.md
+        - Procedural Page: wiki_design/page_templates/procedural_page.md
+        - Standard Page: wiki_design/page_templates/standard_page.md
+      - Branding Guidelines: wiki_design/BRAND_GUIDELINES.md
+      - Copilot Prompt: wiki_design/COPILOT_PROMPT.md
+      - Quick Reference: wiki_design/QUICK_REFERENCE.md
+      - Read Me: wiki_design/README.md
+      - Wiki Formatting Guide: WIKI_FORMATTING_GUIDE.md
+      - Index 2: INDEX2.md
