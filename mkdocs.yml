@@ -1,11 +1,20 @@
-
-# This mkdocs.yml is intentionally verbose and serves as living documentation
-# for how the Data Projects Wiki is configured and why decisions were made.
-
+# ------------------------------------------------------------------------------------------
+# Title: mkdocs.yml
+# Created by: Oliver Boult
+# Created on: 2026-04-22
+# ------------------------------------------------------------------------------------------
+# Last reviewed by: Oliver Boult
+# Last reviewed on: 2026-04-22
+# ------------------------------------------------------------------------------------------
+# This file defines how the documentation site is built and rendered. It specifies the 
+# site’s navigation, theme and styling (via Material for MkDocs), enabled plugins, Markdown 
+# features, and global settings. Any change to the site’s structure, look and feel, or 
+# functionality is typically made through this configuration file.
+# ------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------
 # Site information 
-#
+# ------------------------------------------------------------------------------------------
 # Defines the site's identity and metadata, crucial for branding, SEO, and user recognition 
 # in a data projects wiki.
 # ------------------------------------------------------------------------------------------
@@ -17,7 +26,7 @@ site_description: This wiki site documents all designs, practices and processes 
 
 # ------------------------------------------------------------------------------------------
 # Repository
-#
+# ------------------------------------------------------------------------------------------
 # Configures the repository link in the header, promoting open-source collaboration and easy
 # access to source code for data projects.
 # ------------------------------------------------------------------------------------------
@@ -28,8 +37,17 @@ repo_url: https://github.com/olivermboult/data_projects_wiki   # Links to the Gi
 # ------------------------------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------------------------------
+# Core build configuration for MkDocs. Defines where documentation source files live and
+# configures the overall site theme, behaviour, language, and user experience.
+# ------------------------------------------------------------------------------------------
 
 docs_dir: wiki                              # Specifies the directory for documentation sources, allowing custom organisation of data project docs separate from build files.
+
+# Theme ------------------------------------------------------------------------------------
+# Configures Material for MkDocs, including visual identity, branding overrides, typography,
+# icons, navigation behaviour, accessibility features, and colour palettes for light and
+# dark modes.
+# ------------------------------------------------------------------------------------------
 theme:                                      # Configures the theme and its customisations, providing a professional look tailored to data engineering audiences.
   name: material                            # Selects Material for MkDocs, chosen for its modern design and features that enhance readability of technical content.
   custom_dir: wiki/_wiki_branding           # Points to custom theme overrides, enabling branding specific to the data projects wiki for better team identity.
@@ -53,15 +71,19 @@ theme:                                      # Configures the theme and its custo
       quote: octicons/quote-16              # Icon used for !!! quote admonitions 
       draft: octicons/pencil-16             # Icon used for !!! draft admonitions
     annotation: material/plus-circle        # Customises annotation icons, aiding in interactive elements like code copying for data engineers.
-
+  # Theme features ---------------------------------------------------------------------------
+  # Enables and configures Material for MkDocs feature flags that enhance navigation,
+  # content interaction, search behaviour, and overall usability for large technical
+  # documentation sites.
+  # ------------------------------------------------------------------------------------------
   features:                                 # Enables specific features to improve navigation and usability, tailored for a comprehensive data projects wiki.
   # Navigation enhancements ----------------------------------------------------------------
     - navigation.instant                    # Enables instant loading for smoother browsing, reducing wait times in large data documentation sites.
     - navigation.instant.progress           # Adds a progress bar for loading feedback, useful for data-heavy pages with diagrams or tables.
     #- navigation.instant.preview           # Enables hover previews for internal links. Disabled to avoid potential hover delays; consider enabling for smaller sites with fast networks.
     - navigation.tracking                   # Tracks URL anchors during scrolling, allowing bookmarking specific sections in data guides.
-    #- navigation.tabs                      # Renders top-level sections as tabs on large screens.  Disabled for sidebar consistency; consider enabling for tab-heavy navigation in future.
-    #- navigation.tabs.sticky               # Keeps tabs visible while scrolling. Disabled without tabs; enable alongside navigation.tabs for persistent UI.
+    - navigation.tabs                       # Renders top-level sections as tabs on large screens.  Disabled for sidebar consistency; consider enabling for tab-heavy navigation in future.
+    - navigation.tabs.sticky                # Keeps tabs visible while scrolling. Disabled without tabs; enable alongside navigation.tabs for persistent UI.
     #- navigation.sections                  # Groups top-level sections in the sidebar. Disabled for flat structure; consider grouping sections as wiki expands.
     #- navigation.expand                    # Expands all sidebar sections by default (incompatible with navigation.prune). Disabled due to prune incompatibility; choose based on content volume.
     #- navigation.prune                     # Reduces HTML size by pruning hidden navigation items (incompatible with navigation.expand). Disabled to preserve full nav; consider enabling for very large sites to reduce HTML size.
@@ -85,8 +107,10 @@ theme:                                      # Configures the theme and its custo
     - content.code.annotate                 # Enables annotations on code, allowing inline explanations for complex data logic.
     - content.tooltips                      # Improves tooltips for better context in data tables and links.
     - content.footnote.tooltips             # Footnote tooltips feature.
-
-
+  # Colour palette ---------------------------------------------------------------------------
+  # Defines light and dark colour schemes for the site using custom CSS-driven palettes.
+  # Supports accessible, brand-aligned theming and user-controlled mode switching.
+  # ------------------------------------------------------------------------------------------
   palette:                              # Defines colour schemes for light and dark modes, accommodating different working environments for data engineers.
     - scheme: default                   # Sets up light mode with custom colours, ensuring readability in bright office settings.    
       primary: custom                   # Uses your CSS-defined palette rather than a built-in Material colour
@@ -101,10 +125,13 @@ theme:                                      # Configures the theme and its custo
       toggle:                           # Configures the toggle for switching back to light mode, maintaining flexibility.
         icon: material/weather-sunny    # Icon shown in dark mode (suggests switching to light)
         name: Switch to light mode      # Tooltip/accessible label for the toggle in dark mode
-
   language: en                          # Sets the language for UI elements, ensuring English labels for international data teams.
 
-
+# Plugins ----------------------------------------------------------------------------------
+# Extends MkDocs functionality beyond the core feature set, enabling capabilities such as
+# full-text search, content inclusion, Git-based page metadata (authors and last updated
+# dates), and modular documentation composition.
+# ------------------------------------------------------------------------------------------
 plugins:                                # Enables plugins to extend functionality, adding capabilities like search and markdown inclusion for richer data docs.
   - search                              # Provides site-wide search, essential for quickly finding data practices and processes.
 #  - table-reader                       # Adds support for reading table data from CSV/TSV files (useful for data engineering docs)
@@ -123,7 +150,12 @@ plugins:                                # Enables plugins to extend functionalit
   - git-authors                         # Displays author info per page, promoting recognition; enable for collaborative teams.
 #  - social                             # Adds social media cards, improving shareability; enable for external audiences.
 
-
+# Markdown extensions ----------------------------------------------------------------------
+# Controls how Markdown content is parsed and rendered. Enables advanced documentation
+# features such as admonitions, tabs, diagrams, code annotations, task lists, tables,
+# tooltips, icons, emojis, and rich formatting required for technical and data-focused
+# documentation.
+# ------------------------------------------------------------------------------------------
 markdown_extensions:                  # Controls how Markdown is parsed (admonitions, tabs, emoji, mermaid fences, etc.)
   - meta
   
@@ -188,11 +220,19 @@ markdown_extensions:                  # Controls how Markdown is parsed (admonit
 # ------------------------------------------------------------------------------------------
 # Customisation
 # ------------------------------------------------------------------------------------------
+# Applies site-specific visual overrides on top of the Material theme, allowing fine-grained
+# control of colours, spacing, components, and brand alignment via custom CSS.
+# ------------------------------------------------------------------------------------------
+
 extra_css:            # Adds your own stylesheet(s) after the theme CSS (so you can override styles)
   - style.css         # Path to your custom CSS file for styling overrides
 
 # ------------------------------------------------------------------------------------------
 # Navigation
+# ------------------------------------------------------------------------------------------
+# Defines the logical structure of the documentation site, mapping sections and pages to
+# files within the docs directory. This controls sidebar order, hierarchy, and how users
+# explore the data projects wiki.
 # ------------------------------------------------------------------------------------------
 
 nav:

@@ -1,20 +1,46 @@
-/* 
+/*
 ------------------------------------------------------------------------------------------
-  Wiki Colours
+  Title: style.css
+  Created by: Oliver Boult
+  Created on: 2026-04-22
 ------------------------------------------------------------------------------------------
-  Foundation colour palette for the entire design system. These base colours form the
-  backbone of the theme and are referenced throughout: in Material for MkDocs theme
-  variables, admonition variants, component libraries, and generated tint/shade scales.
-  
-  Organising principle:
-  - Primary colours (1): Brand identity and primary UI actions (headers, buttons, focus)
-  - Secondary colours (2): Accent and highlight states (hover, selection, emphasis)
-  - RAG colours (3): Status indicators (red = critical, amber = warning, green = success)
-  - Neutral greys (4): Global text, backgrounds, borders, and disabled states
-  
-  When to change these:
-  - Update brand identity (rare); cascades through theme and all child variants
-  - Ensure accessible contrast ratios (WCAG AA/AAA); check against neutral backgrounds
+  Last reviewed by: Oliver Boult
+  Last reviewed on: 2026-04-22
+------------------------------------------------------------------------------------------
+  Purpose:
+  This file defines the visual design system for the Data Projects Wiki. It centralises
+  brand colours, semantic tokens, Material for MkDocs theme variable overrides, and
+  reusable component styles (e.g. admonitions, heroes, buttons).
+
+  All styling decisions are expressed through CSS custom properties first, allowing
+  consistent reuse across light/dark modes, components, and future extensions.
+
+  Change guidance:
+  - Prefer updating tokens (variables) over component rules
+  - Check contrast and accessibility after any colour changes
+  - Treat this as a design system, not ad-hoc CSS
+------------------------------------------------------------------------------------------
+*/
+
+/*
+------------------------------------------------------------------------------------------
+  Wiki Colours & Design Tokens
+------------------------------------------------------------------------------------------
+  Central design token layer for the entire wiki design system.
+
+  Defines:
+  - Brand colours (primary/secondary)
+  - Semantic status colours (RAG)
+  - Neutral greyscale
+  - Programmatically generated tint/shade variants
+
+  These variables are consumed by:
+  - Material for MkDocs theme variables
+  - Admonition colour mappings
+  - Custom components (hero, buttons, etc.)
+
+  Do NOT apply raw hex values outside this section.
+------------------------------------------------------------------------------------------
 */
 
 :root {
@@ -34,7 +60,7 @@
   --wiki-amber:   #FFBF00;      /* Warnings, cautions, in-progress states. */
   --wiki-green:   #27693F;      /* Success, affirmations, positive outcomes. */
 
-    /* Other Colours: Neutral grey scale */
+  /* Other Colours: Neutral grey scale */
   /* Used throughout for text, backgrounds, borders, and disabled states. */
   /* Values follow a 0–1000 scale: 0 is pure white, 1000 is pure black. */
   --wiki-n0:    #FFFFFF;
@@ -49,23 +75,24 @@
   --wiki-n900:  #0F172A;
   --wiki-n1000: #000000;
 
-  
-  /* 
-  Programmatically generated colour variants using CSS color-mix() 
+/*
 ------------------------------------------------------------------------------------------
-  Rationale: Generating lighter and darker tints of brand colours ensures design  
-  consistency, reduces maintenance burden, and enables responsive colour adaption. 
-  These variants are computed in the oklab colour space, which provides perceptually 
-  uniform darkening and lightening across all hues. 
-  
-  Naming convention: --wiki-[colour]-[percentage]-[l|d] 
-  - [colour] = base colour name 
-  - [percentage] = amount mixed (10% = subtle, 90% = extreme) 
-  - [l|d] = lighter (l) or darker (d) variant 
-  
-  Use case: Hover states, subtle backgrounds, hierarchy, emphasis, disabled states. 
-  Change if: Colour contrast ratios fall below WCAG AA for your use case. */
-  
+  Generated Colour Variants
+------------------------------------------------------------------------------------------
+  Automatically derived lighter and darker variants of base colours using CSS color-mix()
+  in the OKLab colour space for perceptual consistency.
+
+  Purpose:
+  - Reduce manual colour maintenance
+  - Ensure consistent gradients, hover states, and hierarchy
+  - Enable scalable theming as the system grows
+
+  Change with care:
+  - Requires modern browser support for OKLab and color-mix()
+  - Re-test accessibility contrast after adjusting base colours
+------------------------------------------------------------------------------------------
+*/
+
   /* Deep Indigo - Darker variants */
   --wiki-deep-indigo-10-d: color-mix(in oklab, var(--wiki-deep-indigo), black 10%);
   --wiki-deep-indigo-20-d: color-mix(in oklab, var(--wiki-deep-indigo), black 20%);
@@ -220,14 +247,22 @@
   --wiki-lavender-90-l: color-mix(in oklab, var(--wiki-lavender), white 90%);
   --wiki-lavender-95-l: color-mix(in oklab, var(--wiki-lavender), white 95%);
 
-/* 
-  Admonition Colour Mappings 
- 
-  Semantic assignment of brand/RAG colours to admonition types. 
+/*
+------------------------------------------------------------------------------------------
+  Admonition Semantic Colour Mapping
+------------------------------------------------------------------------------------------
+  Maps semantic admonition intents (note, warning, danger, draft, etc.) to design tokens.
 
-  Rationale: Consistent visual language—each admonition type signals a single semantic intent (note, success, warning, etc.). 
-  Change if: You want to visually associate an admonition type with a different colour. 
+  This layer decouples:
+  - Meaning (e.g. “warning”, “success”)
+  - From presentation (specific colours)
+
+  Change here if:
+  - You want to re-associate an admonition with a different semantic colour
+  - You are aligning with revised brand or accessibility guidance
+------------------------------------------------------------------------------------------
 */
+
   --wiki-ad-note:     var(--wiki-data-blue);
   --wiki-ad-abstract: var(--wiki-dark-teal);
   --wiki-ad-info:     var(--wiki-clear-sky);
@@ -242,6 +277,25 @@
   --wiki-ad-quote:    var(--wiki-data-blue);
   --wiki-ad-draft:    var(--wiki-golden)
 }
+
+/*
+------------------------------------------------------------------------------------------
+  Material Theme Overrides – Light Mode (default)
+------------------------------------------------------------------------------------------
+  Overrides Material for MkDocs CSS variables to align the light theme with the
+  wiki design system.
+
+  Affects:
+  - Global UI chrome (header, sidebar, footer)
+  - Typography and link styling
+  - Code blocks and syntax highlighting
+  - Admonitions, tables, and elevation (shadows)
+
+  Intent:
+  Provide a clean, high-contrast, professional reading experience suitable for
+  long-form technical documentation.
+------------------------------------------------------------------------------------------
+*/
 
 [data-md-color-scheme="default"] {
 
@@ -373,12 +427,19 @@ Tables - Affects: table grid/borders in content.
 
 /*
 ------------------------------------------------------------------------------------------
-  Material Theme Overrides
-  Dark Mode (slate)
-  Look: deep indigo background, midnight-green surfaces, white typography, bleu accents, 
-  mustard highlights, emerald/persian-green for “positive” tokens.
+  Material Theme Overrides – Dark Mode (slate)
+------------------------------------------------------------------------------------------
+  Dark theme implementation using the same design tokens as light mode.
+
+  Goals:
+  - Maintain brand consistency across modes
+  - Avoid pure black backgrounds to reduce eye fatigue
+  - Preserve semantic colour meaning (RAG, success, warning)
+
+  Light and dark modes should differ in luminance, not intent.
 ------------------------------------------------------------------------------------------
 */
+
 [data-md-color-scheme="slate"] {
 
 /*
@@ -508,17 +569,41 @@ Tables - Affects: table grid/borders in content.
 }
 
 
-/* 
+/*
 ------------------------------------------------------------------------------------------
   Component Library
 ------------------------------------------------------------------------------------------
+  Reusable, composable UI components built on top of Material for MkDocs.
+
+  Components defined here:
+  - Admonition variants
+  - Hero banners
+  - (Future) buttons, cards, layout helpers
+
+  Guidance:
+  - Components should rely on design tokens, not raw values
+  - Variants should be additive, not duplicative
+------------------------------------------------------------------------------------------
 */
+
+
 
 /*
-  Admonitions ----------------------------------------------------------------------------
-*/
+------------------------------------------------------------------------------------------
+  Admonitions – Component Overrides
+------------------------------------------------------------------------------------------
+  Custom styling for Material admonitions to align layout, colour usage, and emphasis
+  with the wiki design system.
 
-/* Customise Standard Admonitions */
+  Pattern:
+  - Border = semantic colour
+  - Title background = subtle tint
+  - Icon = semantic colour
+  - No drop shadows for visual clarity
+
+  This enforces a consistent, predictable visual language across call-outs.
+------------------------------------------------------------------------------------------
+*/
 
 /* note */
 
@@ -833,8 +918,81 @@ Tables - Affects: table grid/borders in content.
   box-shadow: none !important;                                                             /* Removes the default box shadow from the quote details block */
 }
 
+/* Draft */
+
+.md-typeset .admonition.draft,                                                              /* Alters the draft admonition block */
+.md-typeset details.draft {                                                                 /* Alters the draft details (expandable admonition) block */
+  border-color: var(--wiki-ad-draft) !important;                                            /* Sets the border color of the draft admonition */ 
+}
+
+.md-typeset .draft > .admonition-title,                                                     /* Alters the title of the draft admonition block */ 
+.md-typeset .draft > summary {                                                              /* Alters the title of the draft details (expandable admonition) block */
+  background-color: color-mix(in srgb, var(--wiki-ad-draft) 12%, transparent) !important;   /* Sets the background color of the title of draft admonition */
+  color: var(--wiki-ad-draft) !important;                                                   /* Sets the text color of the title of draft admonition */  
+}
+
+.md-typeset .draft > .admonition-title::before,                                             /* Alters the icon before the title of the draft admonition block */         
+.md-typeset .draft > summary::before {                                                      /* Alters the icon before the title of the draft details (expandable admonition) block */
+  background-color: var(--wiki-ad-draft) !important;                                        /* Sets the color of the icon before the title of draft admonition */
+  -webkit-mask-image: var(--md-admonition-icon--draft);
+  mask-image: var(--md-admonition-icon--draft);
+
+}
+
+.md-typeset .draft > summary::after {                                                       /* Alters the icon after the title of the draft details (expandable admonition) block */
+  color: var(--wiki-ad-draft) !important;                                                   /* Sets the color of the icon after the title of draft admonition */
+}
+
+.md-typeset details[class] {                                                               /* Alters the draft details (expandable admonition) block */
+  box-shadow: none !important;                                                             /* Removes the default box shadow from the draft details block */
+}
+
+
+/* Variant Template
+
+.md-typeset .admonition.VARIANT_NAME,
+.md-typeset details.VARIANT_NAME {
+  border-color: #COLOUR !important;
+}
+
+.md-typeset .VARIANT_NAME > .admonition-title,
+.md-typeset .VARIANT_NAME > summary {
+  background-color: #COLOUR !important;
+  color: #COLOUR !important;
+}
+
+.md-typeset .VARIANT_NAME > .admonition-title::before,
+.md-typeset .VARIANT_NAME > summary::before {
+  background-color: #COLOUR;
+  -webkit-mask-image: #ICON;
+  mask-image: #ICON;
+}
+
+.md-typeset .quote > summary::after {                                                      
+  color: #COLOUR !important;                                                   
+}
+
+.md-typeset details[class] {                                                            
+  box-shadow: none !important;                                                           
+}
+
+*/
+
 /*
-  Hero ----------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+  Hero Component
+------------------------------------------------------------------------------------------
+  Large, visually prominent banner component used to introduce sections, landing pages,
+  or key concepts.
+
+  Features:
+  - Token-driven colour variants
+  - Responsive typography
+  - Optional size modifiers (sm / md / lg)
+
+  Intent:
+  Provide strong visual hierarchy without overwhelming content-heavy pages.
+------------------------------------------------------------------------------------------
 */
 
 .md-typeset .hero {
@@ -904,10 +1062,6 @@ Tables - Affects: table grid/borders in content.
 
 /* Variants */
 
-/*
-  Hero ----------------------------------------------------------------------------
-*/
-
 .md-typeset .hero--deep-inidgo {
   --hero-bg-1: var(--wiki-deep-indigo-20-d);
   --hero-bg-2: var(--wiki-deep-indigo-20-l);
@@ -950,73 +1104,20 @@ Tables - Affects: table grid/borders in content.
   --hero-text: var(--wiki-n0);
 }
 
-
 /*
-  Admonitions ----------------------------------------------------------------------------
-*/
+------------------------------------------------------------------------------------------
+  Buttons
+------------------------------------------------------------------------------------------
+  Reserved area for custom button variants that extend Material buttons with
+  semantic or brand-specific styling.
 
-/* Draft */
+  Use cases:
+  - Primary actions
+  - Destructive actions
+  - Contextual navigation cues
 
-.md-typeset .admonition.draft,                                                              /* Alters the draft admonition block */
-.md-typeset details.draft {                                                                 /* Alters the draft details (expandable admonition) block */
-  border-color: var(--wiki-ad-draft) !important;                                            /* Sets the border color of the draft admonition */ 
-}
-
-.md-typeset .draft > .admonition-title,                                                     /* Alters the title of the draft admonition block */ 
-.md-typeset .draft > summary {                                                              /* Alters the title of the draft details (expandable admonition) block */
-  background-color: color-mix(in srgb, var(--wiki-ad-draft) 12%, transparent) !important;   /* Sets the background color of the title of draft admonition */
-  color: var(--wiki-ad-draft) !important;                                                   /* Sets the text color of the title of draft admonition */  
-}
-
-.md-typeset .draft > .admonition-title::before,                                             /* Alters the icon before the title of the draft admonition block */         
-.md-typeset .draft > summary::before {                                                      /* Alters the icon before the title of the draft details (expandable admonition) block */
-  background-color: var(--wiki-ad-draft) !important;                                        /* Sets the color of the icon before the title of draft admonition */
-  -webkit-mask-image: var(--md-admonition-icon--draft);
-  mask-image: var(--md-admonition-icon--draft);
-
-}
-
-.md-typeset .draft > summary::after {                                                       /* Alters the icon after the title of the draft details (expandable admonition) block */
-  color: var(--wiki-ad-draft) !important;                                                   /* Sets the color of the icon after the title of draft admonition */
-}
-
-.md-typeset details[class] {                                                               /* Alters the draft details (expandable admonition) block */
-  box-shadow: none !important;                                                             /* Removes the default box shadow from the draft details block */
-}
-
-
-/* Variant Template
-
-.md-typeset .admonition.VARIANT_NAME,
-.md-typeset details.VARIANT_NAME {
-  border-color: #COLOUR !important;
-}
-
-.md-typeset .VARIANT_NAME > .admonition-title,
-.md-typeset .VARIANT_NAME > summary {
-  background-color: #COLOUR !important;
-  color: #COLOUR !important;
-}
-
-.md-typeset .VARIANT_NAME > .admonition-title::before,
-.md-typeset .VARIANT_NAME > summary::before {
-  background-color: #COLOUR;
-  -webkit-mask-image: #ICON;
-  mask-image: #ICON;
-}
-
-.md-typeset .quote > summary::after {                                                      
-  color: #COLOUR !important;                                                   
-}
-
-.md-typeset details[class] {                                                            
-  box-shadow: none !important;                                                           
-}
-
-*/
-
-/*
-  Buttons --------------------------------------------------------------------------------
+  Button variants should remain visually consistent with links and admonitions.
+------------------------------------------------------------------------------------------
 */
 
 /* Variants */
