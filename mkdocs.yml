@@ -260,10 +260,10 @@ nav:
         - FAQs: wiki_design/page_templates/faq.md
         - Glossary Entry: wiki_design/page_templates/glossary_entry.md
         - Overview Page: wiki_design/page_templates/overview_page.md
-        - Procedural Page: wiki_design/page_templates/procedural_page.md
+        - Procedural Guide: wiki_design/page_templates/procedural_guide.md
         - Standard Page: wiki_design/page_templates/standard_page.md
       - Branding Guidelines: wiki_design/BRAND_GUIDELINES.md
-      - Copilot Prompt: wiki_design/COPILOT_PROMPT.md
+      - Copilot Prompts: wiki_design/COPILOT_PROMPTs.md
       - Quick Reference: wiki_design/QUICK_REFERENCE.md
       - Read Me: wiki_design/README.md
       - Wiki Formatting Guide: WIKI_FORMATTING_GUIDE.md
